@@ -22,6 +22,6 @@
 | Wenye Guo | wguo2@sfsu.edu | 922231840 | wenyeguo | Database Adminstrator |
 | Sabur Saigani | ssaigani@sfsu.edu | 921794806 |Sabursaigani| Functional Lead |
 |Mathew O Abiola| mabiola@mail.sfsu.edu |920585637 | mathewabiola | Github Master |
-|Jonathan Lp| jip3@mail.sfsu.edu |920845949 | ipchjonathan | Functional Assistant |
+|Jonathan Ip| jip3@mail.sfsu.edu |920845949 | ipchjonathan | Functional Assistant |
 
 ## NO code needs to be stored in the root of your repository. You may rename the application folder if you like to your team's application name. But all source code related to your team's application should be stored inside the application folder.
