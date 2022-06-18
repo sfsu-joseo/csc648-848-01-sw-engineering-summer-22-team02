@@ -6,14 +6,26 @@ import About from './About';
 import {Route, Link, Routes} from 'react-router-dom'
 import Navbar from './Navbar';
 
+// Import other team member's file names
+import Ireland from "./PersonalAbout/Ireland";
+
+
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
+
+        {/* Route other team member's file names */}
+        <Route path="/PersonalAbout/Ireland" element={<Ireland />} />
+
+
+
       </Routes>
+      
+      
     </div>
   );
 }
