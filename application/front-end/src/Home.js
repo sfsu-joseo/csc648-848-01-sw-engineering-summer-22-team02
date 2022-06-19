@@ -19,7 +19,7 @@ const Home = () => {
         </h3>
 
         <h3>
-          <a className="button-link" href="/">
+          <a className="button-link" href="/PersonalAbout/Islas">
             Kevin Islas
           </a>
         </h3>

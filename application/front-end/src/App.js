@@ -8,6 +8,7 @@ import Navbar from "./Navbar";
 
 // Import other team member's file names
 import Ireland from "./PersonalAbout/Ireland";
+import Ip from "./PersonalAbout/Ip";
 import Islas from "./PersonalAbout/Islas";
 
 function App() {
