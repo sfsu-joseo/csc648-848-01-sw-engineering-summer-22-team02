@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 //import logo from './logo.svg';
-import './App.css';
-import Home from './Home'
-import About from './About';
-import {Route, Link, Routes} from 'react-router-dom'
-import Navbar from './Navbar';
+import "./App.css";
+import Home from "./Home";
+import About from "./About";
+import { Route, Link, Routes } from "react-router-dom";
+import Navbar from "./Navbar";
 
 // Import other team member's file names
 import Ireland from "./PersonalAbout/Ireland";
@@ -19,6 +19,7 @@ function App() {
 
         {/* Route other team member's file names */}
         <Route path="/PersonalAbout/Ireland" element={<Ireland />} />
+        <Route path="/PersonalAbout/Ip" element={<Ip />} />
         <Route path="/PersonalAbout/Islas" element={<Islas />} />
       </Routes>
     </div>
