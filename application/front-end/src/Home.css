@@ -50,5 +50,20 @@
 
 .Ireland_About_Paragraph{
   text-align: center;
-  
+}
+
+
+.About_Image {
+  width: 350px;
+  height: 350px;
+  padding-top: 20px;
+}
+
+.About_Name {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.About_Paragraph {
+  text-align: center;
 }

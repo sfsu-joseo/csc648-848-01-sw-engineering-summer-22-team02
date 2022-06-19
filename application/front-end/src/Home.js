@@ -1,7 +1,6 @@
 import React from "react";
-import './Home.css';
-import { Link} from "react-router-dom";
-
+import "./Home.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -13,27 +12,45 @@ const Home = () => {
         <h1> Team 2 </h1>
       </div>
       <div className="buttons">
-        
-        <h3><a className="button-link" href="/">Kshitiz Sareen</a></h3>
+        <h3>
+          <a className="button-link" href="/">
+            Kshitiz Sareen
+          </a>
+        </h3>
 
-        <h3><a className="button-link" href="/">Kevin Islas</a></h3>
+        <h3>
+          <a className="button-link" href="/PersonalAbout/Islas">
+            Kevin Islas
+          </a>
+        </h3>
 
-        <h3><a className="button-link" href="/PersonalAbout/Ireland">Shamar Ireland</a></h3>
+        <h3>
+          <a className="button-link" href="/PersonalAbout/Ireland">
+            Shamar Ireland
+          </a>
+        </h3>
 
-        <h3><a className="button-link" href="/">Sabur Saigani</a></h3>
+        <h3>
+          <a className="button-link" href="/">
+            Sabur Saigani
+          </a>
+        </h3>
 
-        <h3><a className="button-link" href="/">Wenye Guo</a></h3>
+        <h3>
+          <a className="button-link" href="/">
+            Wenye Guo
+          </a>
+        </h3>
 
-        <h3><a className="button-link" href="/">Mathew O Abiola</a></h3>
-
-    
+        <h3>
+          <a className="button-link" href="/">
+            Mathew O Abiola
+          </a>
+        </h3>
       </div>
     </>
     // </div>
-
-
-  )
-}
-
+  );
+};
 
 export default Home;
