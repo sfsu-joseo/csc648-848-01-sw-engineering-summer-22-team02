@@ -3,7 +3,10 @@ import React from "react";
 function Islas() {
   return (
     <div>
-      {/* //Image to be added at a later date */}
+      <img
+        class="About_Image"
+        src={require("../Images/Kevin PlaceHolder.png")}
+      />
       <h1 className="About_Name"> Kevin Islas Orgaz</h1>
       <p className="About_Paragraph">
         Hello, I am Kevin and I am a Computer Science Major at SFSU. I have two
