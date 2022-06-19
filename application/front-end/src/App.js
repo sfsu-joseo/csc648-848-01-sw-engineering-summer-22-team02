@@ -10,6 +10,7 @@ import Navbar from "./Navbar";
 import Ireland from "./PersonalAbout/Ireland";
 import Ip from "./PersonalAbout/Ip";
 import Islas from "./PersonalAbout/Islas";
+import Guo from "./PersonalAbout/Guo";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/PersonalAbout/Ireland" element={<Ireland />} />
         <Route path="/PersonalAbout/Ip" element={<Ip />} />
         <Route path="/PersonalAbout/Islas" element={<Islas />} />
+        <Route path="/PersonalAbout/Guo" element={<Guo />} />
       </Routes>
     </div>
   );

@@ -37,7 +37,7 @@ const Home = () => {
         </h3>
 
         <h3>
-          <a className="button-link" href="/">
+          <a className="button-link" href="/PersonalAbout/Guo">
             Wenye Guo
           </a>
         </h3>
