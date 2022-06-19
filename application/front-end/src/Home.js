@@ -26,6 +26,8 @@ const Home = () => {
 
         <h3><a className="button-link" href="/">Mathew O Abiola</a></h3>
 
+        <h3><a className="button-link" href="/PersonalAbout/Ip">Jonathan Ip</a></h3>
+
     
       </div>
     </>

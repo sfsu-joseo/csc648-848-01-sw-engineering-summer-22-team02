@@ -8,6 +8,7 @@ import Navbar from './Navbar';
 
 // Import other team member's file names
 import Ireland from "./PersonalAbout/Ireland";
+import Ip from './PersonalAbout/Ip';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
         {/* Route other team member's file names */}
         <Route path="/PersonalAbout/Ireland" element={<Ireland />} />
+        <Route path="/PersonalAbout/Ip" element={<Ip />} />
 
 
 
