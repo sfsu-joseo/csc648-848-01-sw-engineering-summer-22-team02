@@ -11,6 +11,7 @@ import Ireland from "./PersonalAbout/Ireland";
 import Ip from "./PersonalAbout/Ip";
 import Islas from "./PersonalAbout/Islas";
 import Guo from "./PersonalAbout/Guo";
+import Saigani from "./PersonalAbout/Saigani";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/PersonalAbout/Ip" element={<Ip />} />
         <Route path="/PersonalAbout/Islas" element={<Islas />} />
         <Route path="/PersonalAbout/Guo" element={<Guo />} />
+        <Route path="/PersonalAbout/Saigani" element={<Saigani />} />
       </Routes>
     </div>
   );
