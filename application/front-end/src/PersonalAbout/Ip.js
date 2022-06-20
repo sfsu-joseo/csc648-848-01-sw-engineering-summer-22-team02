@@ -3,16 +3,14 @@ import React from "react";
 function Ip() {
     return (
       <div>
-        <img class= "Ireland_About_Image" src={require('../Images/Ireland_Image.jpeg')} />
-        <h1 className="Ireland_About_Name"> Jonathan Ip</h1>
-        <p className="Ireland_About_Paragraph">Hello, I am Shamar and I am a Computer Science Major at SFSU. This is my last class 
-        and I am expected to graduate at the end of this summer. 
+        <img class= "Ip_About_Image" src={require('../Images/Ip_image.png')} />
+        <h1 className="Ip_About_Name"> Jonathan Ip</h1>
+        <p className="Ip_About_Paragraph">Nice to meet you, I'm Jonathan Ip. I am a SFSU student majoring in Japanese and minoring in Computer Application.
         </p>
-        <p className="Ireland_About_Paragraph">I am most comfortable with the front end part of things,
-         because of this I am a Front End Developer for my team. 
+        <p className="Ip_About_Paragraph">
+          I likes playing video games and enjoy all kinds of Japanese entertainment culture, and I researches a lot on programming so that I can finish making my own game.
         </p>
-        <p className="Ireland_About_Paragraph">I am looking foward to seeing what we will create by the end of this class and the end of
-        summer.
+        <p className="Ip_About_Paragraph">As for this summer, I am looking forward to work with my team to creates our best web app we can.
         </p>
       </div>
     );
