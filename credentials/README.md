@@ -34,10 +34,6 @@
     Please install an SSH client, if you're using windows, or you can use the terminal if your using Linux to connect to the server via SSH.
     To connect to the server from linux, please use the command.
     
-    Please change the file permissions.
-    
-    chmod 600 <path_to_ssh_key_file>
-    
     ssh -i <path_to_ssh_key_file> <ssh_username>@<ssh_url>
     
     In our case the command is:
