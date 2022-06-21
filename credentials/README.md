@@ -43,9 +43,13 @@
     **To access the Database**
     
     In any client that that can connect to MySQL databases.
+    
     Please specify the host as 34.168.15.4.
+    
     Please specify the port as 3306.
+    
     Please specify the username as root.
+    
     Please specify the password as Ks@1234567890.
  
 
