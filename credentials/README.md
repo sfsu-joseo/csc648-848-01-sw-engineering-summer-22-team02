@@ -18,6 +18,33 @@
 7. Database name (basically the name that contains all your tables)
 8. Instructions on how to use the above information.
 
+# Credentials
+
+1. Server IP: 34.136.124.189
+2. SSH Username: kshitizsareen709
+3. SSH Key: This file is included in the credentials folder.
+4. Database URL: 34.168.15.4
+5. Database Port: 3306
+6. Database Username: root
+7. Database Password: Ks@1234567890
+8. Instructions on how to use the above information:
+    **To access the server via SSH**
+    Please download the ssh_key file given in the credentials folder. Store that file in any path that you would wish to store. 
+    Please install an SSH client, if you're using windows, or you can use the terminal if your using Linux to connect to the server via SSH.
+    To connect to the server from linux, please use the command.
+    ssh -i <path to ssh key file> <ssh_username>@<ssh_url>
+    
+    In our case the command is:
+    ssh -i <path to ssh key file> kshitizsareen709@34.136.124.189
+    
+    **To access the Database**
+    In any client that that can connect to MySQL databases.
+    Please specify the host as 34.168.15.4.
+    Please specify the port as 3306.
+    Please specify the username as root.
+    Please specify the password as Ks@1234567890.
+ 
+
 # Most important things to Remember
 ## These values need to kept update to date throughout the semester. <br>
 ## <strong>Failure to do so will result it points be deducted from milestone submissions.</strong><br>
