@@ -36,4 +36,4 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/",router);
 
-app.listen(8080, () => console.log('Server started'));
+app.listen(8080, () => console.log('Server Begins'));
