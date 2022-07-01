@@ -12,6 +12,8 @@ import Ip from "./PersonalAbout/Ip";
 import Islas from "./PersonalAbout/Islas";
 import Guo from "./PersonalAbout/Guo";
 import Saigani from "./PersonalAbout/Saigani";
+import Abiola from "./PersonalAbout/Abiola";
+import Sareen from "./PersonalAbout/Sareen";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path="/PersonalAbout/Islas" element={<Islas />} />
         <Route path="/PersonalAbout/Guo" element={<Guo />} />
         <Route path="/PersonalAbout/Saigani" element={<Saigani />} />
+        <Route path="/PersonalAbout/Abiola" element={<Abiola />} />
+        <Route path="/PersonalAbout/Sareen" element={<Sareen />} />
       </Routes>
     </div>
   );

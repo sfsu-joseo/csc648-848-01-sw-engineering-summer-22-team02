@@ -2,7 +2,6 @@ import React from "react";
 import "./Home.css";
 import "./Navbar.css";
 
-
 const Home = () => {
   return (
     <>
