@@ -1,3 +1,3 @@
-Use YourSportsDB;
+Use Yoursports;
 
 SELECT * FROM Article;

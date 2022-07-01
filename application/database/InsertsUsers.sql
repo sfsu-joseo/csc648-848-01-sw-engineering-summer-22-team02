@@ -1,4 +1,4 @@
-Use YourSportsDB;
+Use Yoursports;
 
 INSERT INTO RegisteredUser (name,username,email,password) VALUES ("Kshitiz Sareen","ksareen","kshitizsareen709@gmail.com","1234567890");
 INSERT INTO RegisteredUser (name,username,email,password) VALUES ("Shamar Ireland","sIreland","sireland@mail.sfsu.edu","1234567890");
