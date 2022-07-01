@@ -4,6 +4,9 @@
     padding-bottom: 30px;
 }
 
+body{
+  background-color: #D2F9D6;
+}
 .button {
     
   background-color: #0d356c; 
@@ -31,7 +34,6 @@
     font-weight: 500;
     padding: 15px 32px;
     margin-top: 18px;
-    
     border-radius: 6px;
     border: none;
 }
