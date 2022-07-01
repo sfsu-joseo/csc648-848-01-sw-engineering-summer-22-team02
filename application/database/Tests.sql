@@ -1,3 +1,3 @@
 Use YourSportsDB;
 
-SELECT * FROM RegisteredUser;
+SELECT * FROM Article;
