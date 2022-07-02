@@ -1,6 +1,8 @@
 import React from "react";
 // import "./Home.css";
 import "./Navbar.css";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   return (
@@ -17,10 +19,11 @@ const Home = () => {
 
       <ul className="secondNavbar">
         <li>
-          <img class="Logo_Img" src={require('./HomePage_Images/YourSports.png')} />
+          <img alt="logo" class="Logo_Img" src={require('./HomePage_Images/YourSports.png')} />
         </li>
         <li className="user_Img">
-        <button><img class="user" src={require('./HomePage_Images/user.png')} /></button>
+        {/* <button><img class="user" src={require('./HomePage_Images/user.png')} /></button> */}
+        <FontAwesomeIcon icon={faUser}  />
         </li>
         <li className="signup">
           <a className="login_signup_click" href="/About">SignUp</a>

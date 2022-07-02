@@ -3,7 +3,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #E8ECC2;
+    /* background-color: #E8ECC2; */
+    background-color: rgb(27, 28, 30);
 }
 
 li {
@@ -26,13 +27,14 @@ li .first_header:hover {
 /* Second Navbar  */
 
 .secondNavbar{
-    background-color:rgb(44,60,68)
+    background-color:rgb(8, 33, 66);
 }
 
 .Logo_Img{
-    width: 120px;
+    width: 280px;
     height: 120px;
-    padding-top: 2px;;
+    padding-top: 5px;
+    padding-left: 10px;
 }
 .user_Img{
     width: 10px;
@@ -78,7 +80,7 @@ li .first_header:hover {
 
 /* Third Navbar  */
 .thirdNavbar {
-    background-color:rgb(44,60,68);
+    background-color:rgb(8, 33, 66);
 }
 
 .thirdNavbar .navbar_align {
@@ -111,6 +113,7 @@ li .first_header:hover {
 .search_bar{
 
     margin-top: 50px;
+    
 }
 
 .search_bar .search_feed{
@@ -120,12 +123,12 @@ li .first_header:hover {
     /* margin-right: 16px; */
     border: none;
     font-size: 20px;
+    border-radius: 20px;
 }
 .search_bar .search_button{
     padding: 10px;
     margin-top: 8px;
     margin-right: 16px;
-    margin-left: 2px;
     border: none;
     font-size: 20px;
     
@@ -140,4 +143,14 @@ li .first_header:hover {
     padding-right: 16px;
     padding-top: 20px;
     margin-left: 15px;
+}
+
+.secondNavbar .user_Img .svg-inline--fa.fa-user {
+    color: rgb(213,222,238);
+    height: 28px;
+    padding-top: 4px;
+}
+
+.secondNavbar .user_Img .svg-inline--fa.fa-user :hover {
+    color: #1DA099;
 }
