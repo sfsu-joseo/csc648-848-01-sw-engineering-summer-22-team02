@@ -18,6 +18,126 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+li .first_header:hover {
     background-color: #1DA099;
+}
+
+
+/* Second Navbar  */
+
+.secondNavbar{
+    background-color:rgb(44,60,68)
+}
+
+.Logo_Img{
+    width: 120px;
+    height: 120px;
+    padding-top: 2px;;
+}
+.user_Img{
+    width: 10px;
+    height: 10px;
+    margin-right:50px ;
+    margin-top: 15px;
+    float: right;
+    cursor: pointer;
+}
+
+.secondNavbar .signup{
+    padding-right: 20px;
+    float: right;
+    color: rgb(213,222,238);
+    margin-top: 8px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.secondNavbar .login{
+    padding-right: 2px;
+    margin-top: 8px;
+    float: right;
+    color: rgb(213,222,238);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.secondNavbar .signup .login_signup_click{
+    color: rgb(213,222,238);
+}
+
+.secondNavbar .login .login_signup_click{
+    color: rgb(213,222,238);
+}
+
+.secondNavbar .signup :hover{
+    color: #1DA099;
+}
+.secondNavbar .login :hover{
+    color: #1DA099;
+}
+
+/* Third Navbar  */
+.thirdNavbar {
+    background-color:rgb(44,60,68);
+}
+
+.thirdNavbar .navbar_align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thirdNavbar .twitter_feed{
+    color: rgb(213,222,238);
+    font-size: 20px;
+
+}
+.thirdNavbar .live_games{
+    color: rgb(213,222,238);
+    font-size: 20px;
+}
+.thirdNavbar .player_stats{
+    color: rgb(213,222,238);
+    font-size: 20px;
+    
+}
+
+.thirdNavbar .navbar_align :hover{ 
+    color: #1DA099;
+}
+
+/* Search Bar */
+
+.search_bar{
+
+    margin-top: 50px;
+}
+
+.search_bar .search_feed{
+    padding: 10px;
+    padding-right: 60px;
+    margin-top: 8px;
+    /* margin-right: 16px; */
+    border: none;
+    font-size: 20px;
+}
+.search_bar .search_button{
+    padding: 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    margin-left: 2px;
+    border: none;
+    font-size: 20px;
+    
+    
+}
+
+.search_bar .search_button{
+    background:url(./HomePage_Images/SearchIcon.png) no-repeat;
+    cursor:pointer;
+    border:none;
+    padding-bottom: 10px;
+    padding-right: 16px;
+    padding-top: 20px;
+    margin-left: 15px;
 }
