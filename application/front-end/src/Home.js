@@ -1,9 +1,14 @@
 import React from "react";
+import { useState } from "react";
 // import "./Home.css";
 import "./Navbar.css";
+import InputSubmission from "./InputSubmission";
+
 
 const Home = () => {
+  
   return (
+  
     <>
       <ul className="firstNavbar">
         <li>
@@ -45,15 +50,28 @@ const Home = () => {
           </li>
         </div>
       </ul>
+      <InputSubmission />
 
-      <div className="search_bar">
+      {/* <div className="search_bar">
         
-        <input type="text" placeholder="Search Feed" className="search_feed"></input>
+        
+        <input placeholder="Search Feed"  />
+     
         <button className="search_button" type="submit"></button>
-      </div>
+      </div> */}
     </>
   );
 };
+
+
+//   const requestUrl = "url of whatever you want to make a request to";
+// fetch('/search',)
+// .then(response => response.json())
+// .then(data => { 
+//    // do something with the data the API has returned
+// })
+
+
 // </div>
 
 export default Home;
