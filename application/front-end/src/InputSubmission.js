@@ -22,7 +22,7 @@ var axios = require("axios");
 
     axios(config)
       .then(function (response) {
-        JSON.parse(response.data);
+       // JSON.parse(response.data);
         console.log(JSON.stringify(response.data));
       })
       .catch(function (error) {

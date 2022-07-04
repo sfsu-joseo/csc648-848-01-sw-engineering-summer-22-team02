@@ -1,9 +1,9 @@
 import React from "react";
-import { useState } from "react";
 // import "./Home.css";
 import "./Navbar.css";
 import InputSubmission from "./InputSubmission";
-
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+// import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   
@@ -22,9 +22,11 @@ const Home = () => {
 
       <ul className="secondNavbar">
         <li>
-          <img class="Logo_Img" src={require('./HomePage_Images/YourSports.png')} />
+          <img alt="logo" class="Logo_Img" src={require('./HomePage_Images/YourSports.png')} />
         </li>
         <li className="user_Img">
+          {/* <button><img class="user" src={require('./HomePage_Images/user.png')} /></button> */}
+        {/* <FontAwesomeIcon icon={faUser}  /> */}
         <button><img class="user" src={require('./HomePage_Images/user.png')} /></button>
         </li>
         <li className="signup">
@@ -52,26 +54,9 @@ const Home = () => {
       </ul>
       <InputSubmission />
 
-      {/* <div className="search_bar">
-        
-        
-        <input placeholder="Search Feed"  />
-     
-        <button className="search_button" type="submit"></button>
-      </div> */}
     </>
   );
 };
 
-
-//   const requestUrl = "url of whatever you want to make a request to";
-// fetch('/search',)
-// .then(response => response.json())
-// .then(data => { 
-//    // do something with the data the API has returned
-// })
-
-
-// </div>
 
 export default Home;
