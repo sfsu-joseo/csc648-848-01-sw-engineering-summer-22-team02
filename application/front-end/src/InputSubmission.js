@@ -13,11 +13,11 @@ function handlesearch(e) {
 var axios = require("axios");
 
     var config = {
-      method: "get",
+      method: "post",
       url: "http://34.136.124.189:8080/api/searchnews/search",
-      date: "2022-06-01",
-      sport: sport,
-      searchText: InputText,
+      data:{
+      sport: "baseball",
+      }
     };
 
     axios(config)
