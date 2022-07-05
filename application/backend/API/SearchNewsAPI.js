@@ -4,6 +4,12 @@ const con = require("../conn");
 const searchNewsRouter = express.Router();
 
 searchNewsRouter.get("/search", (req, res) => {
+
+    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+
+
     let date = req.body.date == "" || req.body.date == null ? null : req.body.date.trim().toLowerCase();
     let sport = req.body.sport == "" || req.body.sport == null ? null : req.body.sport.trim().toLowerCase();
     let searchText = req.body.searchText == "" || req.body.searchText == null ? null : req.body.searchText.trim().toLowerCase();
@@ -46,7 +52,6 @@ searchNewsRouter.get("/search", (req, res) => {
         })
         res.json(newResults)
       });
-  
   });
 
 module.exports=searchNewsRouter;
