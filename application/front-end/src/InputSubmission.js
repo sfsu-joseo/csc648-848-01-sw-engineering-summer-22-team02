@@ -14,8 +14,8 @@ var axios = require("axios");
 
     var config = {
       method: "get",
-      url: "http://localhost:3000/",
-      date: date,
+      url: "http://34.136.124.189:8080/api/searchnews/search",
+      date: "2022-06-01",
       sport: sport,
       searchText: InputText,
     };
