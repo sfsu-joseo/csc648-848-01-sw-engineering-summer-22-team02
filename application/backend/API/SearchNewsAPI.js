@@ -3,7 +3,7 @@ const con = require("../conn");
 
 const searchNewsRouter = express.Router();
 
-searchNewsRouter.get("/search", (req, res) => {
+searchNewsRouter.post("/search", (req, res) => {
 
     res.header('Access-Control-Allow-Origin', "*");
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
