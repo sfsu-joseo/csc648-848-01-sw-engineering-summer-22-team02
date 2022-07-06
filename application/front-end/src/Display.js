@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "./Home.css";
 //image_url
 //heading
 //subheading
@@ -35,12 +36,12 @@ function Display() {
         data.map((data) => {
           return (
             <div className="data">
-              <img src={data.image_URL}></img>
-              <h3>{data.heading}</h3>
-              <h3>{data.subHeading}</h3>
-              <h3>{data.posttime}</h3>
-              <h3>{data.Author}</h3>
-              <h3>{data.sport}</h3>
+              <img className="display_image" src={data.image_URL}></img>
+              <h3 className="data_text">{data.heading}</h3>
+              <h3 className="data_text">{data.subHeading}</h3>
+              <h3 className="data_text">{data.posttime}</h3>
+              <h3 className="data_text">{data.Author}</h3>
+              <h3 className="data_text">{data.sport}</h3>
             </div>
           );
         })

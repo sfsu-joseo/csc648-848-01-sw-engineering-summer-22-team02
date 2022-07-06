@@ -141,8 +141,8 @@ li .first_header:hover {
     border:none;
     padding-bottom: 10px;
     padding-right: 16px;
-    padding-top: 20px;
-    margin-left: 15px;
+    padding-top: 18px;
+    margin-left: 20px;
 }
 
 .dropbtn {
@@ -188,7 +188,7 @@ li .first_header:hover {
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: #1DA099;
   }
 
   .dateSelect{

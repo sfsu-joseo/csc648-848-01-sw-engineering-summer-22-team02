@@ -39,6 +39,44 @@ body{
     border: none;
 }
 
+/* Search and Filter Formatting */
+
+.dropdown{
+  padding-left: 10px;
+  
+  
+}
+.dropdown .dropbtn{
+  background: #0d356c;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: none;
+}
+
+.dropdown .dropdown-content{
+  padding: 10px;
+}
+.dropdown .dropdown-content .select_format{
+  color:#0d356c;
+  border: none;
+}
+/* Date Selection Formatting */
+
+.dateSelect{
+  margin-left: 10px;
+  margin-right:10px;
+  margin-bottom: 10px;
+  color: #0d356c;
+  font-size: 15px;
+  border-radius: 20px;
+  font-family: 'Helvetica', Arial, Lucida Grande, sans-serif;
+  
+}
+
+.search_bar .search_feed{
+  margin-right: 15px;
+}
+
 /* Ireland About page CSS styles */
 .Ireland_About_Image{
   width: 350px;
@@ -69,4 +107,29 @@ body{
 
 .About_Paragraph {
   text-align: center;
+}
+
+
+/* Display Image */
+.data .display_image{
+  height: 350px;
+  width: 650px;
+  border-radius: 35px;
+  padding-top: 20px;
+}
+
+.data{
+  background-color: rgb(8, 33, 66);
+  border-radius: 20px;
+  margin-left: 55px;
+  margin-right: 55px;
+  margin-bottom: 50px;
+  
+}
+
+.data .data_text{
+  color: rgb(213,222,238);
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Display from "./Display.js";
+import "./Navbar.css";
 
 function InputSubmission() {
   const [InputText, setInputText] = useState("");
@@ -40,27 +41,28 @@ function InputSubmission() {
         onChange={(e) => setInputText(e.target.value)}
       />
 
-      <button
-        className="search_button"
-        onClick={handlesearch}
-        type="submit"
-      ></button>
       <input
         type="date"
         className="dateSelect"
         onChange={(e) => setDate(e.target.value)}
       />
       <div className="dropdown">
-        <button class="dropbtn"></button>
+        <button class="dropbtn">Select Sport</button>
         <div className="dropdown-content">
-          <select onChange={(e) => setSport(e.target.value)}>
-            <option value="">Select One …</option>
+          <select className="select_format" onChange={(e) => setSport(e.target.value)}>
+            <option className="selec" value="">Select One …</option>
             <option value="Basketball">Basketball</option>
             <option value="Baseball">Baseball</option>
           </select>
         </div>
       </div>
+      <button
+        className="search_button"
+        onClick={handlesearch}
+        type="submit"
+      ></button>
       <div className="display">
+        
         <Display />
       </div>
     </div>
