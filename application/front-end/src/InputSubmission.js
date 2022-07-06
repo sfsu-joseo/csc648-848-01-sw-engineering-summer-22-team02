@@ -1,37 +1,36 @@
-//import userEvent from '@testing-library/user-event';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Display from "./Display.js";
 import "./Navbar.css";
 
 function InputSubmission() {
+  const [data, setData] = useState("");
   const [InputText, setInputText] = useState("");
   const [date, setDate] = useState("");
   const [sport, setSport] = useState("");
 
-  function handlesearch(e) {
-    var axios = require("axios");
-
+  function handlesearch() {
     var config = {
       method: "post",
       url: "http://34.136.124.189:8080/api/searchnews/search",
       data: {
-        sport: "baseball",
+        sport: sport,
+        searchText: InputText,
+        date: date,
       },
     };
 
     axios(config)
       .then(function (response) {
-        // JSON.parse(response.data);\
-        console.log(InputText);
-        console.log(date);
-        console.log(sport);
-        console.log(JSON.stringify(response.data));
+        setData(response.data);
+        console.log(response.data)
       })
       .catch(function (error) {
         console.log(error);
       });
   }
+  useEffect(() => {
+    handlesearch();
+  }, []);
 
   return (
     <div className="search_bar">
@@ -49,8 +48,13 @@ function InputSubmission() {
       <div className="dropdown">
         <button class="dropbtn">Select Sport</button>
         <div className="dropdown-content">
-          <select className="select_format" onChange={(e) => setSport(e.target.value)}>
-            <option className="selec" value="">Select One …</option>
+          <select
+            className="select_format"
+            onChange={(e) => setSport(e.target.value)}
+          >
+            <option className="selec" value="">
+              Select One …
+            </option>
             <option value="Basketball">Basketball</option>
             <option value="Baseball">Baseball</option>
           </select>
@@ -61,10 +65,26 @@ function InputSubmission() {
         onClick={handlesearch}
         type="submit"
       ></button>
-      <div className="display">
-        
-        <Display />
-      </div>
+      {data ? (
+        data.map((data) => {
+          return (
+            <div className="data">
+              <img
+                className="display_image"
+                alt="Article "
+                src={data.image_URL}
+              ></img>
+              <h3 className="data_text">{data.heading}</h3>
+              <h3 className="data_text">{data.subHeading}</h3>
+              <h3 className="data_text">{data.posttime}</h3>
+              <h3 className="data_text">{data.Author}</h3>
+              <h3 className="data_text">{data.sport}</h3>
+            </div>
+          );
+        })
+      ) : (
+        <h3>No data yet</h3>
+      )}
     </div>
   );
 }
