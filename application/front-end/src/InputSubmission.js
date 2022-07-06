@@ -14,9 +14,9 @@ function InputSubmission() {
     var config = {
       method: "post",
       url: "http://34.136.124.189:8080/api/searchnews/search",
-      date: date,
-      sport: sport,
-      searchText: InputText,
+      data: {
+        sport: "baseball",
+      },
     };
 
     axios(config)
