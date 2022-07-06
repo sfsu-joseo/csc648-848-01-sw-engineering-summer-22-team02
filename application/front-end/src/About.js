@@ -13,7 +13,7 @@ function About() {
       <div className="buttons">
         <h3>
           <a className="button-link" href="/PersonalAbout/Sareen">
-            Kshitiz Sareen Test
+            Kshitiz Sareen
           </a>
         </h3>
 
