@@ -3,6 +3,7 @@ const router = require('./API/router');
 const searchNewsRouter = require("./API/SearchNewsAPI");
 const bodyParser= require('body-parser');
 const cors = require('cors');
+const accountRouter = require("./API/accountAPI");
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use(bodyParser.urlencoded({
 app.use("/",router);
 
 app.use('/api/searchnews/',searchNewsRouter);
+app.use('/api/account/',accountRouter);
 
 
 
