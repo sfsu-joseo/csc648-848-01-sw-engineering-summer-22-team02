@@ -39,10 +39,15 @@ li .first_header:hover {
 .user_Img{
     width: 10px;
     height: 10px;
-    margin-right:50px ;
+    margin-right:85px ;
     margin-top: 15px;
     float: right;
     cursor: pointer;
+    
+}
+
+.secondNavbar .iconn{
+    padding: 0;
 }
 
 .secondNavbar .signup{
@@ -112,7 +117,7 @@ li .first_header:hover {
 
 .search_bar{
 
-    margin-top: 50px;
+    margin-top: 40px;
     
 }
 
@@ -124,6 +129,7 @@ li .first_header:hover {
     border: none;
     font-size: 20px;
     border-radius: 20px;
+    margin-bottom: 40px;
 }
 .search_bar .search_button{
     padding: 10px;

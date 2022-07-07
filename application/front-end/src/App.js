@@ -6,6 +6,7 @@ import About from "./About";
 import SignUp from "./SignUp";
 import { Route, Link, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
+import TempPage from "./TempPage";
 
 // Import other team member's file names
 import Ireland from "./PersonalAbout/Ireland";
@@ -20,9 +21,10 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/TempPage" element={<TempPage />} />
 
         {/* Route other team member's file names */}
         <Route path="/PersonalAbout/Ireland" element={<Ireland />} />

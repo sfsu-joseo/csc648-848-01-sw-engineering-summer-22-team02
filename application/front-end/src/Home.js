@@ -9,6 +9,13 @@ import { Link } from "react-router-dom";
 // import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
+
+
+function popup(){
+  alert("will be implemented in the next prototype");
+}
+
+
   return (
     <>
       <ul className="firstNavbar">
@@ -26,21 +33,26 @@ const Home = () => {
 
       <ul className="secondNavbar">
         <li>
+        <a className="iconn" href="/Home">
           <img
             alt="logo"
             class="Logo_Img"
             src={require("./HomePage_Images/YourSports.png")}
           />
+          </a>
         </li>
         <li className="user_Img">
           {/* <button><img class="user" src={require('./HomePage_Images/user.png')} /></button> */}
           {/* <FontAwesomeIcon icon={faUser}  /> */}
-          <button>
+          
+          <button onClick={popup}>
+          {/* <a className="iconn" href="/TempPage"> */}
             <img
               class="user"
               alt="User"
               src={require("./HomePage_Images/user.png")}
             />
+            {/* </a> */}
           </button>
         </li>
         <li className="signup">
@@ -48,9 +60,8 @@ const Home = () => {
             SignUp
           </a>
         </li>
-        //src\TempPage.js
         <li className="login">
-          <a className="login_signup_click" href="/TempPage">
+          <a onClick={popup} className="login_signup_click" href="/Home">
             Login
           </a>
         </li>
@@ -59,17 +70,17 @@ const Home = () => {
       <ul className="thirdNavbar">
         <div className="navbar_align">
           <li className="third_align">
-            <a className="twitter_feed" href="/TempPage">
+            <a onClick={popup} className="twitter_feed" href="/Home">
               Twitter Feeds
             </a>
           </li>
           <li>
-            <a className="live_games" href="/TempPage">
+            <a onClick={popup} className="live_games" href="/Home">
               Live Games
             </a>
           </li>
           <li>
-            <a className="player_stats" href="/TempPage">
+            <a onClick={popup} className="player_stats" href="/Home">
               Player Statistics
             </a>
           </li>
