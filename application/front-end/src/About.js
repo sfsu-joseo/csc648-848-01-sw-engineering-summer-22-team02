@@ -4,6 +4,18 @@ import "./Home.css";
 function About() {
   return (
     <>
+      <ul className="firstNavbar">
+        <li>
+          <a className="first_header" href="/">
+            Home
+          </a>
+        </li>
+        <li>
+          <a className="first_header" href="/About">
+            About
+          </a>
+        </li>
+      </ul>
       <div className="header">
         <h1> Software Engineering Class SFSU </h1>
         <h1>Summer 2022 </h1>

@@ -2,7 +2,7 @@ import React from "react";
 // import "./Home.css";
 import "./Navbar.css";
 import InputSubmission from "./InputSubmission";
-
+import { Link } from "react-router-dom";
 
 // import Display from "./Display.js";
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -36,7 +36,11 @@ const Home = () => {
           {/* <button><img class="user" src={require('./HomePage_Images/user.png')} /></button> */}
           {/* <FontAwesomeIcon icon={faUser}  /> */}
           <button>
-            <img class="user" alt="User" src={require("./HomePage_Images/user.png")} />
+            <img
+              class="user"
+              alt="User"
+              src={require("./HomePage_Images/user.png")}
+            />
           </button>
         </li>
         <li className="signup">
@@ -44,8 +48,9 @@ const Home = () => {
             SignUp
           </a>
         </li>
+        //src\TempPage.js
         <li className="login">
-          <a className="login_signup_click" href="/About">
+          <a className="login_signup_click" href="/TempPage">
             Login
           </a>
         </li>
@@ -54,24 +59,23 @@ const Home = () => {
       <ul className="thirdNavbar">
         <div className="navbar_align">
           <li className="third_align">
-            <a className="twitter_feed" href="">
+            <a className="twitter_feed" href="/TempPage">
               Twitter Feeds
             </a>
           </li>
           <li>
-            <a className="live_games" href="">
+            <a className="live_games" href="/TempPage">
               Live Games
             </a>
           </li>
           <li>
-            <a className="player_stats" href="">
+            <a className="player_stats" href="/TempPage">
               Player Statistics
             </a>
           </li>
         </div>
       </ul>
       <InputSubmission />
-      
     </>
   );
 };
