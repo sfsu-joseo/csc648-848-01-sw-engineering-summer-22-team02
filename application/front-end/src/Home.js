@@ -2,6 +2,8 @@ import React from "react";
 // import "./Home.css";
 import "./Navbar.css";
 import InputSubmission from "./InputSubmission";
+
+
 // import Display from "./Display.js";
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 // import { faUser } from "@fortawesome/free-solid-svg-icons";
@@ -38,7 +40,7 @@ const Home = () => {
           </button>
         </li>
         <li className="signup">
-          <a className="login_signup_click" href="/About">
+          <a className="login_signup_click" href="/SignUp">
             SignUp
           </a>
         </li>

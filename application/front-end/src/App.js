@@ -3,6 +3,7 @@ import React from "react";
 import "./App.css";
 import Home from "./Home";
 import About from "./About";
+import SignUp from "./SignUp";
 import { Route, Link, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
 
@@ -19,8 +20,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="" element={<Home />} />
         <Route path="/About" element={<About />} />
+        <Route path="/SignUp" element={<SignUp />} />
 
         {/* Route other team member's file names */}
         <Route path="/PersonalAbout/Ireland" element={<Ireland />} />
