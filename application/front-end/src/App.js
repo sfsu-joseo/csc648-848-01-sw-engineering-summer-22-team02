@@ -7,6 +7,8 @@ import SignUp from "./SignUp";
 import { Route, Link, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
 import TempPage from "./TempPage";
+import ArticleView from "./ArticleView";
+import UploadArticle from "./UploadArticle";
 
 // Import other team member's file names
 import Ireland from "./PersonalAbout/Ireland";
@@ -26,6 +28,8 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/TempPage" element={<TempPage />} />
+        <Route path="/ArticleView" element={<ArticleView />} />
+        <Route path="/UploadArticle" element={<UploadArticle />} />
 
         {/* Route other team member's file names */}
         <Route path="/PersonalAbout/Ireland" element={<Ireland />} />

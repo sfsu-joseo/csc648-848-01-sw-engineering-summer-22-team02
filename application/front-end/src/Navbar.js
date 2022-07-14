@@ -1,7 +1,8 @@
 import React from "react";
 import "./Navbar.css";
 import { Link} from "react-router-dom";
-
+import "./ArticleView";
+import "./UploadArticle";
 
 const Navbar = () => {
   return (
@@ -61,6 +62,11 @@ const Navbar = () => {
         <li>
           <a className="player_stats" href="/TempPage">
             Player Statistics
+          </a>
+        </li>
+        <li>
+          <a className="player_stats" href="/UploadArticle">
+            Upload Articles
           </a>
         </li>
         <li>

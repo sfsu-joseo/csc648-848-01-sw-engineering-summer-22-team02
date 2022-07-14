@@ -141,3 +141,65 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+/* Article View Formating */
+
+.article .author{
+  text-align: left;
+  margin-bottom: 5px;
+  color: rgb(126, 123, 123);
+  margin-left: 45px;
+  margin-right: 50px;
+}
+
+.article .date{
+ text-align: left;
+ color: rgb(126, 123, 123);
+ margin-left: 45px;
+ margin-right: 50px;
+}
+
+.article .heading{
+  text-align: left;
+  margin-left: 45px;
+  margin-right: 50px;
+  padding-top: 30px;
+}
+
+.article .sub-heading{
+  text-align: left;
+  font-weight: 400;
+  margin-left: 45px;
+  margin-right: 50px;
+}
+
+.article .image{
+  height: 500px;
+  width: 900px;
+  margin-bottom: 45px;
+  
+  
+}
+.article .image .article_image{
+  height: 500px;
+  width: 900px;
+  margin-left: 45px;
+  
+  
+}
+.article .content{
+ text-align: left;
+ font-weight: 650;
+ margin-left: 45px;
+ margin-right: 50px;
+}
+.article .conclusion{
+  text-align: left;
+  font-weight: 650;
+  margin-left: 45px;
+  margin-right: 50px;
+}
+
+/* Upload Article Formating  */
+

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Navbar.css";
+import ArticleView from "./ArticleView";
 
 function InputSubmission() {
   const [data, setData] = useState("");
@@ -81,11 +82,13 @@ function InputSubmission() {
                   <h3 className="data_text">{data.sport}</h3>
                 </div>
                 <div className="column2">
+                  <a href="/ArticleView">
                   <img
                     className="image"
                     alt="Article "
                     src={data.image_URL}
                   ></img>
+                  </a>
                 </div>
               </div>
             </>
