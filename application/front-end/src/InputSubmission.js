@@ -40,52 +40,64 @@ function InputSubmission() {
         onChange={(e) => setInputText(e.target.value)}
       />
 
-      <input
-        type="date"
-        className="dateSelect"
-        onChange={(e) => setDate(e.target.value)}
-      />
-      <div className="dropdown">
-        <button class="dropbtn">Select Sport</button>
-        <div className="dropdown-content">
-          <select
-            className="select_format"
-            onChange={(e) => setSport(e.target.value)}
-          >
-            <option className="selec" value="">
-              Select One …
-            </option>
-            <option value="Basketball">Basketball</option>
-            <option value="Baseball">Baseball</option>
-          </select>
-        </div>
-      </div>
       <button
         className="search_button"
         onClick={handlesearch}
         type="submit"
       ></button>
+
+      <div className="filter_section">
+        <input
+          type="date"
+          className="dateSelect"
+          onChange={(e) => setDate(e.target.value)}
+        />
+        <div className="dropdown">
+          <button class="dropbtn">Select Sport</button>
+          <div className="dropdown-content">
+            <select
+              className="select_format"
+              onChange={(e) => setSport(e.target.value)}
+            >
+              <option className="selec" value="">
+                Select One …
+              </option>
+              <option value="Basketball">Basketball</option>
+              <option value="Baseball">Baseball</option>
+            </select>
+          </div>
+        </div>
+      </div>
       {data ? (
         data.map((data) => {
           return (
-            <div className="data">
-              <img
-                className="display_image"
-                alt="Article "
-                src={data.image_URL}
-              ></img>
-              <h3 className="data_text">{data.heading}</h3>
-              <h3 className="data_text">{data.subHeading}</h3>
-              <h3 className="data_text">{data.posttime}</h3>
-              <h3 className="data_text">{data.Author}</h3>
-              <h3 className="data_text">{data.sport}</h3>
-            </div>
+            <>
+              <div className="row">
+              <div className="column1">
+                  <h3 className="data_text">{data.heading}</h3>
+                  <h3 className="data_text">{data.subHeading}</h3>
+                  <h3 className="data_text">{data.posttime}</h3>
+                  <h3 className="data_text">{data.Author}</h3>
+                  <h3 className="data_text">{data.sport}</h3>
+                </div>
+                <div className="column2">
+                  <img
+                    className="image"
+                    alt="Article "
+                    src={data.image_URL}
+                  ></img>
+                </div>
+              </div>
+            </>
           );
         })
       ) : (
         <h3>No data yet</h3>
       )}
     </div>
+
+
+
   );
 }
 

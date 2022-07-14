@@ -27,12 +27,12 @@ li .first_header:hover {
 /* Second Navbar  */
 
 .secondNavbar{
-    background-color:rgb(8, 33, 66);
+    background-color:rgb(0,19,39,255);
 }
 
 .Logo_Img{
-    width: 280px;
-    height: 120px;
+    width: 380px;
+    height: 80px;
     padding-top: 5px;
     padding-left: 10px;
 }
@@ -85,7 +85,7 @@ li .first_header:hover {
 
 /* Third Navbar  */
 .thirdNavbar {
-    background-color:rgb(8, 33, 66);
+    background-color:rgb(44, 82, 138);
 }
 
 .thirdNavbar .navbar_align {
@@ -117,22 +117,23 @@ li .first_header:hover {
 
 .search_bar{
 
-    margin-top: 40px;
+    margin-top: 20px;
     
 }
 
 .search_bar .search_feed{
     padding: 10px;
-    padding-right: 60px;
-    margin-top: 80px;
+    padding-right: 120px;
+    margin-top: 30px;
     /* margin-right: 16px; */
     border: none;
     font-size: 20px;
     border-radius: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+    margin-left: 60px;
 }
 .search_bar .search_button{
-    padding: 10px;
+    padding-left: 10px;
     margin-top: 8px;
     margin-right: 16px;
     border: none;
@@ -148,7 +149,7 @@ li .first_header:hover {
     padding-bottom: 10px;
     padding-right: 16px;
     padding-top: 18px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .dropbtn {
@@ -191,6 +192,16 @@ li .first_header:hover {
     display: block;
   }
   
+  .filter_section{
+     padding-left: 15px;
+  }
+
+  .filter_section .dropdown .dropbtn{
+    background:rgb(44, 82, 138);
+    margin-right: 30px;
+    margin-bottom: 25px;
+  }
+
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {
     background-color: #1DA099;
@@ -201,4 +212,46 @@ li .first_header:hover {
   }
   input{
     position: relative;
+  }
+
+
+  .search_bar .row{
+     display: flex;
+     background-color: rgb(44, 82, 138);
+     margin-bottom: 35px;
+     margin-left: 160px;
+     margin-right: 160px;
+     border-radius: 30px;
+  }
+
+  .search_bar .column1{
+      flex: 50%;
+
+  }
+
+  .search_bar .row .column1{
+      padding-left: 50px;
+      padding-right: 50px;
+  }
+
+  .search_bar .column1 .data_text{
+      color: rgb(213,222,238);
+      font-weight: 500;
+  }
+
+  .search_bar .column2{
+    flex: 50%;
+
+}
+
+.search_bar .row .column2{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: auto;
+}
+
+  .search_bar .row .column2 .image{
+      height: 150px;
+      width: 250px;
+      border-radius: 30px;
   }
