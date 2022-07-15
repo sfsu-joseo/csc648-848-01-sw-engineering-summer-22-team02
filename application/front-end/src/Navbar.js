@@ -1,8 +1,9 @@
 import React from "react";
 import "./Navbar.css";
-import { Link} from "react-router-dom";
 import "./ArticleView";
 import "./UploadArticle";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faUserGear} from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   return (
@@ -30,6 +31,9 @@ const Navbar = () => {
         />
         </a>
       </li>
+      <li className="gear">
+      <FontAwesomeIcon icon={faUserGear} />
+      </li>
       <li className="signup">
         <a className="login_signup_click" href="/SignUp">
           Signup
@@ -50,11 +54,6 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a className="live_games" href="/TempPage">
-          Twitter Feeds
-          </a>
-        </li>
-        <li>
           <a className="player_stats" href="/TempPage">
             Games
           </a>
@@ -67,6 +66,11 @@ const Navbar = () => {
         <li>
           <a className="player_stats" href="/UploadArticle">
             Upload Articles
+          </a>
+        </li>
+        <li>
+          <a className="live_games" href="/TempPage">
+          Dashboard
           </a>
         </li>
         <li>

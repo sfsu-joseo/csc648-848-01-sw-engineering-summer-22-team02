@@ -36,14 +36,21 @@ li .first_header:hover {
     padding-top: 5px;
     padding-left: 10px;
 }
-.user_Img{
-    width: 10px;
-    height: 10px;
-    margin-right:85px ;
-    margin-top: 15px;
+.secondNavbar .gear{
+    margin-right:35px ;
+    margin-top: 22px;
     float: right;
     cursor: pointer;
+    color: white;
     
+}
+
+.secondNavbar .gear .svg-inline--fa.fa-user-gear{
+    width: 29px;
+    height: 29px;
+}
+.secondNavbar .gear .svg-inline--fa.fa-user-gear:hover{
+    /* background-color: #1DA099; */
 }
 
 .secondNavbar .iconn{
