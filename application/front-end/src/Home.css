@@ -201,5 +201,128 @@ body{
   margin-right: 50px;
 }
 
-/* Upload Article Formating  */
+/* Intoduction section */
+.search_bar .into .statement1{
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 40px;
+  color: rgb(79, 77, 77);
+}
+.search_bar .into .statement2{
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 45px;
+  color: rgb(79, 77, 77);
+}
 
+/* Upload Article Formating  */
+.upload{
+  float: left;
+  margin-left: 45px;
+}
+
+ .upload .heading{
+  /* width: 100%; */
+  /* padding: 12px 20px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-right: 500px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding-right: 290px;
+  margin-top: 80px;
+  font-size:xx-large;
+  font-weight: bolder;
+  padding-left: 20px;
+}
+
+.upload .sub{
+  /* width: 100%; */
+  /* padding: 12px 20px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* margin-right: 500px; */
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding-right: 450px;
+  font-weight: bolder;
+  font-size: large;
+  padding-left: 20px;
+}
+
+.upload .image{
+  padding-right:200px ;
+  padding-top: 180px;
+  padding-bottom: 180px;
+  padding-left: 200px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size:x-large;
+  font-weight: bolder;
+  
+}
+
+.upload .intro{
+  width: 100%;
+  /* padding: 12px 20px; */
+  padding-right: 1000px;
+  margin: 20px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding-bottom: 100px;
+  font-weight:bolder;
+  font-size:medium ;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+.upload .content{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 20px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding-bottom: 100px;
+  font-weight: bolder;
+  font-size: medium;
+}
+.upload .conclusion{
+  width: 100%;
+  padding: 12px 20px;
+  padding-bottom: 26px;
+  margin: 20px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-weight: bolder;
+  font-size:medium ;
+}
+
+.upload .upload_button{
+  background-color: rgb(23, 71, 134); /* Green */
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  padding-left: 90px;
+  padding-right: 90px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
