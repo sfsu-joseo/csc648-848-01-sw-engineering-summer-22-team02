@@ -5,6 +5,8 @@ import "./SignUp.css"
 
 
 const UploadArticle = () => {
+
+    
     return (
         <>
             <Navbar />
@@ -19,22 +21,25 @@ const UploadArticle = () => {
                     type="text"
                     placeholder="Sub-Heading"
                 />
-                <input
+                {/* <input
+                    type="file"
                     className="image"
-                    type="text"
-                    placeholder="Image"
-                />
-                <input
-                    className="intro"
+                    
+                /> */}
+                  <label for="files" classname="btn">Select Image</label>
+                    <input id="files"  style={{visibility:"hidden"}} type="file"></input>
+                    
+                <textarea
+                    className="content"
                     type="text"
                     placeholder="Introduction"
                 />
-                <input
-                    className="content"
+                <textarea
+                    className="conclusion"
                     type="text"
                     placeholder="Content"
                 />
-                <input
+                 <textarea
                     className="conclusion"
                     type="text"
                     placeholder="Conclusion"

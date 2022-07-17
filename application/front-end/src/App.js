@@ -9,6 +9,8 @@ import Navbar from "./Navbar";
 import TempPage from "./TempPage";
 import ArticleView from "./ArticleView";
 import UploadArticle from "./UploadArticle";
+import Login from "./Login";
+import Account_Settings from "./Account_Settings";
 
 // Import other team member's file names
 import Ireland from "./PersonalAbout/Ireland";
@@ -27,9 +29,11 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/TempPage" element={<TempPage />} />
         <Route path="/ArticleView" element={<ArticleView />} />
         <Route path="/UploadArticle" element={<UploadArticle />} />
+        <Route path="/Account_Settings" element={<Account_Settings />} />
 
         {/* Route other team member's file names */}
         <Route path="/PersonalAbout/Ireland" element={<Ireland />} />

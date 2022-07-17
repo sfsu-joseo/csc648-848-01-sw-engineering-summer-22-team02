@@ -32,7 +32,7 @@ const Navbar = () => {
         </a>
       </li>
       <li className="gear">
-      <FontAwesomeIcon icon={faUserGear} />
+      <a className="settings" href="/Account_Settings"><FontAwesomeIcon icon={faUserGear} /></a>
       </li>
       <li className="signup">
         <a className="login_signup_click" href="/SignUp">
@@ -40,7 +40,7 @@ const Navbar = () => {
         </a>
       </li>
       <li className="login">
-        <a className="login_signup_click" href="/TempPage">
+        <a className="login_signup_click" href="/Login">
           Login
         </a>
       </li>

@@ -36,5 +36,86 @@
     padding-left: 90px;
     padding-right: 90px;
     border-radius: 20px;
+}
+
+.Signup_form .Signup_button:hover{
+    background-color:#1DA099 ;
+    transition:0.3s;
+}
+
+
+
+.account_buttons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.account_buttons .reset{
+    display: block;
+    background-color: rgb(23, 71, 134); /* Green */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+.account_buttons .reset:hover{
+    background-color: #1DA099;
+    transition:0.27s;
+}
+
+
+.account_buttons .logout{
+    display: block;
+    background-color: rgb(23, 71, 134); /* Green */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    padding-left: 83px;
+    padding-right: 83px;
+    border-radius: 20px;
     
+}
+.account_buttons .logout:hover{
+    background-color: #1DA099;
+    transition:0.27s;
+}
+
+.account_buttons .delete{
+    display: block;
+    background-color: rgb(23, 71, 134); /* Green */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    padding-left: 53px;
+    padding-right: 53px;
+    border-radius: 20px;
+}
+.account_buttons .delete:hover{
+    background-color: #1DA099;
+    transition:0.27s;
+    
+}
+
+.Signup_form .check{
+    text-align: right;
+    margin-right: 50px;
+    font-weight: 600;
+    color: rgb(111, 108, 108);
+    
+}
+.account_buttons .link{
+    text-decoration: none;
 }
