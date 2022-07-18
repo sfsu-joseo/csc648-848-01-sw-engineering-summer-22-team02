@@ -49,8 +49,6 @@ body{
 
 .dropdown{
   padding-left: 10px;
-  
-  
 }
 .dropdown .dropbtn{
   background: #0d356c;
@@ -357,3 +355,16 @@ label{
   background-color: #1DA099;
 }
 
+.curryStatline{
+  text-align: right;
+  margin-right:200px;
+  margin-left: 50%;
+  padding:100px;
+}
+.Stats_image {
+  height: 400px;
+  width: 600px;
+}
+.statLine{
+  text-align: left;
+}
