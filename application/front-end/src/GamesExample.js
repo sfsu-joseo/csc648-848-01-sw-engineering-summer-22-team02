@@ -1,8 +1,13 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const GamesExample = () => {
+  function popup() {
+    alert("Comment deletion will be implemented next milestone");
+  }
   const [data, setData] = useState("");
 
   function handleComments() {
@@ -41,36 +46,56 @@ const GamesExample = () => {
         </a>
       </div>
       <div className="comment">
-        <div className="commentText">
-          TestUser: oh yeah this game is so good
+        <div className="column">TestUser:</div>
+        <div className="commentText">oh yeah this game is so good</div>
+        <div className="commentIcon">
+          <FontAwesomeIcon icon={faTrash} onClick={popup} />
         </div>
       </div>
       <div className="comment">
-        <div className="commentText">TestUser: I love the warriors</div>
+        <div className="column">SportsLover:</div>
+        <div className="commentText">I love the warriors</div>
+        <div className="commentIcon">
+          <FontAwesomeIcon icon={faTrash} onClick={popup} />
+        </div>
       </div>
-      {data ? (
-        [data].map((data) => {
-          return (
-            <div className="comment">
-              <div className="commentText">{data}</div>
-            </div>
-          );
-        })
-      ) : (
-        <h3></h3>
-      )}
-      {/* <textarea
-        className="textArea"
-        onChange={(e) => setData(e.target.value)}
-      ></textarea> */}
-      <input
-        placeholder="Enter Comments here"
-        className="comment_feed"
-        onChange={(e) => setData(e.target.value)}
-      />
-      <button className="submit_button" type="submit" onClick={handleComments}>
-        Submit
-      </button>
+      <div className="comment">
+        <div className="column">LuckyLep:</div>
+        <div className="commentText">Steph Curry is the G.O.A.T</div>
+        <div className="commentIcon">
+          <FontAwesomeIcon icon={faTrash} onClick={popup} />
+        </div>
+      </div>
+      <div className="comment">
+        <div className="column">MjoverLebron:</div>
+        <div className="commentText">How does this impact Lebron's legacy</div>
+        <div className="commentIcon">
+          <FontAwesomeIcon icon={faTrash} onClick={popup} />
+        </div>
+      </div>
+
+      <div className="comment">
+        <div className="column">LAforLife:</div>
+        <div className="commentText">Next year the Lakers will take it</div>
+        <div className="commentIcon">
+          <FontAwesomeIcon icon={faTrash} onClick={popup} />
+        </div>
+      </div>
+
+      <div className="search_bar">
+        <input
+          placeholder="Enter comment here"
+          className="search_feed"
+          onChange={(e) => setData(e.target.value)}
+        />
+        <button
+          className="submit_button"
+          type="submit"
+          onClick={handleComments}
+        >
+          Submit
+        </button>
+      </div>
     </>
   );
 };

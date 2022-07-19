@@ -1,59 +1,41 @@
 import React from "react";
 import Navbar from "./Navbar";
 import "./Home.css";
-import "./SignUp.css"
-
+import "./SignUp.css";
+import { useState } from "react";
 
 const UploadArticle = () => {
+  const [img, setImgage] = useState();
 
-    function uploaded(){
-        alert("Article Uploaded");
-    }
-    return (
-        <>
-            <Navbar />
-            <div className="upload">
-            <input
-                    className="heading"
-                    type="text"
-                    placeholder="Heading"
-                />
-                <input
-                    className="sub"
-                    type="text"
-                    placeholder="Sub-Heading"
-                />
-                {/* <input
-                    type="file"
-                    className="image"
-                    
-                /> */}
-                  <label for="files" classname="btn">Select Image</label>
-                    <input id="files"  style={{visibility:"hidden"}} type="file"></input>
-                    
-                <textarea
-                    className="content"
-                    type="text"
-                    placeholder="Introduction"
-                />
-                <textarea
-                    className="conclusion"
-                    type="text"
-                    placeholder="Content"
-                />
-                 <textarea
-                    className="conclusion"
-                    type="text"
-                    placeholder="Conclusion"
-                />
-                <a href="/Home">
-                <button type="submit"  className="upload_button" onClick={uploaded}>
-                    Upload
-                </button>
-                </a>
-            </div>
-        </>
-    );
-}
+  const onImageChange = (e) => {
+    const [file] = e.target.files;
+    setImgage(URL.createObjectURL(file));
+  };
+  function uploaded() {
+    alert("Article Uploaded");
+  }
+  return (
+    <>
+      <Navbar />
+      <div className="upload">
+        <input className="heading" type="text" placeholder="Heading" />
+        <input className="sub" type="text" placeholder="Sub-Heading" />
+
+        <div className="btn">
+          <input type="file" className="btnFile" onChange={onImageChange} />
+          <img className="btnImg" src={img} alt="" />
+        </div>
+        <textarea className="content" type="text" placeholder="Introduction" />
+        <textarea className="conclusion" type="text" placeholder="Content" />
+        <textarea className="conclusion" type="text" placeholder="Conclusion" />
+        <a href="/Home">
+          <button type="submit" className="upload_button" onClick={uploaded}>
+            Upload
+          </button>
+        </a>
+      </div>
+    </>
+  );
+};
 
 export default UploadArticle;
