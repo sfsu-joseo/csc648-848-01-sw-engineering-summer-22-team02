@@ -22,7 +22,12 @@ const UploadArticle = () => {
         <input className="sub" type="text" placeholder="Sub-Heading" />
 
         <div className="btn">
-          <input type="file" className="btnFile" onChange={onImageChange} />
+          <p style={{
+            color: 'black',
+            marginTop: '1%',
+            marginRight: '100%',
+          }}>Choose Thumbnail</p>
+          <input type="file" className="btnFile"  onChange={onImageChange}/>
           <img className="btnImg" src={img} alt="" />
         </div>
         <textarea className="content" type="text" placeholder="Introduction" />
