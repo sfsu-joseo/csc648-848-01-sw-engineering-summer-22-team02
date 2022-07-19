@@ -33,17 +33,17 @@ function SignUp() {
                 console.log(error);
             });
     }
-    // useEffect(() => {
-    //     handlesignup();
-    // }, []);
+    useEffect(() => {
+        handlesignup();
+    }, []);
 
-    function popup(){
-        alert("Signup Succesful");
-      }
+    // function popup() {
+    //     alert("Signup Succesful");
+    // }
 
     return (
         <>
-            <Navbar/>
+            <Navbar />
             <div className="Signup_form">
                 <input
                     className="form_input"
@@ -72,19 +72,18 @@ function SignUp() {
                     placeholder="Password"
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <p className="check">Are you signing up as a creator: <input classname="checkbox" type="checkbox"/></p>
-                <p className="check">Do you agree to the terms of service:<input className="checkbox" type="checkbox"/></p>
-                
-                <a href="/Home">
-                <button type="submit" onClick={popup} className="Signup_button">
+
+                <p className="check">Are you signing up as a creator: <input classname="checkbox" type="checkbox" /></p>
+                <p className="check">Do you agree to the terms of service:<input className="checkbox" type="checkbox" /></p>
+
+                <button type="submit" onClick={handlesignup} className="Signup_button">
                     SignUp
                 </button>
-                </a>
                 {data ? (
                     [data].map((data) => {
                         return (
                             <div className="data">
-                                {/* <h3 className="data_text">{data}</h3> */}
+                                <h3 className="data_text">{data}</h3>
                             </div>
                         );
                     })
