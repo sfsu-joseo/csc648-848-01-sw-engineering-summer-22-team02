@@ -399,7 +399,8 @@ label{
   padding-right: 50px;
   border-radius: 20px;
   margin-bottom: 25px;
-div.scrollmenu {
+}
+  div.scrollmenu {
   background-color: rgb(236, 235, 235);
   overflow: auto;
   white-space: nowrap;
