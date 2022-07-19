@@ -5,29 +5,36 @@ import Navbar from "./Navbar";
 
 function Account_Settings() {
 
-    function popup(){
-        alert("Will be implemented in next prototype");
+    function deleteSuccess(){
+        alert("Account Deleted");
     }
 
     function logoutSuccess(){
         alert("Logout Sucessful");
+    }
+    function reset(){
+        alert("Will be impelmented in next prototype");
     }
 
     return (
         <>
             <Navbar/>
             <div className="account_buttons">
-                <button type="submit" onClick={popup} className="reset">
+            <a className="link" href="/Home">
+                <button type="submit" onClick={reset} className="reset">
                     Reset Password
                 </button>
+                </a>
                 <a className="link" href="/Home">
                 <button type="submit" onClick={logoutSuccess} className="logout">
                     Logout
                 </button>
                 </a>
-                <button type="submit" onClick={popup} className="delete">
+                <a className="link" href="/Home">
+                <button type="submit" onClick={deleteSuccess} className="delete">
                     Delete Account 
                 </button>
+                </a>
             </div>
         </>
     );

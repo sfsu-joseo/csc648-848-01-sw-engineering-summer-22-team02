@@ -16,6 +16,7 @@ import BettsStatline from "./BettsStatline";
 import CurryPlayerStats from "./CurryPlayerStats";
 import Games from "./Games";
 import GamesExample from "./GamesExample";
+import Dashboard from "./Dashboard";
 
 // Import other team member's file names
 import Ireland from "./PersonalAbout/Ireland";
@@ -44,6 +45,7 @@ function App() {
         <Route path="/ArticleView" element={<ArticleView />} />
         <Route path="/UploadArticle" element={<UploadArticle />} />
         <Route path="/Account_Settings" element={<Account_Settings />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
 
         {/* Route other team member's file names */}
         <Route path="/PersonalAbout/Ireland" element={<Ireland />} />
