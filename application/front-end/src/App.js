@@ -15,6 +15,7 @@ import Account_Settings from "./Account_Settings";
 import BettsStatline from "./BettsStatline";
 import CurryPlayerStats from "./CurryPlayerStats";
 import Games from "./Games";
+import GamesExample from "./GamesExample";
 
 // Import other team member's file names
 import Ireland from "./PersonalAbout/Ireland";
@@ -35,6 +36,7 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Games" element={<Games />} />
+        <Route path="/GamesExample" element={<GamesExample />} />
         <Route path="PlayerStats" element={<PlayerStats />} />
         <Route path="/TempPage" element={<TempPage />} />
         <Route path="/BettsStatline" element={<BettsStatline />} />

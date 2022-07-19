@@ -30,11 +30,14 @@ function PlayerStats() {
         </div>
       </div>
       <div className="playerDisplay">
-        <button className="playerBtn" href="/CurryPlayerStats">
+        <div className="column">
+        <a className="indPlayer" href="/CurryPlayerStats">
           Steph Curry
-        </button>
-
-        <button className="playerBtn">Mookie Betts</button>
+        </a>
+        <a className="indPlayer" href="/BettsStatline">
+          Mookie Betts
+        </a>
+      </div>
       </div>
     </>
   );
