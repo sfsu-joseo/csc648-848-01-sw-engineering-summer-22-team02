@@ -52,17 +52,22 @@ const GamesExample = () => {
         [data].map((data) => {
           return (
             <div className="comment">
-              <h1 className="commentText">{data}</h1>
+              <div className="commentText">{data}</div>
             </div>
           );
         })
       ) : (
         <h3></h3>
       )}
-      <textarea
+      {/* <textarea
         className="textArea"
         onChange={(e) => setData(e.target.value)}
-      ></textarea>
+      ></textarea> */}
+      <input
+        placeholder="Enter Comments here"
+        className="comment_feed"
+        onChange={(e) => setData(e.target.value)}
+      />
       <button className="submit_button" type="submit" onClick={handleComments}>
         Submit
       </button>

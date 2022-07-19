@@ -496,3 +496,84 @@ div.scrollmenu .scroll_info {
   margin-top: 35px;
   color: rgb(79, 77, 77);
 }
+
+/* .comment-box {
+  max-width: 37.5rem;
+  color: #fff;
+  background-color: #909090;
+  border-radius: 0.875rem;
+  padding: 0.2rem 1rem 2rem;
+}
+
+.comment-form {
+  background-color: #fff;
+  border-radius: 0.25rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.comment-form-fields {
+  margin-bottom: 0.25rem;
+}
+  input,
+  textarea {
+    border: none;
+    border-bottom: 1px solid grey;
+    font-size: 0.85rem;
+    padding: 0.25rem 0;
+    width: 99%;
+}
+
+:focus {
+      border-bottom-color: blue;
+      outline: none;
+    }
+  
+
+  textarea {
+    font-style: italic;
+  }
+
+
+.comment-form-actions {}
+
+.comment-count {
+  color: grey;
+}
+
+#comment-reveal {
+  float: right;
+  background-color: blue;
+  color: white;
+}
+
+.comment {
+  border-top: 0.125rem solid grey;
+}
+
+.comment-body {
+  font-style: italic;
+  margin-left: 1rem;
+}
+
+.comment-footer {
+  margin-bottom: 1rem;
+}
+
+.comment-footer-delete {
+  padding: 0.2rem 0;
+  color:grey;
+  text-decoration: none;
+}
+  :hover {
+    color: blue;
+    font-weight: bold;
+  } */
+.comment_feed {
+  display: block;
+  padding-top: 50px;
+  margin-right: 10%;
+  margin-left: 10%;
+  padding-top: 1%;
+  padding-bottom:1%;
+}
