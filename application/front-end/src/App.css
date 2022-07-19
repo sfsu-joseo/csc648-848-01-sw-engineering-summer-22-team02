@@ -39,3 +39,114 @@
 h1{
   text-align: center;
 }
+.playerDisplay{
+   margin-left:15%;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+.indPlayer{
+  display: block;
+      background:White;
+        margin-top: 20px;
+        margin-right:60%;
+        border-radius: 200px;
+        border: none;
+        padding-left:50px;
+        padding-right:50px;
+        padding-bottom: 25px;
+        padding-top: 30px;
+        text-decoration: none;
+        color:black;
+        /* text-align: left; */
+          
+}
+.indPlayer:hover {
+  background-color: #1DA099;
+  transition: ease-in-out 0.26s;
+  } 
+
+.gamesExample {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: rgb(44, 82, 138);
+  border-radius: 20px;
+  margin-bottom: 50px;
+  color: white;
+  height: 300px;
+  width: 80%;
+}
+.score2 {
+  text-align: center;
+  font-size: 25pt;
+  font-weight: 1000;
+  margin-top: 25%;
+}
+.versusText2 {
+  text-align: center;
+  font-size: larger;
+  font-weight: 1000;
+  padding-bottom: 10px;
+
+}
+.time2 {
+  text-align: center;
+  font-size: large;
+  padding-top: 10px;
+}
+
+.games{
+  text-align: center;
+  margin-left:10%;
+  margin-right:50%;
+  background-color:rgb(44, 82, 138);
+  border-radius: 20px;
+  margin-bottom: 50px;
+  color: white;
+  height: 300px;
+    width: 800px;
+}
+
+.gamesInfo{
+margin-right:50%;
+text-decoration: none;
+  color:white;
+}
+.column{
+  float:left;
+  width:33.33%;
+}
+.teams{
+  height: 150px;
+  width: 150px;
+  margin-bottom: 4px;
+  margin-top: 50px;
+}
+.gameText{
+  font-size: larger;
+  font-weight: 1000;
+  margin-bottom:20%;
+}
+
+.score{
+  text-align: center; 
+  margin-top: 50%;
+  font-size: 25pt;
+  font-weight: 1000;    
+}
+.versusText{
+  text-align: center;
+  font-size: larger;
+  font-weight: 1000;
+  padding-bottom: 10px;
+  margin-top: 20%;
+}
+.time{
+  text-align: center;
+  font-size: large;
+  padding-top: 10px;
+}
+
+

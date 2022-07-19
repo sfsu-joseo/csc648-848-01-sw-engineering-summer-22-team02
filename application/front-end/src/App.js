@@ -7,6 +7,16 @@ import SignUp from "./SignUp";
 import { Route, Link, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
 import TempPage from "./TempPage";
+import PlayerStats from "./PlayerStats";
+import ArticleView from "./ArticleView";
+import UploadArticle from "./UploadArticle";
+import Login from "./Login";
+import Account_Settings from "./Account_Settings";
+import BettsStatline from "./BettsStatline";
+import CurryPlayerStats from "./CurryPlayerStats";
+import Games from "./Games";
+import GamesExample from "./GamesExample";
+import Dashboard from "./Dashboard";
 
 // Import other team member's file names
 import Ireland from "./PersonalAbout/Ireland";
@@ -25,7 +35,17 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Games" element={<Games />} />
+        <Route path="/GamesExample" element={<GamesExample />} />
+        <Route path="PlayerStats" element={<PlayerStats />} />
         <Route path="/TempPage" element={<TempPage />} />
+        <Route path="/BettsStatline" element={<BettsStatline />} />
+        <Route path="/CurryPlayerStats" element={<CurryPlayerStats />} />
+        <Route path="/ArticleView" element={<ArticleView />} />
+        <Route path="/UploadArticle" element={<UploadArticle />} />
+        <Route path="/Account_Settings" element={<Account_Settings />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
 
         {/* Route other team member's file names */}
         <Route path="/PersonalAbout/Ireland" element={<Ireland />} />

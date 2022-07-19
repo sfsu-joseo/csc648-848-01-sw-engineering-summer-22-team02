@@ -1,10 +1,12 @@
 import React from "react";
 import "./Home.css";
+import Navbar from "./Navbar";
+
 
 function About() {
   return (
     <>
-      <ul className="firstNavbar">
+      {/* <ul className="firstNavbar">
         <li>
           <a className="first_header" href="/">
             Home
@@ -15,7 +17,8 @@ function About() {
             About
           </a>
         </li>
-      </ul>
+      </ul> */}
+      <Navbar/>
       <div className="header">
         <h1> Software Engineering Class SFSU </h1>
         <h1>Summer 2022 </h1>

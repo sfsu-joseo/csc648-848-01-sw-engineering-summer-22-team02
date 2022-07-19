@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./SignUp.css";
 import axios from "axios";
+import "./Navbar.css";
+import Navbar from "./Navbar";
 
 function SignUp() {
     const [data, setData] = useState("");
@@ -31,66 +33,18 @@ function SignUp() {
                 console.log(error);
             });
     }
-    useEffect(() => {
-        handlesignup();
-    }, []);
+    // useEffect(() => {
+    //     handlesignup();
+    // }, []);
 
     function popup(){
-        alert("will be implemented in the next prototype");
+        alert("Signup Succesful");
       }
 
     return (
         <>
-            <ul className="firstNavbar">
-                <li>
-                    <a className="first_header" href="/">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a className="first_header" href="/About">
-                        About
-                    </a>
-                </li>
-            </ul>
-            <ul className="secondNavbar">
-                <li>
-                <a className="iconn" href="/Home">
-                    <img
-                        alt="logo"
-                        class="Logo_Img"
-                        src={require("./HomePage_Images/YourSports.png")}
-                    />
-                    </a>
-                </li>
-                <li className="user_Img">
-                    {/* <button><img class="user" src={require('./HomePage_Images/user.png')} /></button> */}
-                    {/* <FontAwesomeIcon icon={faUser}  /> */}
-                    
-                    <button>
-                    <a onClick={popup} className="iconn" href="/SignUp">
-                        <img
-                            class="user"
-                            alt="User"
-                            src={require("./HomePage_Images/user.png")}
-                        />
-                        </a>
-                    </button>
-                </li>
-                <li className="signup">
-                    <a className="login_signup_click" href="/SignUp">
-                        SignUp
-                    </a>
-                </li>
-                <li className="login">
-                    <a onClick={popup} className="login_signup_click" href="/SignUp">
-                        Login
-                    </a>
-                </li>
-            </ul>
-
+            <Navbar/>
             <div className="Signup_form">
-                <h1 className="Signup_label">SignUp</h1>
                 <input
                     className="form_input"
                     type="text"
@@ -118,15 +72,19 @@ function SignUp() {
                     placeholder="Password"
                     onChange={(e) => setPassword(e.target.value)}
                 />
-
-                <button type="submit" onClick={handlesignup} className="Signup_button">
+                <p className="check">Are you signing up as a creator: <input classname="checkbox" type="checkbox"/></p>
+                <p className="check">Do you agree to the terms of service:<input className="checkbox" type="checkbox"/></p>
+                
+                <a href="/Home">
+                <button type="submit" onClick={popup} className="Signup_button">
                     SignUp
                 </button>
+                </a>
                 {data ? (
                     [data].map((data) => {
                         return (
                             <div className="data">
-                                <h3 className="data_text">{data}</h3>
+                                {/* <h3 className="data_text">{data}</h3> */}
                             </div>
                         );
                     })

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Navbar.css";
+import ArticleView from "./ArticleView";
 
 function InputSubmission() {
   const [data, setData] = useState("");
@@ -32,60 +33,92 @@ function InputSubmission() {
     handlesearch();
   }, []);
 
+  function dateFilter() {
+    <input
+      type="date"
+      className="dateSelect"
+      onChange={(e) => setDate(e.target.value)}
+    />
+  }
+
   return (
+
     <div className="search_bar">
+      <div className="into">
+        <p className="statement1">Welcome to YourSports, Enjoy a countless number of
+          services ranging from Reading Sports Articles,
+        </p>
+        <p className="statement2">to enjoying live updates of games, and being updated with the latest player
+          statistics.</p>
+      </div>
       <input
-        placeholder="Search Feed"
+        placeholder="Type any keyword present in the heading of an article, to get your search results. Ex “Harden”."
         className="search_feed"
         onChange={(e) => setInputText(e.target.value)}
       />
 
-      <input
-        type="date"
-        className="dateSelect"
-        onChange={(e) => setDate(e.target.value)}
-      />
-      <div className="dropdown">
-        <button class="dropbtn">Select Sport</button>
-        <div className="dropdown-content">
-          <select
-            className="select_format"
-            onChange={(e) => setSport(e.target.value)}
-          >
-            <option className="selec" value="">
-              Select One …
-            </option>
-            <option value="Basketball">Basketball</option>
-            <option value="Baseball">Baseball</option>
-          </select>
-        </div>
-      </div>
       <button
         className="search_button"
         onClick={handlesearch}
         type="submit"
       ></button>
+
+      <div className="filter_section">
+        <input
+          type="date"
+          className="dateSelect"
+          onChange={(e) => setDate(e.target.value)}
+        />
+        <div className="dropdown">
+          <button class="dropbtn">Sport Filter</button>
+          <div className="dropdown-content">
+            <select
+              className="select_format"
+              onChange={(e) => setSport(e.target.value)}
+            >
+              <option className="selec" value="">
+                Select One …
+              </option>
+              <option value="Basketball">Basketball</option>
+              <option value="Baseball">Baseball</option>
+            </select>
+          </div>
+        </div>
+      </div>
       {data ? (
         data.map((data) => {
           return (
-            <div className="data">
-              <img
-                className="display_image"
-                alt="Article "
-                src={data.image_URL}
-              ></img>
-              <h3 className="data_text">{data.heading}</h3>
-              <h3 className="data_text">{data.subHeading}</h3>
-              <h3 className="data_text">{data.posttime}</h3>
-              <h3 className="data_text">{data.Author}</h3>
-              <h3 className="data_text">{data.sport}</h3>
-            </div>
+            <>
+
+              <div className="row">
+                <a className="click_to_view1" href="/ArticleView">
+                  <div className="column1">
+                    <h2 className="data_text">{data.heading}</h2>
+                    <h3 className="data_text">{data.sport}</h3>
+                    <h3 className="data_text">{data.posttime}</h3>
+                    <h3 className="data_text">{data.Author}</h3>
+                  </div>
+                </a>
+                <a className="click_to_view2" href="/ArticleView">
+                  <div className="column2">
+                    <img
+                      className="image"
+                      alt="Article "
+                      src={data.image_URL}
+                    ></img>
+                  </div>
+                </a>
+              </div>
+            </>
           );
         })
       ) : (
         <h3>No data yet</h3>
       )}
     </div>
+
+
+
   );
 }
 
