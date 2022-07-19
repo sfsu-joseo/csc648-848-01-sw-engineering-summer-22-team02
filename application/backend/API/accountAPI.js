@@ -15,7 +15,7 @@ accountRouter.post("/signup",(req,res)=>{
 
     if (name!=null && username!=null && email!=null && password!=null)
     {
-        query = 'INSERT INTO RegisteredUser (name,username,email,password) VALUES ("'+name+'","'+username+'","'+email+'","'+password+'");';
+        query = 'INSERT INTO RegisteredUser (name,username,email,password) VALUES ("'+name+'","'+username+'","'+email+'",MD5("'+password+'"));';
         con.query(query, (error, results, fields) => {
             if (error) {
               res.json(error);
