@@ -94,7 +94,7 @@ function Dashboard() {
             };
             this.handleClick = this.handleClick.bind(this);
         }
-        
+
         handleClick() {
             this.setState({
                 clicked: true
@@ -117,6 +117,9 @@ function Dashboard() {
     return (
         <>
             <Navbar />
+            <div className="top">
+                <p>Click an Article to view more.</p>
+            </div>
             <InfoOnClick />
         </>
     );

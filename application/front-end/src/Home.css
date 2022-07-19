@@ -373,7 +373,7 @@ div.scrollmenu {
   background-color: rgb(236, 235, 235);
   overflow: auto;
   white-space: nowrap;
-  margin-top: 80px;
+  margin-top: 60px;
   margin-left: 140px;
   margin-right: 140px;
 }
@@ -459,4 +459,9 @@ div.scrollmenu .scroll_info {
   margin-left: 90px;
   margin-right: 90px;
   padding-top: 35px;
+}
+
+.top{
+  margin-top: 35px;
+  color: rgb(79, 77, 77);
 }

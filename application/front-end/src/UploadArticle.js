@@ -6,7 +6,9 @@ import "./SignUp.css"
 
 const UploadArticle = () => {
 
-    
+    function uploaded(){
+        alert("Article Uploaded");
+    }
     return (
         <>
             <Navbar />
@@ -44,9 +46,11 @@ const UploadArticle = () => {
                     type="text"
                     placeholder="Conclusion"
                 />
-                <button type="submit"  className="upload_button">
+                <a href="/Home">
+                <button type="submit"  className="upload_button" onClick={uploaded}>
                     Upload
                 </button>
+                </a>
             </div>
         </>
     );
