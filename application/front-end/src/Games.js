@@ -2,13 +2,12 @@ import React from "react";
 import Navbar from "./Navbar";
 
 const Games = () => {
-  
   return (
     <>
       <Navbar />
       <div className="search_bar">
         <input
-          placeholder="Search Player By Name. Ex. “Curry”."
+          placeholder="Search Game by Team. Ex. “Warriors”."
           className="search_feed"
           // onChange={(e) => setInputText(e.target.value)}
         />
@@ -35,6 +34,34 @@ const Games = () => {
             </select>
           </div>
         </div>
+      </div>
+      <div className="games">
+        <a className="gamesInfo" href="/GamesExample">
+          <div className="column">
+            <img
+              className="teams"
+              alt="Warriors logo"
+              src={require("./HomePage_Images/Golden_State_Warriors_logo.svg.png")}
+              /*src\HomePage_Images\*/
+            ></img>
+
+            <div className="gameText">Warriors</div>
+          </div>
+          <p> </p>
+          <div className="column">
+            <div className="score">103 - 90</div>
+            <div className="time">06-13-2022</div>
+            <div className="versusText">Chase Center,San Francisco</div>
+          </div>
+          <div className="column">
+            <img
+              className="teams"
+              alt="Celtics logo"
+              src={require("./HomePage_Images/Boston_Celtics.svg.png")}
+            ></img>
+            <p className="gameText">Celtics</p>
+          </div>
+        </a>
       </div>
       <div className="games">
         <a className="gamesInfo" href="/GamesExample">

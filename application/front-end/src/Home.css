@@ -359,11 +359,10 @@ label{
   text-align: right;
   margin-right:200px;
   margin-left: 50%;
-  padding:100px;
 }
 .Stats_image {
-  height: 400px;
-  width: 600px;
+  height: 100%;
+  width: 200%;
 }
 .statLine{
   text-align: left;

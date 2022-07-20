@@ -6,7 +6,6 @@ import PlayerStats from "./PlayerStats";
 const CurryPlayerStats = () => {
   return (
     <>
-      <PlayerStats />
       <div className="curryStatline">
         <div className="column">
           <img
