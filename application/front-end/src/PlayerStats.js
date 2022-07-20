@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function PlayerStats() {
   return (
@@ -60,7 +61,7 @@ function PlayerStats() {
           </a>
         </div>
       </div>
-      {/* <div className="curryStatline">
+      <div className="curryStatline">
         <div className="column">
           <img
             className="Stats_image"
@@ -76,7 +77,8 @@ function PlayerStats() {
           <p className="statLine">Three Pointers Made: 56.8</p>
           <p className="statLine">Three Pointers Attempted: 158.1</p>
         </div>
-      </div> */}
+      </div>
+      <Footer />
     </>
   );
 }

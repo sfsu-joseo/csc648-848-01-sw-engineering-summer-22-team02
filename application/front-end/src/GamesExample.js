@@ -59,47 +59,33 @@ const GamesExample = () => {
   return (
     <>
       <Navbar />
-        <div class="split left">
-          <div className="gamesExample">
-          <div class="centered">
-            <div className="gamesInfo">
-              <img
-                className="teams"
-                alt="Warriors logo"
-                src={require("./HomePage_Images/Golden_State_Warriors_logo.svg.png")}
-              ></img>
+      <div className="gamesExample">
+        <a className="gameInfo">
+          <div className="column">
+            <img
+              className="teams"
+              alt="Warriors logo"
+              src={require("./HomePage_Images/Golden_State_Warriors_logo.svg.png")}
+            ></img>
 
-              <p className="gameText">Warriors</p>
-              <p> </p>
-            </div>
+            <p className="gameText">Warriors</p>
           </div>
-        </div>
-        <div class="split right">
-          <div className="gamesExample">
-          <div class="centered"></div>
-        </div>
-
-        <div className="column">
-          <div className="score2">103</div>
-        </div>
-        <div className="column">
-          <div className="score2">90</div>
-        </div>
-        <div className="column">
-          <div className="time2">100</div>
-        </div>
-        <div className="time2">06-13-2022</div>
-        <div className="time2">Chase Center,San Francisco</div>
-
-        <div className="column">
-          <img
-            className="teams"
-            alt="Celtics logo"
-            src={require("./HomePage_Images/Boston_Celtics.svg.png")}
-          ></img>
-          <p className="gameText">Celtics</p>
-        </div>
-      </div></div>
+          <p> </p>
+          <div className="column">
+            <div className="score2">103 - 90</div>
+            <div className="time2">06-13-2022</div>
+            <div className="versusText2">Chase Center,San Francisco</div>
+          </div>
+          <div className="column">
+            <img
+              className="teams"
+              alt="Celtics logo"
+              src={require("./HomePage_Images/Boston_Celtics.svg.png")}
+            ></img>
+            <p className="gameText">Celtics</p>
+          </div>
+        </a>
+      </div>
       <div className="comment" id="myDIV">
         <div className="column">TestUser:</div>
         <div className="commentText">oh yeah this game is so good</div>
