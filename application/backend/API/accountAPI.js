@@ -16,7 +16,7 @@ accountRouter.post("/signup",(req,res)=>{
     let termsOfServiceAgreed = req.body.termsOfServiceAgreed == null || req.body.termsOfServiceAgreed == false ? null : true;
 
 
-    if (termsOfServiceAgreed==false)
+    if (termsOfServiceAgreed==true)
     {
     if (name!=null && username!=null && email!=null && password!=null)
     {
