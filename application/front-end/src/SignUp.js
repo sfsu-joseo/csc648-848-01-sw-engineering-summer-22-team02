@@ -10,7 +10,11 @@ function SignUp() {
     const [userName, setUserName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [allSet, setAllSet] = useState(false);
+    const [services, setServices] = useState(false);
+    
+    // const [checked, setChecked] = useState(false);
+    
+    // const [allSet, setAllSet] = useState(false);
 
     function handlesignup() {
         var config = {
@@ -21,6 +25,7 @@ function SignUp() {
                 username: userName,
                 email: email,
                 password: password,
+                termsOfServiceAgreed: services,
             },
         };
 
@@ -41,6 +46,9 @@ function SignUp() {
     //     alert("Signup Succesful");
     // }
 
+
+
+
     return (
         <>
             <Navbar />
@@ -48,6 +56,7 @@ function SignUp() {
                 <input
                     className="form_input"
                     type="text"
+                    value={name}
                     placeholder="Name"
                     onChange={(e) => setName(e.target.value)}
                 />
@@ -55,6 +64,7 @@ function SignUp() {
                 <input
                     className="form_input"
                     type="text"
+                    value={userName}
                     placeholder="Username"
                     onChange={(e) => setUserName(e.target.value)}
                 />
@@ -63,27 +73,49 @@ function SignUp() {
                     className="form_input"
                     type="text"
                     placeholder="Email"
+                    value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
 
                 <input
                     className="form_input"
                     type="password"
+                    value={password}
                     placeholder="Password"
                     onChange={(e) => setPassword(e.target.value)}
                 />
 
-                <p className="check">Are you signing up as a creator: <input classname="checkbox" type="checkbox" /></p>
-                <p className="check">Do you agree to the terms of service:<input className="checkbox" type="checkbox" /></p>
+                <p className="requirement">Password must be between 8-20 characters</p>
+                <p className="check">Are you signing up as a creator: <input 
+                classname="checkbox"
+                type="checkbox"
+                // checked={services}
+                // onChange={(e) => 
+                // setServices(e.target.checked)} 
+                /></p>
+                 
+                <p className="check">Do you agree to the terms of service:<input 
+                className="checkbox" 
+                type="checkbox"
+                checked={services}
+                onChange={(e) => {
+                    setServices(e.target.checked)
+                }} /></p> 
+
+                
 
                 <button type="submit" onClick={handlesignup} className="Signup_button">
                     SignUp
                 </button>
+                {/* <a className="loginButton" href="">Login</a> */}
                 {data ? (
                     [data].map((data) => {
                         return (
+                            <div>
+                                 <a className="loginButton" href="">Login</a>
                             <div className="data">
                                 <h3 className="data_text">{data}</h3>
+                            </div>
                             </div>
                         );
                     })
