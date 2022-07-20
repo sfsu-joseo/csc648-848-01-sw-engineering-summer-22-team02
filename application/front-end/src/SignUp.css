@@ -36,6 +36,7 @@
     padding-left: 90px;
     padding-right: 90px;
     border-radius: 20px;
+    margin-bottom: 10px;
 }
 
 .Signup_form .Signup_button:hover{
@@ -118,4 +119,13 @@
 }
 .account_buttons .link{
     text-decoration: none;
+}
+
+.Signup_form .requirement{
+    color: red;
+    margin-top: 1px;
+}
+
+.Signup_form .loginButton{
+    color: rgb(31, 94, 230);
 }
