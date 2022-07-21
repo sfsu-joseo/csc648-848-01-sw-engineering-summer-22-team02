@@ -31,12 +31,12 @@ function Login() {
       </div>
       <div className="Forget_Signup">
         <a className="forget" href="/ForgotPassword">
-          Forget Password
+          Forgot Password?
         </a>
       </div>
       <div className="Forget_Signup">
         <a className="signup" href="/Signup">
-          Signup
+        Do not have an account? Signup Here!
         </a>
       </div>
       <ul className="footerLogin">

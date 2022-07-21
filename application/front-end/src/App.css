@@ -330,7 +330,9 @@ font-style: bold;
   margin-bottom: 10px;
 }
 
+.comment_bar
+
 input,
 input::placeholder {
-  padding-right: 1000px;
+  padding-right: 30%;
 }

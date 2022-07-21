@@ -103,8 +103,9 @@ function SignUp() {
           />
         </p>
 
-        <p className="check">
+        <p className="check"><a href="/termsOfService">
           Do you agree to the terms of service:
+          </a>
           <input
             className="checkbox"
             type="checkbox"
@@ -118,8 +119,9 @@ function SignUp() {
         <button type="submit" onClick={handlesignup} className="Signup_button">
           SignUp
         </button>
+        <br></br>
         <a className="loginButton" href="/Login">
-          Login
+        Have an account already? Login here!
         </a>
         {/* <a className="loginButton" href="">Login</a> */}
         {/* {data ? (
