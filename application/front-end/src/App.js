@@ -27,6 +27,7 @@ import Guo from "./PersonalAbout/Guo";
 import Saigani from "./PersonalAbout/Saigani";
 import Abiola from "./PersonalAbout/Abiola";
 import Sareen from "./PersonalAbout/Sareen";
+import ForgotPassword from "./ForgotPassword";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         <Route path="/UploadArticle" element={<UploadArticle />} />
         <Route path="/Account_Settings" element={<Account_Settings />} />
         <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/ForgotPassword" element={<ForgotPassword />} />
 
         {/* Route other team member's file names */}
         <Route path="/PersonalAbout/Ireland" element={<Ireland />} />

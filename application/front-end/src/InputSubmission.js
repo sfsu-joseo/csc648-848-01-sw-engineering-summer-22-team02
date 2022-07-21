@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Navbar.css";
 import ArticleView from "./ArticleView";
+import Footer from "./Footer";
 
 function InputSubmission() {
   const [data, setData] = useState("");
@@ -158,7 +159,9 @@ function InputSubmission() {
         <h3>No data yet</h3>
       )}
     </div>
+    
   );
+
 }
 
 export default InputSubmission;

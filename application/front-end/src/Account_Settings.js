@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./SignUp.css";
 import "./Navbar.css";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function Account_Settings() {
 
@@ -12,16 +13,13 @@ function Account_Settings() {
     function logoutSuccess(){
         alert("Logout Sucessful");
     }
-    function reset(){
-        alert("Will be impelmented in next prototype");
-    }
 
     return (
         <>
             <Navbar/>
             <div className="account_buttons">
-            <a className="link" href="/Home">
-                <button type="submit" onClick={reset} className="reset">
+            <a className="link" href="/ForgotPassword">
+                <button type="submit" className="reset">
                     Reset Password
                 </button>
                 </a>
@@ -36,6 +34,7 @@ function Account_Settings() {
                 </button>
                 </a>
             </div>
+            <Footer/>
         </>
     );
 }

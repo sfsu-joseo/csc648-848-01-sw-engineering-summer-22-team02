@@ -3,6 +3,7 @@ import "./SignUp.css";
 import axios from "axios";
 import "./Navbar.css";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function SignUp() {
   const [data, setData] = useState("");
@@ -106,29 +107,30 @@ function SignUp() {
           />
         </p>
 
-        <button type="submit" onClick={handlesignup} className="Signup_button">
-          SignUp
-        </button>
-        {/* <a className="loginButton" href="">Login</a> */}
-        {data ? (
-          [data].map((data) => {
-            return (
-              <div>
-                <a className="loginButton" href="/Login">
-                  Login
-                </a>
-                <div className="data">
-                  <h3 className="data_text">{data}</h3>
-                </div>
-              </div>
-            );
-          })
-        ) : (
-          <h3>error</h3>
-        )}
-      </div>
-    </>
-  );
+                
+
+                <button type="submit" onClick={handlesignup} className="Signup_button">
+                    SignUp
+                </button>
+                {/* <a className="loginButton" href="">Login</a> */}
+                {data ? (
+                    [data].map((data) => {
+                        return (
+                            <div>
+                                 <a className="loginButton" href="/Login">Login</a>
+                            <div className="data">
+                                <h3 className="data_text">{data}</h3>
+                            </div>
+                            </div>
+                        );
+                    })
+                ) : (
+                    <h3></h3>
+                )}
+            </div>
+            <Footer/>
+        </>
+    );
 }
 
 export default SignUp;
