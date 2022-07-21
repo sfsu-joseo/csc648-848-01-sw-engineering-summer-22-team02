@@ -335,7 +335,8 @@ input {
 .dropdown .dropbtn {
     background: #0d356c;
     margin-top: 10px;
-    border-radius: 15px;
+    margin-right: 1000px;
+    border-radius: 20px;
     border: none;
 }
 

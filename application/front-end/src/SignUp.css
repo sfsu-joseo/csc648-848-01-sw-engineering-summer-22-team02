@@ -1,8 +1,11 @@
 .Signup_form{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%,-50%); */
+    /* margin-top: 345px; */
+    margin-top: 15%;
+    margin-bottom: 20%;
 }
 
 .Signup_form .form_input{
@@ -18,6 +21,11 @@
     left: 50%;
     transform: translate(-50%,-50%);
     
+}
+
+.data {
+    margin-left: 42%;
+    margin-right: 42%;
 }
 
 .Signup_form .Signup_label{
@@ -111,8 +119,9 @@
 }
 
 .Signup_form .check{
-    text-align: right;
-    margin-right: 50px;
+    text-align: center;
+    margin-left:30% ;
+    margin-right: 30%;
     font-weight: 600;
     color: rgb(111, 108, 108);
     
@@ -128,4 +137,74 @@
 
 .Signup_form .loginButton{
     color: rgb(31, 94, 230);
+}
+
+.login_form{
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%,-50%); */
+    /* margin-top: 345px; */
+    margin-top: 300px;
+    padding-top: 60px;
+    /* padding-bottom: 30%; */
+    /* margin-bottom: 10%; */
+}
+
+.login_form .form_input{
+    width: 250px;
+    padding: 12px 20px;
+    margin-top: 18px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box; 
+    font-size: medium;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.data {
+    margin-left: 42%;
+    margin-right: 42%;
+}
+
+.login_form .Signup_label{
+    color: rgb(23, 71, 134);
+    padding-bottom: 20px;
+}
+
+.login_form .Signup_button{
+    background-color: rgb(23, 71, 134); /* Green */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    padding-left: 90px;
+    padding-right: 90px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.login_form .Signup_button:hover{
+    background-color:#1DA099 ;
+    transition:0.3s;
+}
+
+.Forget_Signup{
+    color: rgb(31, 94, 230);
+    margin-top: 10px;
+}
+
+.Forget_Signup .forget{
+    color: rgb(31, 94, 230);
+    /* margin-bottom: 10px; */
+}
+.Forget_Signup .signup {
+    color: rgb(31, 94, 230);
+    /* margin-top: 10px; */
 }
