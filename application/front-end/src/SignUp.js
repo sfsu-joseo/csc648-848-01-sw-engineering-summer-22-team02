@@ -129,6 +129,7 @@ function SignUp() {
                                  
                             <div className="data">
                                 <h3 className="data_text">{data}</h3>
+                                
                             </div>
                             </div>
                         );

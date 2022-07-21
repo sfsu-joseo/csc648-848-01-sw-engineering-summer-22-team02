@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import TermsOfService from "./TermsOfService";
 
 function PlayerStats() {
    function redirect() {
@@ -88,7 +89,7 @@ function PlayerStats() {
         <div class="row">
           <div class="column">
             <br></br>
-            <a href="/ArticleView">Terms of Service</a>
+            <a href="./TermsOfService">Terms of Service</a>
           </div>
           <div class="column">
             <p>Contact Us</p>

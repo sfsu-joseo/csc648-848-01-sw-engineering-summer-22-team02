@@ -18,6 +18,7 @@ import Games from "./Games";
 import GamesExample from "./GamesExample";
 import Dashboard from "./Dashboard";
 import Footer from "./Footer";
+import LoginFooter from "./LoginFooter";
 
 // Import other team member's file names
 import Ireland from "./PersonalAbout/Ireland";
@@ -41,6 +42,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Games" element={<Games />} />
         <Route path="/Footer" element={<Footer />} />
+        <Route path="/LoginFooter" element={<LoginFooter />} />
         <Route path="/GamesExample" element={<GamesExample />} />
         <Route path="PlayerStats" element={<PlayerStats />} />
         <Route path="/TempPage" element={<TempPage />} />

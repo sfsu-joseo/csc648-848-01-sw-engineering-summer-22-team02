@@ -3,6 +3,7 @@ import "./Home.css";
 import "./App.css";
 import PlayerStats from "./PlayerStats";
 import Navbar from "./Navbar";
+import "./TermsOfService";
 
 const CurryPlayerStats = () => {
      function redirect() {
@@ -89,7 +90,7 @@ const CurryPlayerStats = () => {
         <div class="row">
           <div class="column">
             <br></br>
-            <a href="/ArticleView">Terms of Service</a>
+            <a href="/TermsOfService">Terms of Service</a>
           </div>
           <div class="column">
             <p>Contact Us</p>
