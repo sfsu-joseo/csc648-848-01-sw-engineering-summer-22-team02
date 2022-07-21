@@ -17,7 +17,6 @@ function Dashboard() {
                 <div className="overall_board">
                 <div class="column left" >
 
-
                     <div className="border">
                         <div className="column1">
                             <h2 className="data_text">James Harden just joined the Sixers </h2>

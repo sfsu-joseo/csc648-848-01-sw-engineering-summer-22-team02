@@ -112,7 +112,7 @@ function SignUp() {
                     [data].map((data) => {
                         return (
                             <div>
-                                 <a className="loginButton" href="">Login</a>
+                                 <a className="loginButton" href="/Login">Login</a>
                             <div className="data">
                                 <h3 className="data_text">{data}</h3>
                             </div>
