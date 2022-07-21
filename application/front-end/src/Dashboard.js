@@ -2,6 +2,7 @@ import React from "react";
 // import "./Home.css";
 import "./Navbar.css"
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function Dashboard() {
 
@@ -40,8 +41,8 @@ function Dashboard() {
 
                     <div className="border">
                         <div className="column1">
-                            <h2 className="data_text">James Harden just joined the Sixers </h2>
-                            <h3 className="data_text">2022-5-3</h3>
+                            <h2 className="data_text">Baseball is at an all time high</h2>
+                            <h3 className="data_text">2022-3-3</h3>
 
                         </div>
 
@@ -49,7 +50,7 @@ function Dashboard() {
                             <img
                                 className="image"
                                 alt="Article "
-                                src={require("./HomePage_Images/Harden.png")}
+                                src={require("./HomePage_Images/Baseball.png")}
                             ></img>
                         </div>
 
@@ -60,7 +61,7 @@ function Dashboard() {
 
                     <div className="border">
                         <div className="column1">
-                            <h2 className="data_text">James Harden just joined the Sixers </h2>
+                            <h2 className="data_text">James Harden just joined the Sixers</h2>
                             <h3 className="data_text">2022-5-3</h3>
 
                         </div>
@@ -80,7 +81,7 @@ function Dashboard() {
 
                     <div className="border">
                         <div className="column1">
-                            <h2 className="data_text">James Harden just joined the Sixers </h2>
+                            <h2 className="data_text">Baseball is at an all time high </h2>
                             <h3 className="data_text">2022-5-3</h3>
 
                         </div>
@@ -89,7 +90,7 @@ function Dashboard() {
                             <img
                                 className="image"
                                 alt="Article "
-                                src={require("./HomePage_Images/Harden.png")}
+                                src={require("./HomePage_Images/Baseball.png")}
                             ></img>
                         </div>
 
@@ -107,10 +108,14 @@ function Dashboard() {
                         <p className="importantInfo">Number of Dislikes:<b className="number"> 30</b></p>
 
                     </div>
+                    
                 </div>
-
+                
             </div>
+            
+            
         </>
+        
     );
 }
 
