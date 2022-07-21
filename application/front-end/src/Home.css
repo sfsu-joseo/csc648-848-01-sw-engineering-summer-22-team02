@@ -369,23 +369,25 @@ label{
   border-radius: 20px;
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 2.5%;
-  padding-top:.5%;
-  padding-bottom: 2.5%;
+  margin-top: 1.5%;
+  padding-top:1.5%;
+  padding-bottom: 1.5%;
   padding-right: 15px;
 }
-.comment .column{
-width:33%;
-height:5%;
+.comment .userName{
+  text-align: left;
+  margin-left: 0.75%;
+  font-size: 100%;
+  font-weight: bold;
 }
 .comment .commentText{
   text-align:left;
   padding-left: 3%;
-  font-size: medium;
+  font-size: 100%;
 }
 .comment .commentIcon{
-  text-align: right;
-  padding-right:1%;
+    text-align: right;
+      margin-left: 0.75%;
 }
 
 .text{

@@ -120,32 +120,32 @@ const GamesExample = () => {
       </div>
 
       <div className="comment" id="myDIV">
-        <div className="column">
-          <div className="userName">TestUser:</div>
-        </div>
-        <div className="column">
-          <div className="commentText">oh yeah this game is so good</div>
-        </div>
-        <div className="column">
+        <div className="userName">Test User</div>
+        <div className="commentText">oh yeah this game is so good</div>
+        <div className="commentIcon">
           <FontAwesomeIcon icon={faTrash} onClick={myFunction} />
         </div>
+
+        {/* </div> */}
       </div>
-      <div className="comment" id="myDIV1" onClick={myFunction1}>
-        <div className="column">SportsLover:</div>
+      <div className="comment" id="myDIV1">
+        <div className="userName">SportsLover:</div>
         <div className="commentText">I love the warriors</div>
         <div className="commentIcon">
-          <FontAwesomeIcon icon={faTrash} />
+          <FontAwesomeIcon icon={faTrash} onClick={myFunction1} />
         </div>
       </div>
       <div className="comment" id="myDIV2">
-        <div className="column">LuckyLep:</div>
-        <div className="commentText">Steph Curry is the G.O.A.T</div>
+        <div className="userName">LuckyLep:</div>
+        <div className="commentText">Steph Curry is the G.O.A.T
         <div className="commentIcon">
           <FontAwesomeIcon icon={faTrash} onClick={myFunction2} />
         </div>
+        </div>
+        
       </div>
       <div className="comment" id="myDIV3">
-        <div className="column">MjoverLebron:</div>
+        <div className="userName">MjoverLebron:</div>
         <div className="commentText">How does this impact Lebron's legacy</div>
         <div className="commentIcon">
           <FontAwesomeIcon icon={faTrash} onClick={myFunction3} />
@@ -153,7 +153,7 @@ const GamesExample = () => {
       </div>
 
       <div className="comment" id="myDIV4">
-        <div className="column">LAforLife:</div>
+        <div className="userName">LAforLife:</div>
         <div className="commentText">Next year the Lakers will take it</div>
         <div className="commentIcon">
           <FontAwesomeIcon icon={faTrash} onClick={myFunction4} />

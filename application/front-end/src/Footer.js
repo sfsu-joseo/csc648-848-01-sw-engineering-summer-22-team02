@@ -10,7 +10,7 @@ const Footer = () => {
       <ul className="footer">
         <div class="row">
           <div class="column">
-            <p href="/ArticleView">Terms of Service</p>
+            <a href="/ArticleView">Terms of Service</a>
           </div>
           <div class="column">
             <p>Some text..</p>
