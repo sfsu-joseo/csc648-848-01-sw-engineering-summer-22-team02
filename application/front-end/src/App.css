@@ -119,6 +119,7 @@ h1{
   color: white;
   height: 300px;
     width: 90%;
+    min-width: 50%;
 }
 
 .gamesInfo{
@@ -144,23 +145,22 @@ text-decoration: none;
   margin-top: 50px;
 }
 .gameText{
-  font-size: larger;
+  font-size: 100%;
   font-weight: 1000;
   margin-bottom:20%;
 }
 
 .score{
   text-align: center; 
-  margin-top: 50%;
+  margin-top: 30%;
   font-size: 200%;
   font-weight: 1000;    
 }
 .versusText{
   text-align: center;
-  font-size: 100%;
-  font-weight: 1000;
+  font-size: 90%;
   padding-bottom: 10px;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 .time{
   text-align: center;

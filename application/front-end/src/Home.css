@@ -79,9 +79,7 @@ body{
   
 }
 
-.search_bar .search_feed{
-  margin-right: 15px;
-}
+
 
 /* Ireland About page CSS styles */
 .Ireland_About_Image{
@@ -212,12 +210,14 @@ body{
   margin-left: 80px;
   margin-right: 80px;
   margin-top: 40px;
+  font-size: 200%;
   color: rgb(79, 77, 77);
 }
 .search_bar .into .statement2{
   margin-left: 80px;
   margin-right: 80px;
-  margin-bottom: 45px;
+  margin-bottom: 1%;
+  font-size: 200%;
   color: rgb(79, 77, 77);
 }
 
@@ -378,12 +378,12 @@ label{
   padding-bottom: 5px;
   padding-right: 15px;
 }
-.commentText{
+.comment .commentText{
   text-align:left;
   padding-left: 3%;
   font-size: medium;
 }
-.commentIcon{
+.comment .commentIcon{
   text-align: right;
   padding-right:1%;
 }

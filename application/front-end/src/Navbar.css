@@ -123,22 +123,20 @@ li .first_header:hover {
 /* Search Bar */
 
 .search_bar {
-
     margin-top: 20px;
-
 }
 
 .search_bar .search_feed {
-    padding: 10px;
-    padding-right: 700px;
-    padding-left: 18px;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    padding-right: 35%;
+    padding-left: 2%;
     margin-top: 30px;
-    /* margin-right: 16px; */
+    margin-left: 2%;
     border: none;
     font-size: 20px;
     border-radius: 20px;
     margin-bottom: 10px;
-    margin-left: 60px;
 }
 
 input,
@@ -152,8 +150,6 @@ input::placeholder {
     margin-right: 16px;
     border: none;
     font-size: 20px;
-
-
 }
 
 .search_bar .search_button {
@@ -258,9 +254,10 @@ input {
     display: flex;
     background-color: rgb(44, 82, 138);
     margin-bottom: 35px;
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 15%;
+    margin-right: 15%;
     border-radius: 30px;
+    min-width:50%;
 }
 
 .search_bar .row .click_to_view1 {
@@ -290,10 +287,11 @@ input {
 }
 
 .search_bar .row .click_to_view2 .column2 .image {
-    height: 150px;
-    width: 250px;
-    border-radius: 30px;
-    margin-left: 55px;
+    height: 60%;
+    width: 60%;
+    border-radius: 2%;
+    margin-left: .2%;
+    /* width: 20%; */
 }
 
 .secondNavbar .gear .settings {
@@ -307,6 +305,7 @@ input {
     color: #1DA099;
 }
 
+/*Search bar for the Players page*/
 .search_bar_player .search_feed {
     padding: 10px;
     padding-right: 100px;
@@ -339,8 +338,33 @@ input {
     border: none;
 }
 
-
-
+.search_bar_Games {
+    margin-top: 20px;
+    margin-left: 40%;
+    text-align: left;
+}
+.search_bar_Games .search_feed {
+    padding-right: 10%;
+    padding-left: 5%;
+    padding-top: .75%;
+    padding-bottom: .75%;
+    margin-right: 16px;
+    border: none;
+    margin-right: 2%;
+    font-size: 100%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.search_button_Games {
+    margin-right: 25%;
+    background: url(./HomePage_Images/SearchIcon.png) no-repeat;
+    cursor: pointer;
+    border: none;
+    padding-bottom: 10px;
+    padding-right: 16px;
+    padding-top: 18px;
+    /* margin-left: 2px; */
+}
 
 
 .row {
@@ -534,5 +558,4 @@ justify-content: center;
     width: 33.33%;
     padding: 10px;
     height: 300px;
-    /* Should be removed. Only for demonstration */
   }

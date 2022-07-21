@@ -6,13 +6,13 @@ const Games = () => {
   return (
     <>
       <Navbar />
-      <div className="search_bar">
+      <div className="search_bar_Games">
         <input
           placeholder="Search Game by Team. Ex. “Warriors”."
           className="search_feed"
           // onChange={(e) => setInputText(e.target.value)}
         />
-        <button className="search_button" type="submit"></button>
+        <button className="search_button_Games" type="submit"></button>
       </div>
       <div className="filter_section">
         <input

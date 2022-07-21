@@ -78,7 +78,6 @@ function PlayerStats() {
           <p className="statLine">Three Pointers Attempted: 158.1</p>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
