@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import "./Home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsDown, faThumbsUp, faUserGear } from "@fortawesome/free-solid-svg-icons";
+import Footer from "./Footer";
 
 
 const ArticleView = () => {
@@ -51,9 +52,9 @@ const ArticleView = () => {
                 </p>
                 <p className="conclusion">For now, the Nets are being patient. It’s a negotiating position, but one they don’t
                     need to change. Brooklyn only gets one swing at this.
-
                 </p>
             </div>
+            <Footer/>
         </>
     );
 }

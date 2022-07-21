@@ -34,14 +34,17 @@ function SignUp() {
       .then(function (response) {
         setData(response.data);
         console.log(response.data);
+        alert(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
   }
-  useEffect(() => {
-    handlesignup();
-  }, []);
+//   useEffect(() => {
+//     handlesignup();
+//   }, []);
+
+
 
   // function popup() {
   //     alert("Signup Succesful");
@@ -107,26 +110,25 @@ function SignUp() {
           />
         </p>
 
-                
-
                 <button type="submit" onClick={handlesignup} className="Signup_button">
                     SignUp
                 </button>
                 {/* <a className="loginButton" href="">Login</a> */}
-                {data ? (
+                {/* {data ? (
                     [data].map((data) => {
                         return (
                             <div>
                                  <a className="loginButton" href="/Login">Login</a>
                             <div className="data">
                                 <h3 className="data_text">{data}</h3>
+                                
                             </div>
                             </div>
                         );
                     })
                 ) : (
                     <h3></h3>
-                )}
+                )} */}
             </div>
             <Footer/>
         </>
