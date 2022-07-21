@@ -197,14 +197,11 @@ body{
 
 .article .image{
   margin-bottom: 45px;
-  margin-left: auto;
+  margin-left: 10%;
   margin-right: auto;
-  
+  width: 30%;
 }
 .article .image .article_image{
-  height: 60%;
-  width: 60%;
-  margin-left: 45px;
   margin-left: auto;
   margin-right: auto;
   
@@ -379,15 +376,17 @@ label{
   margin-left: 0.75%;
   font-size: 100%;
   font-weight: bold;
+  padding:.5%;
 }
 .comment .commentText{
-  text-align:left;
+  text-align: left;
   padding-left: 3%;
-  font-size: 100%;
+  font-size: 150%;
 }
 .comment .commentIcon{
     text-align: right;
-      margin-left: 0.75%;
+    margin-left: 0.75%;
+    margin-top: -2%;
 }
 
 .text{

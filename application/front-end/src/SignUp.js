@@ -4,6 +4,7 @@ import axios from "axios";
 import "./Navbar.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import TermsOfService from "./TermsOfService";
 
 function SignUp() {
   const [data, setData] = useState("");
@@ -16,6 +17,12 @@ function SignUp() {
   // const [checked, setChecked] = useState(false);
 
   // const [allSet, setAllSet] = useState(false);
+  //   function handleFunctions() {
+  //     handlesignup();
+  //   }
+  function redirect() {
+    alert("You are now leaving this Website");
+  }
 
   function handlesignup() {
     var config = {
@@ -34,14 +41,15 @@ function SignUp() {
       .then(function (response) {
         setData(response.data);
         console.log(response.data);
+        alert(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
   }
-  useEffect(() => {
-    handlesignup();
-  }, []);
+  //   useEffect(() => {
+  //     handlesignup();
+  //   }, []);
 
   // function popup() {
   //     alert("Signup Succesful");
@@ -107,17 +115,18 @@ function SignUp() {
           />
         </p>
 
-                
-
-                <button type="submit" onClick={handlesignup} className="Signup_button">
-                    SignUp
-                </button>
-                {/* <a className="loginButton" href="">Login</a> */}
-                {data ? (
+        <button type="submit" onClick={handlesignup} className="Signup_button">
+          SignUp
+        </button>
+        <a className="loginButton" href="/Login">
+          Login
+        </a>
+        {/* <a className="loginButton" href="">Login</a> */}
+        {/* {data ? (
                     [data].map((data) => {
                         return (
                             <div>
-                                 <a className="loginButton" href="/Login">Login</a>
+                                 
                             <div className="data">
                                 <h3 className="data_text">{data}</h3>
                             </div>
@@ -126,11 +135,51 @@ function SignUp() {
                     })
                 ) : (
                     <h3></h3>
-                )}
-            </div>
-            <Footer/>
-        </>
-    );
+                )} */}
+        {/* <h3 className="data_text" style={{ display: "hidden" }}>
+          {data}
+        </h3> */}
+      </div>
+      <ul className="footerSignUp">
+        <div class="row">
+          <div class="column">
+            <br></br>
+            <a href="./TermsOfService">Terms of Service</a>
+          </div>
+          <div class="column">
+            <p>Contact Us</p>
+            <a
+              href="https://www.facebook.com/sanfranciscostate"
+              onClick={redirect}
+            >
+              {" "}
+              <p>Facebook</p>
+            </a>
+            <a
+              href="https://twitter.com/SFSU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+              onClick={redirect}
+            >
+              {" "}
+              <p>Twitter</p>
+            </a>
+            <a
+              href="https://www.instagram.com/sanfranciscostate/?hl=en"
+              onClick={redirect}
+            >
+              {" "}
+              <p>Instagram</p>
+            </a>
+          </div>
+          <div class="column">
+            <p>Address</p>
+            <p>San Francisco State University</p>
+            <p>San Francisco</p>
+            <p>California</p>
+          </div>
+        </div>
+      </ul>
+    </>
+  );
 }
 
 export default SignUp;

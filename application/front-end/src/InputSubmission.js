@@ -14,7 +14,6 @@ function InputSubmission() {
   function my_func() {
     myFunction();
     handlesearch();
-    myFunction1();
   }
 
   function myFunction() {
@@ -26,9 +25,6 @@ function InputSubmission() {
     }
   }
 
-  function myFunction1() {
-    setSport();
-  }
   function handlesearch() {
     var config = {
       method: "post",
@@ -83,7 +79,7 @@ function InputSubmission() {
 
       <button
         className="search_button"
-        onClick={handlesearch}
+        onClick={my_func}
         type="submit"
       ></button>
 
@@ -159,9 +155,7 @@ function InputSubmission() {
         <h3>No data yet</h3>
       )}
     </div>
-    
   );
-
 }
 
 export default InputSubmission;

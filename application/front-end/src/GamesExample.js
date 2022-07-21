@@ -120,49 +120,72 @@ const GamesExample = () => {
       </div>
 
       <div className="comment" id="myDIV">
-        <div className="userName">Test User</div>
-        <div className="commentText">oh yeah this game is so good</div>
-        <div className="commentIcon">
-          <FontAwesomeIcon icon={faTrash} onClick={myFunction} />
+        <div className="userName">
+          Test User
+          <div className="commentIcon">
+            <FontAwesomeIcon icon={faTrash} onClick={myFunction} />
+          </div>
+        </div>
+        <div className="commentText">
+          Oh yeah this game is so good, we are witnessing one of, if not the
+          best, shooter of all time. KD needs Steph not the other way around{" "}
         </div>
 
         {/* </div> */}
       </div>
       <div className="comment" id="myDIV1">
-        <div className="userName">SportsLover:</div>
-        <div className="commentText">I love the warriors</div>
-        <div className="commentIcon">
-          <FontAwesomeIcon icon={faTrash} onClick={myFunction1} />
+        <div className="userName">
+          SportsLover:
+          <div className="commentIcon">
+            <FontAwesomeIcon icon={faTrash} onClick={myFunction1} />
+          </div>
+        </div>
+        <div className="commentText">
+          I love the warriors. They'll repeat again for sure. A healthy Curry
+          and Klay duo is unstoppable. #Gold Blooded.{" "}
         </div>
       </div>
       <div className="comment" id="myDIV2">
-        <div className="userName">LuckyLep:</div>
-        <div className="commentText">Steph Curry is the G.O.A.T
-        <div className="commentIcon">
-          <FontAwesomeIcon icon={faTrash} onClick={myFunction2} />
+        <div className="userName">
+          LuckyLep:
+          <div className="commentIcon">
+            <FontAwesomeIcon icon={faTrash} onClick={myFunction2} />
+          </div>
         </div>
+        <div className="commentText">
+          Jayson Tatum gave up on the team. He looks like Westbrick out there. 5
+          turnovers is horrendous. We will be back next year.
         </div>
-        
       </div>
       <div className="comment" id="myDIV3">
-        <div className="userName">MjoverLebron:</div>
-        <div className="commentText">How does this impact Lebron's legacy</div>
-        <div className="commentIcon">
-          <FontAwesomeIcon icon={faTrash} onClick={myFunction3} />
+        <div className="userName">
+          MjoverLebron:
+          <div className="commentIcon">
+            <FontAwesomeIcon icon={faTrash} onClick={myFunction3} />
+          </div>
+        </div>
+        <div className="commentText">
+          This isn't real basketball. Michael Jordan would be dropping 80+
+          points a night in this era. Too soft.Curry good but he's no Jordan
         </div>
       </div>
 
       <div className="comment" id="myDIV4">
-        <div className="userName">LAforLife:</div>
-        <div className="commentText">Next year the Lakers will take it</div>
-        <div className="commentIcon">
-          <FontAwesomeIcon icon={faTrash} onClick={myFunction4} />
+        <div className="userName">
+          LAforLife:
+          <div className="commentIcon">
+            <FontAwesomeIcon icon={faTrash} onClick={myFunction4} />
+          </div>
+        </div>
+        <div className="commentText">
+          Enjoy it while you can Warriors Fans, next year the Lakers will take
+          it. Lebron and a healthy Anthony Davis {">"} Steph and Klay all day
         </div>
       </div>
 
-      <div className="search_bar">
+      <div className="comment_bar">
         <input
-          placeholder="Enter comment here"
+          placeholder="Write your post here"
           className="search_feed"
           onChange={(e) => setData(e.target.value)}
         />

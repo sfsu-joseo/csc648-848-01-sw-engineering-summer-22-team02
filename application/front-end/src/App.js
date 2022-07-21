@@ -28,6 +28,7 @@ import Saigani from "./PersonalAbout/Saigani";
 import Abiola from "./PersonalAbout/Abiola";
 import Sareen from "./PersonalAbout/Sareen";
 import ForgotPassword from "./ForgotPassword";
+import TermsOfService from "./TermsOfService";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route path="/GamesExample" element={<GamesExample />} />
         <Route path="PlayerStats" element={<PlayerStats />} />
         <Route path="/TempPage" element={<TempPage />} />
+        <Route path="/TermsOfService" element={<TermsOfService />} />
         <Route path="/BettsStatline" element={<BettsStatline />} />
         <Route path="/CurryPlayerStats" element={<CurryPlayerStats />} />
         <Route path="/ArticleView" element={<ArticleView />} />

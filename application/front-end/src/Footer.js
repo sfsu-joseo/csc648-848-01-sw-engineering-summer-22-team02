@@ -3,6 +3,7 @@ import "./Navbar.css";
 import "./ArticleView";
 import "./UploadArticle";
 import "./PlayerStats";
+import "./TermsOfService";
 
 const Footer = () => {
   function redirect() {
@@ -14,7 +15,7 @@ const Footer = () => {
         <div class="row">
           <div class="column">
             <br></br>
-            <a href="/ArticleView">Terms of Service</a>
+            <a href="/TermsOfService">Terms of Service</a>
           </div>
           <div class="column">
             <p>Contact Us</p>
