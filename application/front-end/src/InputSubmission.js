@@ -11,19 +11,16 @@ function InputSubmission() {
   const [sport, setSport] = useState("");
   const [length, setLength] = useState("");
 
-  function my_func() {
-    myFunction();
-    handlesearch();
-  }
+ 
 
-  function myFunction() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
+  // function myFunction() {
+  //   var x = document.getElementById("myDIV");
+  //   if (x.style.display === "none") {
+  //     x.style.display = "block";
+  //   } else {
+  //     x.style.display = "none";
+  //   }
+  // }
 
   function handlesearch() {
     var config = {
@@ -79,7 +76,7 @@ function InputSubmission() {
 
       <button
         className="search_button"
-        onClick={my_func}
+        onClick={handlesearch}
         type="submit"
       ></button>
 
@@ -117,10 +114,6 @@ function InputSubmission() {
         </div>
       ) : (
         <div>
-          <h3 id="myDIV">
-            Since no Filters or Keywords were applied, All articles were
-            displayed
-          </h3>
           <h2>{data.length} search results</h2>
         </div>
       )}
