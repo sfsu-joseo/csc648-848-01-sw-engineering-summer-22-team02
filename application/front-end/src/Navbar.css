@@ -554,6 +554,7 @@ justify-content: center;
 .row .column.right .stats .number{
     font-size: xx-large;
     font-size: 160%;
+    color: black;
 }
 
 .top{
@@ -569,11 +570,13 @@ justify-content: center;
     width: 33.33%;
     padding: 10px;
     height: 300px;
+    /* text-align: left; */
     /* Should be removed. Only for demonstration */
   }
 
   .row .column.right .stats .importantInfo{
       font-size: 200%;
+      color: black;
   }
 
   .footer {
