@@ -482,3 +482,27 @@ label{
 .thumbsDown:hover{
   color:#1DA099;
 }
+
+.reset_form .requirement{
+  color: red;
+  margin-top: none;
+}
+
+.reset_form .otp_button{
+  background-color: rgb(23, 71, 134);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    /* margin-top: 5px; */
+    padding-left: 90px;
+    padding-right: 90px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+.reset_form .OTP_message{
+  margin-left: 39%;
+  margin-right: 39%;
+  margin-bottom: 30px;
+}

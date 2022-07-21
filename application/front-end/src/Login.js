@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./SignUp.css";
 import "./Navbar.css";
 import Navbar from "./Navbar";
+import ForgotPassword from "./ForgotPassword";
 
 
 function Login() {
@@ -26,7 +27,7 @@ function Login() {
 
             </div>
             <div className="Forget_Signup">
-                <a className="forget" href="">Forget Password</a>
+                <a className="forget" href="/ForgotPassword">Forget Password</a>
             </div>
             <div className="Forget_Signup">
             <a className="signup" href="/Signup">Signup</a>

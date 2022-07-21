@@ -12,16 +12,13 @@ function Account_Settings() {
     function logoutSuccess(){
         alert("Logout Sucessful");
     }
-    function reset(){
-        alert("Will be impelmented in next prototype");
-    }
 
     return (
         <>
             <Navbar/>
             <div className="account_buttons">
-            <a className="link" href="/Home">
-                <button type="submit" onClick={reset} className="reset">
+            <a className="link" href="/ForgotPassword">
+                <button type="submit" className="reset">
                     Reset Password
                 </button>
                 </a>
