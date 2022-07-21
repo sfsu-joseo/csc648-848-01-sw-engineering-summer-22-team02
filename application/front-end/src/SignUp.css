@@ -146,8 +146,9 @@
     /* left: 50%; */
     /* transform: translate(-50%,-50%); */
     /* margin-top: 345px; */
-    margin-top: 300px;
-    padding-top: 60px;
+    margin-top: 10%;
+    padding-top: 30px;
+    /* margin-bottom: 2%; */
     /* padding-bottom: 30%; */
     /* margin-bottom: 10%; */
 }
@@ -207,6 +208,8 @@
 }
 .Forget_Signup .signup {
     color: rgb(31, 94, 230);
+    margin-bottom: 80%;
+    padding-bottom: 120px;
     /* margin-top: 10px; */
 }
 
