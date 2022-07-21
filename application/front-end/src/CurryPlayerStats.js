@@ -6,37 +6,39 @@ import Navbar from "./Navbar";
 
 const CurryPlayerStats = () => {
   return (
-    <>
+      <>
       <Navbar />
-      <h1>View the Updated Statistic of your favorite players</h1>
-      <div className="search_bar_player">
-        <input
-          placeholder="Search Player By Name. Ex. “Curry”."
-          className="search_feed"
-          // onChange={(e) => setInputText(e.target.value)}
-        />
-        <button className="search_button" type="submit"></button>
+      <div className="statement12">
+        View the Updated Statistic of your favorite players
       </div>
-      <div className="dropdown">
-        <button class="dropbtn">Filter Players by Sport</button>
-        <div className="dropdown-content">
-          <select
-            className="select_format"
-            // onChange={(e) => setSport(e.target.value)}
-          >
-            <option className="selec" value="">
-              Select One …
-            </option>
-            <option value="Basketball">Basketball</option>
-            <option value="Baseball">Baseball</option>
-          </select>
+      <div className="column12">
+        <div className="search_bar_player">
+          <input
+            placeholder="Search Player By Name. Ex. “Curry”."
+            className="search_feed"
+            // onChange={(e) => setInputText(e.target.value)}
+          />
+          <button className="search_button" type="submit"></button>
         </div>
-      </div>
-      <div className="playerDisplay">
-        <div className="column">
-          <div className="indPlayer" href="/CurryPlayerStats">
-            Steph Curry
+        <div className="dropdownPlayer">
+          <button class="dropbtn">Filter Article By Sport</button>
+          <div className="dropdown-content">
+            <select
+              className="select_format"
+              // onChange={(e) => setSport(e.target.value)}
+            >
+              <option className="selec" value="">
+                Select One …
+              </option>
+              <option value="Basketball">Basketball</option>
+              <option value="Baseball">Baseball</option>
+            </select>
           </div>
+        </div>
+        <div className="playerDisplay">
+          <a className="indPlayer" href="/CurryPlayerStats">
+            Steph Curry
+          </a>
           <a className="indPlayer" href="/BettsStatline">
             Mookie Betts
           </a>
@@ -63,16 +65,16 @@ const CurryPlayerStats = () => {
           </a>
         </div>
       </div>
-      <div className="curryStatline">
-        <div className="column">
+      <div className="column12">
+        <div className="curryStatline">
           <img
             className="Stats_image"
             alt="Article Img"
             src={require("./HomePage_Images/StephCurry.jpg")}
           ></img>
-          <div className="statLine">Steph Curry</div>
-          <div className="statLine">Games: 56 </div>
-          <div className="statLine">Field Goals Made: 225.9</div>
+          <p className="statLine">Steph Curry</p>
+          <p className="statLine">Games: 56 </p>
+          <p className="statLine">Field Goals Made: 225.9</p>
           <p className="statLine">Field Goals Attempted: 431.0</p>
           <p className="statLine">Two Pointers Made: 169.1</p>
           <p className="statLine">Two Pointers Attempted: 272.9</p>
