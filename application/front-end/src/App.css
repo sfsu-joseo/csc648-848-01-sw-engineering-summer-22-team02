@@ -2,6 +2,9 @@
   text-align: center;
 }
 
+.column *{
+  color: white;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -46,6 +49,7 @@ h1{
   float: left;
   width: 50%;
 }
+
 .indPlayer{
   display: block;
   text-align: center;
