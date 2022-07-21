@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import "./Home.css";
 import { useState } from 'react'
+import Footer from "./Footer";
 
 const ForgotPassword = () => {
 
@@ -19,7 +20,7 @@ const ForgotPassword = () => {
                 <button type="submit" onClick={() => setShow(!show)} className="otp_button">
                     Send OTP Email
                 </button>
-                {show && <p className="OTP_message">Please check your inbox, you should receive an email 
+                {!show && <p className="OTP_message">Please check your inbox, you should receive an email 
                     containing the OTP within 30 seconds.</p>}
                 
                 <input
@@ -46,6 +47,7 @@ const ForgotPassword = () => {
             <div className="Forget_Signup">
                 <a className="signup" href="/Login">Login</a>
             </div>
+            <Footer/>
         </>
     );
 }

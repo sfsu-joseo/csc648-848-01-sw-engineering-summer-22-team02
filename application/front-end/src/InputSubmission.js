@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Navbar.css";
 import ArticleView from "./ArticleView";
+import Footer from "./Footer";
 
 function InputSubmission() {
   const [data, setData] = useState("");
@@ -90,7 +91,7 @@ function InputSubmission() {
           </div>
         </div>
       </div>
-              <h2 className="data_text">{data.length}</h2>
+      <h2 className="data_text">{data.length}</h2>
       {data ? (
         data.map((data1) => {
           return (
@@ -122,7 +123,9 @@ function InputSubmission() {
       )}
       <h3> no data</h3>
     </div>
+    
   );
+
 }
 
 export default InputSubmission;

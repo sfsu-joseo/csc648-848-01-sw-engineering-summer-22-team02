@@ -3,6 +3,7 @@ import "./SignUp.css";
 import axios from "axios";
 import "./Navbar.css";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function SignUp() {
     const [data, setData] = useState("");
@@ -123,6 +124,7 @@ function SignUp() {
                     <h3></h3>
                 )}
             </div>
+            <Footer/>
         </>
     );
 }

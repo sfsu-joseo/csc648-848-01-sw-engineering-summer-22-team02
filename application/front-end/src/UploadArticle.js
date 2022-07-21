@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import "./Home.css";
 import "./SignUp.css";
 import { useState } from "react";
+import Footer from "./Footer";
 
 const UploadArticle = () => {
     const [img, setImgage] = useState();
@@ -43,6 +44,7 @@ const UploadArticle = () => {
                     </button>
                 </a>
             </div>
+            <Footer/>
         </>
     );
 };

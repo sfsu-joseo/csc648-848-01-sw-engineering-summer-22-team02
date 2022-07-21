@@ -3,7 +3,7 @@ import "./SignUp.css";
 import "./Navbar.css";
 import Navbar from "./Navbar";
 import ForgotPassword from "./ForgotPassword";
-
+import Footer from "./Footer";
 
 function Login() {
     function popup() {
@@ -32,6 +32,7 @@ function Login() {
             <div className="Forget_Signup">
             <a className="signup" href="/Signup">Signup</a>
             </div>
+            <Footer/>
         </>
     );
 }

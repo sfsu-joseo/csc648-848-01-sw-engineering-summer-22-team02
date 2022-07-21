@@ -447,17 +447,19 @@ label{
 }
 
 .upload_greet1{
-  color: rgb(69, 68, 68);
-  font-weight: 600;
+  color: rgb(79, 77, 77);
+  /* font-weight: 600; */
   margin-top: 60px;
   font-size:larger;
+  font-size: 200%;
 }
 
 .upload_greet2{
-  color: rgb(69, 68, 68);
-  font-weight: 600;
+  color: rgb(79, 77, 77);
+  /* font-weight: 600; */
   font-size:larger;
   margin-bottom: 45px;
+  font-size: 200%;
 }
 
 .thumbs{

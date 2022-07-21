@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./SignUp.css";
 import "./Navbar.css";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function Account_Settings() {
 
@@ -33,6 +34,7 @@ function Account_Settings() {
                 </button>
                 </a>
             </div>
+            <Footer/>
         </>
     );
 }
