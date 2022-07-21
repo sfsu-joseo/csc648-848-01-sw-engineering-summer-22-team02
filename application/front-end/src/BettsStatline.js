@@ -7,7 +7,8 @@ import Navbar from "./Navbar";
 const BettsStatline = () => {
   return (
     <>
-  <Navbar />
+      <Navbar />
+      <h1>View the Updated Statistic of your favorite players</h1>
       <div className="search_bar_player">
         <input
           placeholder="Search Player By Name. Ex. “Curry”."
@@ -17,7 +18,7 @@ const BettsStatline = () => {
         <button className="search_button" type="submit"></button>
       </div>
       <div className="dropdown">
-        <button class="dropbtn">Sport Filter</button>
+        <button class="dropbtn">Filter Players by Sport</button>
         <div className="dropdown-content">
           <select
             className="select_format"

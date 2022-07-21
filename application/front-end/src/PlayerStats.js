@@ -7,31 +7,34 @@ function PlayerStats() {
   return (
     <>
       <Navbar />
-      <div className="search_bar_player">
-        <input
-          placeholder="Search Player By Name. Ex. “Curry”."
-          className="search_feed"
-          // onChange={(e) => setInputText(e.target.value)}
-        />
-        <button className="search_button" type="submit"></button>
+      <div className="statement12">
+        View the Updated Statistic of your favorite players
       </div>
-      <div className="dropdown">
-        <button class="dropbtn">Sport Filter</button>
-        <div className="dropdown-content">
-          <select
-            className="select_format"
-            // onChange={(e) => setSport(e.target.value)}
-          >
-            <option className="selec" value="">
-              Select One …
-            </option>
-            <option value="Basketball">Basketball</option>
-            <option value="Baseball">Baseball</option>
-          </select>
+      <div className="column12">
+        <div className="search_bar_player">
+          <input
+            placeholder="Search Player By Name. Ex. “Curry”."
+            className="search_feed"
+            // onChange={(e) => setInputText(e.target.value)}
+          />
+          <button className="search_button" type="submit"></button>
         </div>
-      </div>
-      <div className="playerDisplay">
-        <div className="column">
+        <div className="dropdownPlayer">
+          <button class="dropbtn">Filter Article By Sport</button>
+          <div className="dropdown-content">
+            <select
+              className="select_format"
+              // onChange={(e) => setSport(e.target.value)}
+            >
+              <option className="selec" value="">
+                Select One …
+              </option>
+              <option value="Basketball">Basketball</option>
+              <option value="Baseball">Baseball</option>
+            </select>
+          </div>
+        </div>
+        <div className="playerDisplay">
           <a className="indPlayer" href="/CurryPlayerStats">
             Steph Curry
           </a>
@@ -61,8 +64,8 @@ function PlayerStats() {
           </a>
         </div>
       </div>
-      <div className="curryStatline">
-        <div className="column">
+      <div className="column12">
+        <div className="curryStatline">
           <img
             className="Stats_image"
             alt="Article Img"

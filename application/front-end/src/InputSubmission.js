@@ -10,6 +10,24 @@ function InputSubmission() {
   const [sport, setSport] = useState("");
   const [length, setLength] = useState("");
 
+  function my_func() {
+    myFunction();
+    handlesearch();
+    myFunction1();
+  }
+
+  function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function myFunction1() {
+    setSport();
+  }
   function handlesearch() {
     var config = {
       method: "post",
@@ -23,8 +41,8 @@ function InputSubmission() {
     };
     axios(config)
       .then(function (response) {
-        setLength(20000);
         setData(response.data);
+        console.log(response.data.sport);
         console.log(response.data.length);
         console.log(response.data);
       })
@@ -75,7 +93,7 @@ function InputSubmission() {
           onChange={(e) => setDate(e.target.value)}
         /> */}
         <div className="dropdown">
-          <button class="dropbtn">Sport Filter</button>
+          <button class="dropbtn">Filter Article By Sport</button>
           <div className="dropdown-content">
             <select
               className="select_format"
@@ -90,7 +108,26 @@ function InputSubmission() {
           </div>
         </div>
       </div>
-              <h2 className="data_text">{data.length}</h2>
+      {data.length == 0 ? (
+        <div className="noArticles">
+          <h2>{data.length} search results</h2>
+          <h2>Your Search did not match any articles</h2>
+          <h2>Suggestions:</h2>
+          <h2>Try Keywords relevant to Sports news. Ex. "Harden"</h2>
+          <h2>
+            Filter Articles by the Sport you are interested in. Ex. "Basketball"
+          </h2>
+        </div>
+      ) : (
+        <div>
+          <h3 id="myDIV">
+            Since no Filters or Keywords were applied, All articles were
+            displayed
+          </h3>
+          <h2>{data.length} search results</h2>
+        </div>
+      )}
+
       {data ? (
         data.map((data1) => {
           return (
@@ -120,7 +157,6 @@ function InputSubmission() {
       ) : (
         <h3>No data yet</h3>
       )}
-      <h3> no data</h3>
     </div>
   );
 }

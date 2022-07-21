@@ -6,9 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const GamesExample = () => {
-  function popup() {
-    alert("Comment deletion will be implemented next milestone");
-  }
   function myFunction() {
     var x = document.getElementById("myDIV");
     if (x.style.display === "none") {
@@ -59,7 +56,11 @@ const GamesExample = () => {
   return (
     <>
       <Navbar />
-      <div className="gamesExample">
+      <div className="statement12">
+        Check the Score, and chat with other people who are following the game
+        through the discussion forum
+      </div>
+      {/* <div className="gamesExample">
         <a className="gameInfo">
           <div className="column">
             <img
@@ -85,11 +86,49 @@ const GamesExample = () => {
             <p className="gameText">Celtics</p>
           </div>
         </a>
+      </div> */}
+      {/* <div className="displayScore">
+
+      </div> */}
+      <div className="gamesExample">
+        <div className="gamesInfoExample">
+          <div className="columnExample">
+            <img
+              className="teamsExample1"
+              alt="Warriors logo"
+              src={require("./HomePage_Images/Golden_State_Warriors_logo.svg.png")}
+              /*src\HomePage_Images\*/
+            ></img>
+
+            <div className="gameTextExample">Warriors</div>
+          </div>
+
+          <div className="columnExample">
+            <div className="score2">103 - 90</div>
+            <div className="time2">06-13-2022</div>
+            <div className="versusText2">Chase Center,San Francisco</div>
+          </div>
+          <div className="columnExample">
+            <img
+              className="teamsExample"
+              alt="Celtics logo"
+              src={require("./HomePage_Images/Boston_Celtics.svg.png")}
+            ></img>
+            <div className="gameTextExample">Celtics</div>
+          </div>
+        </div>
       </div>
+
       <div className="comment" id="myDIV">
-        <div className="column">TestUser:</div>
-        <div className="commentText">oh yeah this game is so good</div>
-        <FontAwesomeIcon icon={faTrash} onClick={myFunction} />
+        <div className="column">
+          <div className="userName">TestUser:</div>
+        </div>
+        <div className="column">
+          <div className="commentText">oh yeah this game is so good</div>
+        </div>
+        <div className="column">
+          <FontAwesomeIcon icon={faTrash} onClick={myFunction} />
+        </div>
       </div>
       <div className="comment" id="myDIV1" onClick={myFunction1}>
         <div className="column">SportsLover:</div>

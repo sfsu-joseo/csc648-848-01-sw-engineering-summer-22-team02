@@ -76,7 +76,6 @@ body{
   font-size: 15px;
   border-radius: 20px;
   font-family: 'Helvetica', Arial, Lucida Grande, sans-serif;
-  
 }
 
 
@@ -383,29 +382,20 @@ label{
   background-color: #1DA099;
 }
 
-.curryStatline{
-  text-align: right;
-  margin-right:200px;
-  margin-left: 50%;
-  padding:100px;
-}
-.Stats_image {
-  height: 400px;
-  width: 600px;
-}
-.statLine{
-  text-align: left;
-}
 
 .comment {
   background-color:white;
   border-radius: 20px;
   margin-left: 10%;
   margin-right: 10%;
-  margin-bottom: 10px;
-  padding-top:5px;
-  padding-bottom: 5px;
+  margin-top: 2.5%;
+  padding-top:.5%;
+  padding-bottom: 2.5%;
   padding-right: 15px;
+}
+.comment .column{
+width:33%;
+height:5%;
 }
 .comment .commentText{
   text-align:left;

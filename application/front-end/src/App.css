@@ -48,9 +48,11 @@ h1{
 }
 .indPlayer{
   display: block;
+  text-align: center;
       background:White;
         margin-top: 20px;
         margin-right:60%;
+        min-width: 60%;
         border-radius: 200px;
         border: none;
         padding-left:15%;
@@ -59,7 +61,7 @@ h1{
         padding-top: 1%;
         text-decoration: none;
         color:black;
-        /* text-align: left; */
+        font-size: 100%;
           
 }
 .indPlayer:hover {
@@ -68,25 +70,46 @@ h1{
   } 
 
 .gamesExample {
-  text-align: center;
-  margin-left: 10%;
+  margin-left:10%;
   margin-right: 10%;
   background-color: rgb(44, 82, 138);
-  border-radius: 20px;
-  margin-bottom: 50px;
-  color: white;
-  height: 200%;
-  width: 80%;
+  margin-bottom: 1%;
+   border-radius: 6px;
+   padding-bottom: 2%;
 }
-.gamesExample .column{
+.gamesExample .gamesInfoExample{
+    text-align: center;
+      margin-top: .5%;
+      color: white;
+      height: 300px;
+      width: 100%;
+      text-decoration: none;
+      color: white;
+      padding-top: 1%;
+      
+}
+.gamesExample .teamsExample {
+ width: 47%;
+}
+.gamesExample .teamsExample1 {
+  width: 45%;
+}
+.gameTextExample {
+  font-size: 100%;
+  font-weight: 1000;
+  margin-bottom: 20%;
+}
+.gamesExample .columnExample{
   float:left;
-  width:25%;
+  width:33%;
+  height:75%;
 }
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
+
 .score2 {
   text-align: center;
   font-size: 25pt;
@@ -147,7 +170,7 @@ text-decoration: none;
 .gameText{
   font-size: 100%;
   font-weight: 1000;
-  margin-bottom:20%;
+  margin-bottom:10%;
 }
 
 .score{
@@ -166,57 +189,6 @@ text-decoration: none;
   text-align: center;
   font-size: 100%;
   padding-top: 10px;
-}
-
-
-.split {
-  height: 10%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-/* Control the left side */
-.left {
-  left: 0;
-
-}
-
-/* Control the right side */
-.right {
-  right: 0;
-  margin-top:10%;
-}
-
-/* If you want the content centered horizontally and vertically */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-/* Style the image inside the centered container, if needed */
-.centered img {
-  width: 150px;
-  border-radius: 50%;
-}
-.footer {
-  position: relative;
-  left: 0;
-  bottom: 0;
-  height:150px;
-  width: 100%;
-  background-color:rgb(0, 19, 39, 255);
-  color: white;
-  text-align: center;
-}
-* {
-  box-sizing: border-box;
 }
 
 /* Create three equal columns that floats next to each other */
@@ -244,4 +216,95 @@ text-decoration: none;
   color: white;
   height: 300px;
     width: 90%;
+}
+* {
+  box-sizing: border-box;
+}
+.articleCount{
+text-align: center;
+font-size: 150%;
+font-weight: 500px;
+font-style: bold;
+}
+.dropdownPlayer {
+  padding-left: 10px;
+}
+
+.dropdownPlayer .dropbtn {
+  background: #0d356c;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: none;
+}
+.dropdownPlayer:hover .dropbtn {
+  background-color: #1DA099;
+  transition: ease-in-out 0.26s;
+}
+
+.dropdownPlayer .dropdown-content {
+  padding: 10px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  margin-left:7.5%;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdownPlayer .dropdown-content a {
+  color: black;
+  padding: 15px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdownPlayer .dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdownPlayer:hover .dropdown-content {
+  display: block;
+}
+
+.dropdownPlayer .dropdown-content .select_format {
+  color: #0d356c;
+  border: none;
+}
+
+.statement12 {
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 40px;
+  font-size: 200%;
+  color: rgb(79, 77, 77);
+}
+.column12 {
+  width: 50%;
+  float: left;
+}
+/* .row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+
+.curryStatline {
+  text-align: center;
+}
+
+.curryStatline .Stats_image {
+  margin-top: 3%;
+  height: 100%;
+  width: 60%;
+}
+
+.curryStatline .statLine {
+  font-size: 150%;
+  font-weight: 100%;
+  padding-top: .03%;
 }

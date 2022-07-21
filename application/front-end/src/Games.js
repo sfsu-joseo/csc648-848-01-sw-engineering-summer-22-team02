@@ -6,6 +6,13 @@ const Games = () => {
   return (
     <>
       <Navbar />
+      <div className="statement12">
+        Want to Check the live scores of your favourite games? 
+      </div>
+      <div className="statement12">
+  Search Games by
+        the teams playing, and view there scores in an instant.
+      </div>
       <div className="search_bar_Games">
         <input
           placeholder="Search Game by Team. Ex. “Warriors”."
@@ -21,7 +28,7 @@ const Games = () => {
           // onChange={(e) => setDate(e.target.value)}
         />
         <div className="dropdown">
-          <button class="dropbtn">Sport Filter</button>
+          <button class="dropbtn">Filter by Sport</button>
           <div className="dropdown-content">
             <select
               className="select_format"
@@ -36,177 +43,120 @@ const Games = () => {
           </div>
         </div>
       </div>
-      {/* <div className="columnGames">
-        <div className="games">
-        <a className="gamesInfo" href="/GamesExample">
-          <div className="column">
-            <img
-              className="teams"
-              alt="Warriors logo"
-              src={require("./HomePage_Images/Golden_State_Warriors_logo.svg.png")}
-              /*src\HomePage_Images\
-            ></img>
-
-            <div className="gameText">Warriors</div>
-          </div>
-      
-          <div className="column">
-            <div className="score">103 - 90</div>
-            <div className="time">06-13-2022</div>
-            <div className="versusText">Chase Center,San Francisco</div>
-          </div>
-          <div className="column">
-            <img
-              className="teams"
-              alt="Celtics logo"
-              src={require("./HomePage_Images/Boston_Celtics.svg.png")}
-            ></img>
-            <div className="gameText">Celtics</div>
-          </div>
-        </a>
-        </div>
-      </div> */}
-      
-      {/* <div className="games">
-        <a className="gamesInfo" href="/GamesExample">
-          <div className="column">
-            <img
-              className="teams"
-              alt="Warriors logo"
-              src={require("./HomePage_Images/Golden_State_Warriors_logo.svg.png")}
-            ></img>
-
-            <p className="gameText">Warriors</p>
-          </div>
-          <div className="column">
-            <div className="score">103 - 90</div>
-            <div className="time">06-13-2022</div>
-            <div className="versusText">Chase Center,San Francisco</div>
-          </div>
-          <div className="column">
-            <img
-              className="teams"
-              alt="Celtics logo"
-              src={require("./HomePage_Images/Boston_Celtics.svg.png")}
-            ></img>
-            <p className="gameText">Celtics</p>
-          </div>
-        </a>
-      </div> */}
       <div className="columnGames">
         <div className="games">
-        <a className="gamesInfo" href="/GamesExample">
-          <div className="column">
-            <img
-              className="teams"
-              alt="Warriors logo"
-              src={require("./HomePage_Images/Golden_State_Warriors_logo.svg.png")}
-              /*src\HomePage_Images\*/
-            ></img>
+          <a className="gamesInfo" href="/GamesExample">
+            <div className="column">
+              <img
+                className="teams"
+                alt="Warriors logo"
+                src={require("./HomePage_Images/Golden_State_Warriors_logo.svg.png")}
+                /*src\HomePage_Images\*/
+              ></img>
 
-            <div className="gameText">Warriors</div>
-          </div>
-      
-          <div className="column">
-            <div className="score">103 - 90</div>
-            <div className="time">06-13-2022</div>
-            <div className="versusText">Chase Center,San Francisco</div>
-          </div>
-          <div className="column">
-            <img
-              className="teams"
-              alt="Celtics logo"
-              src={require("./HomePage_Images/Boston_Celtics.svg.png")}
-            ></img>
-            <div className="gameText">Celtics</div>
-          </div>
-        </a>
+              <div className="gameText">Warriors</div>
+            </div>
+
+            <div className="column">
+              <div className="score">103 - 90</div>
+              <div className="time">06-13-2022</div>
+              <div className="versusText">Chase Center,San Francisco</div>
+            </div>
+            <div className="column">
+              <img
+                className="teams"
+                alt="Celtics logo"
+                src={require("./HomePage_Images/Boston_Celtics.svg.png")}
+              ></img>
+              <div className="gameText">Celtics</div>
+            </div>
+          </a>
         </div>
         <div className="games">
-        <a className="gamesInfo" href="/GamesExample">
-          <div className="column">
-            <img
-              className="teams"
-              alt="Warriors logo"
-              src={require("./HomePage_Images/Golden_State_Warriors_logo.svg.png")}
-              /*src\HomePage_Images\*/
-            ></img>
+          <a className="gamesInfo" href="/GamesExample">
+            <div className="column">
+              <img
+                className="teams"
+                alt="Warriors logo"
+                src={require("./HomePage_Images/Golden_State_Warriors_logo.svg.png")}
+                /*src\HomePage_Images\*/
+              ></img>
 
-            <div className="gameText">Warriors</div>
-          </div>
-      
-          <div className="column">
-            <div className="score">103 - 90</div>
-            <div className="time">06-13-2022</div>
-            <div className="versusText">Chase Center,San Francisco</div>
-          </div>
-          <div className="column">
-            <img
-              className="teams"
-              alt="Celtics logo"
-              src={require("./HomePage_Images/Boston_Celtics.svg.png")}
-            ></img>
-            <div className="gameText">Celtics</div>
-          </div>
-        </a>
+              <div className="gameText">Warriors</div>
+            </div>
+
+            <div className="column">
+              <div className="score">103 - 90</div>
+              <div className="time">06-13-2022</div>
+              <div className="versusText">Chase Center,San Francisco</div>
+            </div>
+            <div className="column">
+              <img
+                className="teams"
+                alt="Celtics logo"
+                src={require("./HomePage_Images/Boston_Celtics.svg.png")}
+              ></img>
+              <div className="gameText">Celtics</div>
+            </div>
+          </a>
         </div>
       </div>
       <div className="columnGames">
         <div className="games">
-        <a className="gamesInfo" href="/GamesExample">
-          <div className="column">
-            <img
-              className="teams"
-              alt="Warriors logo"
-              src={require("./HomePage_Images/Golden_State_Warriors_logo.svg.png")}
-              /*src\HomePage_Images\*/
-            ></img>
+          <a className="gamesInfo" href="/GamesExample">
+            <div className="column">
+              <img
+                className="teams"
+                alt="Warriors logo"
+                src={require("./HomePage_Images/Golden_State_Warriors_logo.svg.png")}
+                /*src\HomePage_Images\*/
+              ></img>
 
-            <div className="gameText">Warriors</div>
-          </div>
-      
-          <div className="column">
-            <div className="score">103 - 90</div>
-            <div className="time">06-13-2022</div>
-            <div className="versusText">Chase Center,San Francisco</div>
-          </div>
-          <div className="column">
-            <img
-              className="teams"
-              alt="Celtics logo"
-              src={require("./HomePage_Images/Boston_Celtics.svg.png")}
-            ></img>
-            <div className="gameText">Celtics</div>
-          </div>
-        </a>
+              <div className="gameText">Warriors</div>
+            </div>
+
+            <div className="column">
+              <div className="score">103 - 90</div>
+              <div className="time">06-13-2022</div>
+              <div className="versusText">Chase Center,San Francisco</div>
+            </div>
+            <div className="column">
+              <img
+                className="teams"
+                alt="Celtics logo"
+                src={require("./HomePage_Images/Boston_Celtics.svg.png")}
+              ></img>
+              <div className="gameText">Celtics</div>
+            </div>
+          </a>
         </div>
         <div className="games">
-        <a className="gamesInfo" href="/GamesExample">
-          <div className="column">
-            <img
-              className="teams"
-              alt="Warriors logo"
-              src={require("./HomePage_Images/Golden_State_Warriors_logo.svg.png")}
-              /*src\HomePage_Images\*/
-            ></img>
+          <a className="gamesInfo" href="/GamesExample">
+            <div className="column">
+              <img
+                className="teams"
+                alt="Warriors logo"
+                src={require("./HomePage_Images/Golden_State_Warriors_logo.svg.png")}
+                /*src\HomePage_Images\*/
+              ></img>
 
-            <div className="gameText">Warriors</div>
-          </div>
-      
-          <div className="column">
-            <div className="score">103 - 90</div>
-            <div className="time">06-13-2022</div>
-            <div className="versusText">Chase Center,San Francisco</div>
-          </div>
-          <div className="column">
-            <img
-              className="teams"
-              alt="Celtics logo"
-              src={require("./HomePage_Images/Boston_Celtics.svg.png")}
-            ></img>
-            <div className="gameText">Celtics</div>
-          </div>
-        </a>
+              <div className="gameText">Warriors</div>
+            </div>
+
+            <div className="column">
+              <div className="score">103 - 90</div>
+              <div className="time">06-13-2022</div>
+              <div className="versusText">Chase Center,San Francisco</div>
+            </div>
+            <div className="column">
+              <img
+                className="teams"
+                alt="Celtics logo"
+                src={require("./HomePage_Images/Boston_Celtics.svg.png")}
+              ></img>
+              <div className="gameText">Celtics</div>
+            </div>
+          </a>
         </div>
       </div>
       <Footer />
