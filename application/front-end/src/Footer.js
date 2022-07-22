@@ -1,45 +1,17 @@
-import React, { useState, useEffect } from "react";
-import "./SignUp.css";
+import React from "react";
 import "./Navbar.css";
-import Navbar from "./Navbar";
-import ForgotPassword from "./ForgotPassword";
-import Footer from "./Footer";
-import TermsOfService from "./TermsOfService";
+import "./ArticleView";
+import "./UploadArticle";
+import "./PlayerStats";
+import "./TermsOfService";
 
-function Login() {
-  function popup() {
-    alert("Login Succesful");
-  }
+const Footer = () => {
   function redirect() {
     alert("You are now leaving this Website");
   }
   return (
     <>
-      <Navbar />
-      <div className="login_form">
-        <input
-          className="form_input"
-          type="text"
-          placeholder="Username or Email"
-        />
-
-        <input className="form_input" type="password" placeholder="Password" />
-
-        <button type="submit" onClick={popup} className="Signup_button">
-          Login
-        </button>
-      </div>
-      <div className="Forget_Signup">
-        <a className="forget" href="/ForgotPassword">
-          Forgot Password?
-        </a>
-      </div>
-      <div className="Forget_Signup">
-        <a className="signup" href="/Signup">
-        Do not have an account? Signup Here!
-        </a>
-      </div>
-      <ul className="footerLogin">
+      <ul className="footer">
         <div class="row">
           <div class="column">
             <br></br>
@@ -79,6 +51,6 @@ function Login() {
       </ul>
     </>
   );
-}
+};
 
-export default Login;
+export default Footer;

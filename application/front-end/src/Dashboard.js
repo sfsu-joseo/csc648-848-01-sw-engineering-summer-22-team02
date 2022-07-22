@@ -1,128 +1,152 @@
 import React from "react";
-import "./Home.css";
+// import "./Home.css";
+import "./Navbar.css";
 import Navbar from "./Navbar";
+import TermsOfService from "./TermsOfService";
 
 function Dashboard() {
+     function redirect() {
+       alert("You are now leaving this Website");
+     }
+  return (
+    <>
+      <Navbar />
+      <div className="top">
+        <p>Check the statistics of your articles here</p>
+      </div>
+      <div class="row">
+        <div className="overall_board">
+          <div class="column left">
+            <div className="border">
+              <div className="column1">
+                <h2 className="data_text">
+                  James Harden just joined the Sixers{" "}
+                </h2>
+                <h3 className="data_text">2022-5-3</h3>
+              </div>
 
-    class DisplayedInfo extends React.Component {
-        render() {
-            return (
-                <div className="article_info" {...this.props}>
-                    <p className="views">Number of Views: 5653</p>
-                    <p className="title">Kyrie Irving can still technically be traded, but all signs point to him playing for Nets next season
-                    </p>
-                    <p className="sub-title">Irving's opt-in likely ends the possibility of him joining the Lakers. </p>
-                    <p className="body">Irving has operated with all the subtlety of a Michael Bay film this offseason. He only opted in after trying to find a sign-and-trade
-                        — Irving gave the Nets a list of teams where he wanted to go — and finding there was no wide market for his services after the disruption he caused in Boston
-                        and now Brooklyn. For now, the Nets are being patient. It’s a negotiating position, but one they don’t need to change. Brooklyn only gets one swing at this.
-                    </p>
-                </div>
-            );
-        }
-    }
-
-    class Slider extends React.Component {
-        render() {
-            return (
-                <div className="scrollmenu">
-                    {/* <div class="scrollmenu"> */}
-                    <div className="scroll_info" >
-                        <div className="row" {...this.props}>
-                            <div className="click_to_view1">
-                                <div className="column1">
-                                    <h2 className="data_text">Kyrie Irving can still technically be traded,but all signs point to
-                                    </h2>
-                                    <h2 className="data_text">
-                                        him playing for Nets next season.
-                                    </h2>
-                                    <h3 className="data_text">Basketball</h3>
-                                    <h3 className="data_text">2022-6-19</h3>
-                                    <h3 className="data_text">Kevin Islas</h3>
-                                </div>
-                            </div>
-                            <div className="click_to_view2">
-                                <div className="column2">
-                                    <img
-                                        className="image"
-                                        alt="Article "
-                                        src={require("./HomePage_Images/Article_Img.png")}
-                                    ></img>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* <a className="scroll_info" href="#home"> */}
-                    <div className="scroll_info">
-                        <div className="row" {...this.props}>
-                            <div className="click_to_view1">
-
-                                <div className="column1">
-                                    <h2 className="data_text">More reporting points to Harden opting out to
-                                    </h2>
-                                    <h2 className="data_text">
-                                        give Sixers flexibility.
-                                    </h2>
-                                    <h3 className="data_text">Basketball</h3>
-                                    <h3 className="data_text">2022-6-15</h3>
-                                    <h3 className="data_text">Shamar Ireland</h3>
-                                </div>
-                            </div>
-                            <div className="click_to_view2">
-                                <div className="column2">
-                                    <img
-                                        className="image"
-                                        alt="Article "
-                                        src={require("./HomePage_Images/Harden.png")}
-                                    ></img>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* </a> */}
-                </div>
-                // </div>
-            );
-        }
-    }
-
-    class InfoOnClick extends React.Component {
-        constructor() {
-            super();
-
-            this.state = {
-                clicked: false
-            };
-            this.handleClick = this.handleClick.bind(this);
-        }
-
-        handleClick() {
-            this.setState({
-                clicked: true
-            });
-        }
-
-        render() {
-            return (
-                <div>
-                    <Slider onClick={this.handleClick} />
-                    {this.state.clicked ? <DisplayedInfo /> : null}
-                </div>
-            );
-        }
-    };
-
-
-
-
-    return (
-        <>
-            <Navbar />
-            <div className="top">
-                <p>Click an Article to view more.</p>
+              <div className="column2">
+                <img
+                  className="image"
+                  alt="Article "
+                  src={require("./HomePage_Images/Harden.png")}
+                ></img>
+              </div>
             </div>
-            <InfoOnClick />
-        </>
-    );
+
+            {/* <div className="white">
+
+                    </div> */}
+
+            <div className="border">
+              <div className="column1">
+                <h2 className="data_text">Baseball is at an all time high</h2>
+                <h3 className="data_text">2022-3-3</h3>
+              </div>
+
+              <div className="column2">
+                <img
+                  className="image"
+                  alt="Article "
+                  src={require("./HomePage_Images/Baseball.png")}
+                ></img>
+              </div>
+            </div>
+            {/* <div className="white">
+
+                    </div> */}
+
+            <div className="border">
+              <div className="column1">
+                <h2 className="data_text">
+                  James Harden just joined the Sixers
+                </h2>
+                <h3 className="data_text">2022-5-3</h3>
+              </div>
+
+              <div className="column2">
+                <img
+                  className="image"
+                  alt="Article "
+                  src={require("./HomePage_Images/Harden.png")}
+                ></img>
+              </div>
+            </div>
+            {/* <div className="white">
+
+                    </div> */}
+
+            <div className="border">
+              <div className="column1">
+                <h2 className="data_text">Baseball is at an all time high </h2>
+                <h3 className="data_text">2022-5-3</h3>
+              </div>
+
+              <div className="column2">
+                <img
+                  className="image"
+                  alt="Article "
+                  src={require("./HomePage_Images/Baseball.png")}
+                ></img>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="column right">
+          <div class="stats">
+            <p className="importantInfo">
+              Number of Views: <b className="number"> 5653</b>
+            </p>
+            <p className="importantInfo">
+              Number of Likes: <b className="number"> 170</b>{" "}
+            </p>
+            <p className="importantInfo">
+              Number of Dislikes:<b className="number"> 30</b>
+            </p>
+          </div>
+        </div>
+      </div>
+      <ul className="footerDash">
+        <div class="row">
+          <div class="column">
+            <br></br>
+            <a href="./TermsOfService">Terms of Service</a>
+          </div>
+          <div class="column">
+            <p>Contact Us</p>
+            <a
+              href="https://www.facebook.com/sanfranciscostate"
+              onClick={redirect}
+            >
+              {" "}
+              <p>Facebook</p>
+            </a>
+            <a
+              href="https://twitter.com/SFSU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+              onClick={redirect}
+            >
+              {" "}
+              <p>Twitter</p>
+            </a>
+            <a
+              href="https://www.instagram.com/sanfranciscostate/?hl=en"
+              onClick={redirect}
+            >
+              {" "}
+              <p>Instagram</p>
+            </a>
+          </div>
+          <div class="column">
+            <p>Address</p>
+            <p>San Francisco State University</p>
+            <p>San Francisco</p>
+            <p>California</p>
+          </div>
+        </div>
+      </ul>
+    </>
+  );
 }
 
 export default Dashboard;
