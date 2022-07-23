@@ -1,0 +1,1 @@
+CALL getNewsArticles("2022-05-11","Basketball",null);
