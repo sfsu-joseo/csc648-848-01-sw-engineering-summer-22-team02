@@ -129,17 +129,18 @@ li .first_header:hover {
 .search_bar .search_feed {
     padding-top: .5%;
     padding-bottom: .5%;
-    padding-right: 35%;
+    padding-right: .5%;
     padding-left: 2%;
     margin-top: 30px;
     margin-left: 2%;
     border: none;
     border-radius: 20px;
     margin-bottom: 10px;
+    width: 65%;
 }
 
-input,
-input::placeholder {
+
+.search_feed .input::placeholder {
     padding-right: 400%;
 }
 
@@ -244,6 +245,11 @@ input::placeholder {
     font-size: large;
 }
 
+.dateSelect
+.input {
+    position: relative;
+}
+
 input {
     position: relative;
 }
@@ -307,7 +313,7 @@ input {
 /*Search bar for the Players page*/
 .search_bar_player .search_feed {
     padding: 10px;
-    padding-right: 15%;
+    padding-right: 5%;
     padding-left: 1%;
     margin-top: 30px;
     /* margin-right: 16px; */
@@ -316,6 +322,7 @@ input {
     font-size: 20px;
     border-radius: 20px;
     margin-bottom: 10px;
+    width: 50%;
 }
 .search_bar_player .search_button {
     margin-right: 25%;
@@ -348,12 +355,12 @@ input {
 
 .search_bar_Games {
     margin-top: 20px;
-    margin-left: 40%;
+    margin-left: 35%;
     text-align: left;
 }
 .search_bar_Games .search_feed {
-    padding-right: 10%;
-    padding-left: 5%;
+    padding-right: 5%;
+    padding-left: 1%;
     padding-top: .75%;
     padding-bottom: .75%;
     margin-right: 16px;
@@ -362,6 +369,7 @@ input {
     font-size: 100%;
     border-radius: 20px;
     margin-bottom: 10px;
+    width: 42%;
 }
 .search_button_Games {
     margin-right: 25%;
@@ -538,7 +546,7 @@ justify-content: center;
 } */
 
 .row .column.right{
-   top: 35%;
+   top: 50%;
    left: 50%;
    position: absolute;
 }

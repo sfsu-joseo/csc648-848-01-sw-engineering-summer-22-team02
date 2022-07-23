@@ -10,6 +10,7 @@ function InputSubmission() {
   const [date, setDate] = useState("");
   const [sport, setSport] = useState("");
   const [length, setLength] = useState("");
+  const [searchApplied, setSearchApplied] = useState(false);
 
  
 
@@ -23,6 +24,14 @@ function InputSubmission() {
   // }
 
   function handlesearch() {
+    if(InputText=="" && sport=="")
+    {
+      setSearchApplied(false);
+    }
+    else
+    {
+      setSearchApplied(true);
+    }
     var config = {
       method: "post",
       url: "http://34.136.124.189:8080/api/searchnews/search",
@@ -68,8 +77,8 @@ function InputSubmission() {
           player statistics.
         </p>
       </div>
-      <input
-        placeholder="Type any keyword present in the heading of an article, to get your search results. Ex “Harden”."
+      <input  
+        placeholder="Type any keyword related to sports, to get the latest articles you would like to read. Ex “Harden”."
         className="search_feed"
         onChange={(e) => setInputText(e.target.value)}
       />
@@ -119,7 +128,11 @@ function InputSubmission() {
       )}
 
       {data ? (
-        data.map((data1) => {
+        searchApplied == false ? (
+          <div>
+          <h2>Since no filters or keywords were applied, all the articles are displayed </h2>
+          {
+          data.map((data1) => {
           return (
             <>
               <div className="row">
@@ -144,6 +157,35 @@ function InputSubmission() {
             </>
           );
         })
+      }
+        </div>
+        ) : (
+          data.map((data1) => {
+            return (
+              <>
+                <div className="row">
+                  <a className="click_to_view1" href="/ArticleView">
+                    <div className="column1">
+                      <h2 className="data_text">{data1.heading}</h2>
+                      <h3 className="data_text">{data1.sport}</h3>
+                      <h3 className="data_text">{data1.posttime}</h3>
+                      <h3 className="data_text">{data1.Author}</h3>
+                    </div>
+                  </a>
+                  <a className="click_to_view2" href="/ArticleView">
+                    <div className="column2">
+                      <img
+                        className="image"
+                        alt="Article "
+                        src={data1.image_URL}
+                      ></img>
+                    </div>
+                  </a>
+                </div>
+              </>
+            );
+          })
+        )
       ) : (
         <h3>No data yet</h3>
       )}
