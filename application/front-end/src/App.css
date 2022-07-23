@@ -336,3 +336,11 @@ input,
 input::placeholder {
   padding-right: 30%;
 }
+
+.myArticles{
+  color: black;
+  text-align: left;
+  /* margin-left: 5%;
+  margin-right: 5%; */
+  margin-left: 90px;
+}
