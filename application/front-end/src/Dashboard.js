@@ -15,7 +15,7 @@ function Dashboard() {
                 <p>Check the statistics of your articles here</p>
             </div>
             <div className="newArticle">
-                <a href="">
+                <a href="/UploadArticle">
                 <button className="writeNewArticle">Write New Article</button>
                 </a>
             </div>
