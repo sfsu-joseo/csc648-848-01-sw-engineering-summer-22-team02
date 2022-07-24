@@ -1,0 +1,12 @@
+Use YourSportsDB;
+
+DELIMITER $$
+CREATE PROCEDURE `GetPosts` (IN inGameID INT)
+
+BEGIN
+SELECT * FROM Post
+WHERE fk_Game_ID = inGameID
+ORDER BY PostDate ASC;
+
+END$$
+DELIMITER ;

@@ -1,0 +1,11 @@
+Use YourSportsDB;
+
+DELIMITER $$
+CREATE PROCEDURE `GetGame` (IN inGameID INT )
+
+BEGIN
+SELECT * FROM Game
+WHERE Game_ID = inGameID;
+
+END$$
+DELIMITER ;
