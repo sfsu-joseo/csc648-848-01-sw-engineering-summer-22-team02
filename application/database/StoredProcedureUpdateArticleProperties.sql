@@ -43,8 +43,7 @@ IF newcount = 0
 THEN
 SET count = (SELECT COUNT(*) FROM Article_Likes 
 WHERE fk_Account_ID = inAccountID and fk_Article_ID = inArticleID);
-SELECT count;
-SELECT newcount;
+
 IF count = 1
 THEN
 DELETE FROM Article_Likes
