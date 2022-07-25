@@ -1,7 +1,8 @@
 Use YourSportsDB;
 
 DELIMITER $$
-CREATE PROCEDURE `GetGame` (IN inGameID INT )
+CREATE PROCEDURE `GetGames` 
+(IN inGameID INT )
 
 BEGIN
 SELECT * FROM Game

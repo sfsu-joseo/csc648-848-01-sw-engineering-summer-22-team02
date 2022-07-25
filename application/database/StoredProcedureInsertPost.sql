@@ -1,7 +1,7 @@
 Use YourSportsDB;
 
 DELIMITER $$
-CREATE PROCEDURE `InsertPosts` (IN inPostdate varchar(255), 
+CREATE PROCEDURE `InsertPost` (IN inPostdate varchar(255), 
 IN inPostContent varchar(255), 
 IN inAuthorID INT,
 IN inGame_ID INT)

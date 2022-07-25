@@ -1,9 +1,11 @@
 Use YourSportsDB;
 
 DELIMITER $$
-CREATE PROCEDURE `getNewsArticles`(IN inPostdate VARCHAR(255),
-    IN inSport VARCHAR(255),
-    IN inSearchText VARCHAR(255))
+CREATE PROCEDURE `GetNewsArticles`
+(IN inPostdate VARCHAR(255),
+IN inSport VARCHAR(255),
+IN inSearchText VARCHAR(255))
+
 BEGIN
 
 SELECT Image_url,Heading,SubHeading,PostDate,Name as `Author`,Sport FROM 

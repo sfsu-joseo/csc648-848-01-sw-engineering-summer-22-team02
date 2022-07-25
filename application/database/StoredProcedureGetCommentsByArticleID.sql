@@ -1,7 +1,7 @@
 Use YourSportsDB;
 
 DELIMITER $$
-CREATE PROCEDURE `getCommentsByArticleID`(IN inArticleID INT)
+CREATE PROCEDURE `GetCommentsByArticleID`(IN inArticleID INT)
 
 BEGIN
 

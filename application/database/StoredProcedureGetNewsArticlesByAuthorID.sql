@@ -1,7 +1,7 @@
 Use YourSportsDB;
 
 DELIMITER $$
-CREATE PROCEDURE `getNewsArticlesByAuthorID`(IN inAuthorID INT)
+CREATE PROCEDURE `GetNewsArticlesByAuthorID`(IN inAuthorID INT)
 
 BEGIN
 
