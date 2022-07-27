@@ -5,15 +5,16 @@ import Footer from "./Footer";
 import TermsOfService from "./TermsOfService";
 
 function PlayerStats() {
-   function redirect() {
-     alert("You are now leaving this Website");
-   }
+  function redirect() {
+    alert("You are now leaving this Website");
+  }
   return (
     <>
       <Navbar />
       <div className="statement12">
         View the Updated Statistic of your favorite players
       </div>
+
       <div className="column12">
         <div className="search_bar_player">
           <input
@@ -39,33 +40,77 @@ function PlayerStats() {
           </div>
         </div>
         <div className="playerDisplay">
-          <a className="indPlayer" href="/CurryPlayerStats">
-            Steph Curry
-          </a>
-          <a className="indPlayer" href="/BettsStatline">
-            Mookie Betts
-          </a>
-          <a className="indPlayer" href="/BettsStatline">
-            Player 1
-          </a>
-          <a className="indPlayer" href="/BettsStatline">
-            Player 2
-          </a>
-          <a className="indPlayer" href="/BettsStatline">
-            Player 3
-          </a>
-          <a className="indPlayer" href="/BettsStatline">
-            Player 4
-          </a>
-          <a className="indPlayer" href="/BettsStatline">
-            Player 5
-          </a>
-          <a className="indPlayer" href="/BettsStatline">
-            Player 6
-          </a>
-          <a className="indPlayer" href="/BettsStatline">
-            Player 7
-          </a>
+          <div className="scroll">
+            <a className="indPlayer" href="/CurryPlayerStats">
+              Steph Curry
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Mookie Betts
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 1
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 2
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 3
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 4
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 5
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 6
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 7
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 7
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 7
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 7
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 7
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 7
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 7
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 7
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 7
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 7
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 7
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 9
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 9
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 9
+            </a>
+            <a className="indPlayer" href="/BettsStatline">
+              Player 10
+            </a>
+          </div>
         </div>
       </div>
       <div className="column12">
@@ -85,6 +130,7 @@ function PlayerStats() {
           <p className="statLine">Three Pointers Attempted: 158.1</p>
         </div>
       </div>
+
       <ul className="footerPlayer">
         <div class="row">
           <div class="column">

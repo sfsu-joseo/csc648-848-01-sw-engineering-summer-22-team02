@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Navbar.css";
 import ArticleView from "./ArticleView";
-import Footer from "./Footer";
+import "./Footer";
 
+/*Function receives user input and calls api to return articles*/
 function InputSubmission() {
   const [data, setData] = useState("");
   const [InputText, setInputText] = useState("");
@@ -12,24 +13,10 @@ function InputSubmission() {
   const [length, setLength] = useState("");
   const [searchApplied, setSearchApplied] = useState(false);
 
- 
-
-  // function myFunction() {
-  //   var x = document.getElementById("myDIV");
-  //   if (x.style.display === "none") {
-  //     x.style.display = "block";
-  //   } else {
-  //     x.style.display = "none";
-  //   }
-  // }
-
   function handlesearch() {
-    if(InputText=="" && sport=="")
-    {
+    if (InputText === "" && sport === "") {
       setSearchApplied(false);
-    }
-    else
-    {
+    } else {
       setSearchApplied(true);
     }
     var config = {
@@ -57,14 +44,6 @@ function InputSubmission() {
     handlesearch();
   }, []);
 
-  // function dateFilter() {
-  //   <input
-  //     type="date"
-  //     className="dateSelect"
-  //     onChange={(e) => setDate(e.target.value)}
-  //   />;
-  // }
-
   return (
     <div className="search_bar">
       <div className="into">
@@ -77,7 +56,7 @@ function InputSubmission() {
           player statistics.
         </p>
       </div>
-      <input  
+      <input
         placeholder="Type any keyword related to sports, to get the latest articles you would like to read. Ex “Harden”."
         className="search_feed"
         onChange={(e) => setInputText(e.target.value)}
@@ -90,11 +69,6 @@ function InputSubmission() {
       ></button>
 
       <div className="filter_section">
-        {/* <input
-          type="date"
-          className="dateSelect"
-          onChange={(e) => setDate(e.target.value)}
-        /> */}
         <div className="dropdown">
           <button class="dropbtn">Filter Article By Sport</button>
           <div className="dropdown-content">
@@ -111,7 +85,8 @@ function InputSubmission() {
           </div>
         </div>
       </div>
-      {data.length == 0 ? (
+      {/* If no search search results are returned,displays message to user */}
+      {data.length === 0 ? (
         <div className="noArticles">
           <h2>{data.length} search results</h2>
           <h2>Your Search did not match any articles</h2>
@@ -127,38 +102,43 @@ function InputSubmission() {
         </div>
       )}
 
+      {/*When no filters applied all articles will be displayed  */}
       {data ? (
-        searchApplied == false ? (
+        searchApplied === false ? (
           <div>
-          <h2>Since no filters or keywords were applied, all the articles are displayed </h2>
-          {
-          data.map((data1) => {
-          return (
-            <>
-              <div className="row">
-                <a className="click_to_view1" href="/ArticleView">
-                  <div className="column1">
-                    <h2 className="data_text">{data1.heading}</h2>
-                    <h3 className="data_text">{data1.sport}</h3>
-                    <h3 className="data_text">{data1.posttime}</h3>
-                    <h3 className="data_text">{data1.Author}</h3>
-                  </div>
-                </a>
-                <a className="click_to_view2" href="/ArticleView">
-                  <div className="column2">
-                    <img
-                      className="image"
-                      alt="Article "
-                      src={data1.image_URL}
-                    ></img>
-                  </div>
-                </a>
-              </div>
-            </>
-          );
-        })
-      }
-        </div>
+            <h2>
+              Since no filters or keywords were applied, all the articles are
+              displayed{" "}
+            </h2>
+            {
+              /*Displays all articles */
+              data.map((data1) => {
+                return (
+                  <>
+                    <div className="row">
+                      <a className="click_to_view1" href="/ArticleView">
+                        <div className="column1">
+                          <h2 className="data_text">{data1.heading}</h2>
+                          <h3 className="data_text">{data1.sport}</h3>
+                          <h3 className="data_text">{data1.posttime}</h3>
+                          <h3 className="data_text">{data1.Author}</h3>
+                        </div>
+                      </a>
+                      <a className="click_to_view2" href="/ArticleView">
+                        <div className="column2">
+                          <img
+                            className="image"
+                            alt="Article "
+                            src={data1.image_URL}
+                          ></img>
+                        </div>
+                      </a>
+                    </div>
+                  </>
+                );
+              })
+            }
+          </div>
         ) : (
           data.map((data1) => {
             return (

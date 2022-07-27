@@ -5,51 +5,52 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faThumbsDown,
   faThumbsUp,
-  faUserGear, faTrash
+  faUserGear,
+  faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import Footer from "./Footer";
 
 const ArticleView = () => {
-      function myFunction() {
-        var x = document.getElementById("myDIV");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-      }
-      function myFunction1() {
-        var x = document.getElementById("myDIV1");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-      }
-      function myFunction2() {
-        var x = document.getElementById("myDIV2");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-      }
-      function myFunction3() {
-        var x = document.getElementById("myDIV3");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-      }
-      function myFunction4() {
-        var x = document.getElementById("myDIV4");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-      }
+  function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  function myFunction1() {
+    var x = document.getElementById("myDIV1");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  function myFunction2() {
+    var x = document.getElementById("myDIV2");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  function myFunction3() {
+    var x = document.getElementById("myDIV3");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  function myFunction4() {
+    var x = document.getElementById("myDIV4");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
   function up() {
     alert("Article liked");
   }
@@ -101,6 +102,7 @@ const ArticleView = () => {
           one they don’t need to change. Brooklyn only gets one swing at this.
         </p>
       </div>
+      <div className="statement12">Comments</div>
       <div className="comment" id="myDIV1">
         <div className="userName">
           SportsLover:
@@ -155,12 +157,12 @@ const ArticleView = () => {
         <input
           placeholder="Write your post here"
           className="search_feed"
-        //   onChange={(e) => setData(e.target.value)}
+          //   onChange={(e) => setData(e.target.value)}
         />
         <button
           className="submit_button"
           type="submit"
-        //   onClick={handleComments}
+          //   onClick={handleComments}
         >
           Submit
         </button>

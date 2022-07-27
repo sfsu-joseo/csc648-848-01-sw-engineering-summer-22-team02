@@ -14,15 +14,6 @@ function SignUp() {
   const [password, setPassword] = useState("");
   const [services, setServices] = useState(false);
 
-  // const [checked, setChecked] = useState(false);
-
-  // const [allSet, setAllSet] = useState(false);
-  //   function handleFunctions() {
-  //     handlesignup();
-  //   }
-  function redirect() {
-    alert("You are now leaving this Website");
-  }
 
   function handlesignup() {
     var config = {
@@ -47,13 +38,7 @@ function SignUp() {
         console.log(error);
       });
   }
-  //   useEffect(() => {
-  //     handlesignup();
-  //   }, []);
 
-  // function popup() {
-  //     alert("Signup Succesful");
-  // }
 
   return (
     <>
@@ -97,15 +82,12 @@ function SignUp() {
           <input
             classname="checkbox"
             type="checkbox"
-            // checked={services}
-            // onChange={(e) =>
-            // setServices(e.target.checked)}
+
           />
         </p>
 
-        <p className="check"><a href="/termsOfService">
-          Do you agree to the terms of service:
-          </a>
+        <p className="check">
+          <a href="/termsOfService">Do you agree to the terms of service:</a>
           <input
             className="checkbox"
             type="checkbox"
@@ -121,66 +103,11 @@ function SignUp() {
         </button>
         <br></br>
         <a className="loginButton" href="/Login">
-        Have an account already? Login here!
+          Have an account already? Login here!
         </a>
-        {/* <a className="loginButton" href="">Login</a> */}
-        {/* {data ? (
-                    [data].map((data) => {
-                        return (
-                            <div>
-                                 
-                            <div className="data">
-                                <h3 className="data_text">{data}</h3>
-                                
-                            </div>
-                            </div>
-                        );
-                    })
-                ) : (
-                    <h3></h3>
-                )} */}
-        {/* <h3 className="data_text" style={{ display: "hidden" }}>
-          {data}
-        </h3> */}
       </div>
-      <ul className="footerSignUp">
-        <div class="row">
-          <div class="column">
-            <br></br>
-            <a href="./TermsOfService">Terms of Service</a>
-          </div>
-          <div class="column">
-            <p>Contact Us</p>
-            <a
-              href="https://www.facebook.com/sanfranciscostate"
-              onClick={redirect}
-            >
-              {" "}
-              <p>Facebook</p>
-            </a>
-            <a
-              href="https://twitter.com/SFSU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-              onClick={redirect}
-            >
-              {" "}
-              <p>Twitter</p>
-            </a>
-            <a
-              href="https://www.instagram.com/sanfranciscostate/?hl=en"
-              onClick={redirect}
-            >
-              {" "}
-              <p>Instagram</p>
-            </a>
-          </div>
-          <div class="column">
-            <p>Address</p>
-            <p>San Francisco State University</p>
-            <p>San Francisco</p>
-            <p>California</p>
-          </div>
-        </div>
-      </ul>
+
+      <Footer />
     </>
   );
 }
