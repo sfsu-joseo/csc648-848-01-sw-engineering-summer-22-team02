@@ -2,6 +2,7 @@
     line-height: 0.8;
     color: black;
     padding-bottom: 30px;
+    margin-top: 50px;
 }
 
 body{
@@ -37,14 +38,17 @@ body{
     margin-top: 18px;
     border-radius: 6px;
     border: none;
+    text-decoration: none;
 }
+.button-link:hover {
+    background-color:#1DA099 ;
+}
+
 
 /* Search and Filter Formatting */
 
 .dropdown{
   padding-left: 10px;
-  
-  
 }
 .dropdown .dropbtn{
   background: #0d356c;
@@ -60,22 +64,21 @@ body{
   color:#0d356c;
   border: none;
 }
+
+
 /* Date Selection Formatting */
 
 .dateSelect{
   margin-left: 10px;
   margin-right:10px;
   margin-bottom: 10px;
-  color: #0d356c;
+  color: white;
   font-size: 15px;
   border-radius: 20px;
   font-family: 'Helvetica', Arial, Lucida Grande, sans-serif;
-  
 }
 
-.search_bar .search_feed{
-  margin-right: 15px;
-}
+
 
 /* Ireland About page CSS styles */
 .Ireland_About_Image{
@@ -140,4 +143,375 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+/* Article View Formating */
+
+.article{
+  width: 90%;
+  /* padding: 12px 20px; */
+  padding-bottom: 90px;
+  margin: 20px 0;
+
+  border-radius: 4px;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.article .author{
+  text-align: center;
+  margin-bottom: 5px;
+  color: rgb(126, 123, 123);
+  margin-left: 45px;
+  margin-right: 50px;
+  padding-top: 50px;
+}
+
+.article .date{
+ text-align: center;
+ color: rgb(126, 123, 123);
+ margin-left: 45px;
+ margin-right: 50px;
+}
+
+.article .heading{
+  text-align: center;
+  margin-left: 45px;
+  margin-right: 50px;
+  padding-top: 30px;
+}
+
+.article .sub-heading{
+  text-align: center;
+  font-weight: 400;
+  margin-left: 45px;
+  margin-right: 50px;
+  margin-bottom: 60px;
+}
+
+.article .image{
+  margin-bottom: 45px;
+  margin-left: 10%;
+  margin-right: auto;
+  width: 30%;
+}
+.article .image .article_image{
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.article .content{
+ text-align: center;
+ font-weight: 650;
+ margin-left: 45px;
+ margin-right: 50px;
+ padding-bottom: 20px;
+}
+.article .conclusion{
+  text-align: center;
+  font-weight: 650;
+  margin-left: 45px;
+  margin-right: 50px;
+}
+
+/* Intoduction section */
+.search_bar .into .statement1{
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 40px;
+  font-size: 200%;
+  color: rgb(79, 77, 77);
+}
+.search_bar .into .statement2{
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 1%;
+  font-size: 200%;
+  color: rgb(79, 77, 77);
+}
+
+/* Upload Article Formating  */
+.upload{
+  margin-right: 10%;
+  margin-left: 10%;
+  align-items: center;
+  
+}
+
+ .upload .heading{
+  width: 85%;
+  padding: 12px 20px;
+  padding-bottom: 26px;
+  margin: 20px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-weight: bolder;
+  font-size: 28px;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.upload .sub{
+  width: 85%;
+  padding: 12px 20px;
+  padding-bottom: 26px;
+  margin: 20px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+}
+.upload .image{
+  width: 50%;
+  /* padding: 12px 20px; */
+  padding-bottom: 90px;
+  margin: 20px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  margin-bottom: 35px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+label{
+  padding-right:2px ;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  /* padding-left: 90px; */
+  margin-right: 700px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  box-sizing: border-box;
+  font-size:x-large;
+  font-weight: bolder;
+  background-color: white;
+  text-align: center;
+  
+}
+
+.upload .content{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 20px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding-bottom: 50px;
+  font-weight: bolder;
+  font-size: 18px;
+  /* padding-right: 700px; */
+  font-family:Arial, Helvetica, sans-serif;
+}
+.upload .conclusion{
+  width: 100%;
+  padding: 12px 20px;
+  padding-bottom: 140px;
+  margin: 20px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-weight: bolder;
+  font-size: 18px;
+  font-family:Arial, Helvetica, sans-serif; 
+  
+}
+
+.upload .upload_button{
+  background-color: rgb(23, 71, 134); /* Green */
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  padding-left: 90px;
+  padding-right: 90px;
+  border-radius: 20px;
+  margin-bottom: 200px;
+}
+
+.upload .upload_button:hover{
+  background-color: #1DA099;
+}
+
+
+.comment {
+  background-color:white;
+  border-radius: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1.5%;
+  padding-top:1.5%;
+  padding-bottom: 1.5%;
+  padding-right: 15px;
+}
+.comment .userName{
+  text-align: left;
+  margin-left: 0.75%;
+  font-size: 100%;
+  font-weight: bold;
+  padding:.5%;
+}
+.comment .commentText{
+  text-align: left;
+  padding-left: 3%;
+  font-size: 150%;
+}
+.comment .commentIcon{
+    text-align: right;
+    margin-left: 0.75%;
+    margin-top: -2%;
+}
+
+.text{
+  text-align: center;
+  margin-right: 15px;
+}
+.submit_button {
+  background-color: rgb(23, 71, 134);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+  
+.headings .box1{
+  float:left ;
+  margin-left: 20px;
+  padding-right: 60px;
+  padding-bottom: 50px;
+  border-radius: 25px;
+  width: 700px;
+  
+  background-color:rgb(44, 82, 138) ;
+}
+
+.headings .box1 .inner{
+  color: white;
+  text-align: left;
+  width: 50%;
+}
+.headings .image .dashboard_img{
+ float: right;
+ height: 140px;
+ width: 280px;
+}
+.headings .image {
+  float: right;
+  
+ }
+
+.headings .box2{
+  float:right ;
+}
+
+.upload_greet1{
+  color: rgb(79, 77, 77);
+  /* font-weight: 600; */
+  margin-top: 60px;
+  font-size:larger;
+  font-size: 200%;
+}
+
+.upload_greet2{
+  color: rgb(79, 77, 77);
+  /* font-weight: 600; */
+  font-size:larger;
+  margin-bottom: 45px;
+  font-size: 200%;
+}
+
+.thumbs{
+  float: right;
+  margin-right: 25px;
+}
+
+.thumbsUp{
+  color: rgb(23, 71, 134);
+  padding-right: 20px;
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+.thumbsDown{
+  color: rgb(23, 71, 134);
+  font-size: xx-large;
+}
+
+.thumbsUp:hover{
+  color:#1DA099;
+}
+.thumbsDown:hover{
+  color:#1DA099;
+}
+
+.reset_form .requirement{
+  color: red;
+  margin-top: none;
+}
+
+.reset_form .otp_button{
+  background-color: rgb(23, 71, 134);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    /* margin-top: 5px; */
+    padding-left: 90px;
+    padding-right: 90px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+.reset_form .OTP_message{
+  margin-left: 39%;
+  margin-right: 39%;
+  margin-bottom: 30px;
+}
+
+.article .image{
+  margin-bottom: 45px;
+  /* margin-left: 10%; */
+  margin-right: auto;
+  margin-left: auto;
+  /* width: 30%; */
+   height: 60%;
+  width: 60%;
+}
+.article .image .article_image{
+  margin-left: auto;
+  margin-right: auto;
+  height: 60%;
+  width: 60%;
 }
