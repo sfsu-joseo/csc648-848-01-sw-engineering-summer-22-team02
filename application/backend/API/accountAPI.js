@@ -20,6 +20,10 @@ accountRouter.post("/signup",(req,res)=>{
     {
     if (name!=null && username!=null && email!=null && password!=null)
     {
+      if (email.match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      ))
+      {
       if(password.length>=8 && password.length<=20)
       {
 
@@ -35,6 +39,11 @@ accountRouter.post("/signup",(req,res)=>{
         {
           res.json("Please adhere to the password requirements")
         }
+      }
+      else
+      {
+        res.json("Please enter a valid email");
+      }
     }
     else
     {
