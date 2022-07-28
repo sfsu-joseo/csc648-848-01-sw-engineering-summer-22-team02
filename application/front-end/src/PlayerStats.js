@@ -24,8 +24,8 @@ function PlayerStats() {
           />
           <button className="search_button" type="submit"></button>
         </div>
-        <div className="dropdownPlayer">
-          <button class="dropbtn">Filter Article By Sport</button>
+        <div className="dropdownPlayerStats">
+          <button class="dropbtnStats">Filter Article By Sport</button>
           <div className="dropdown-content">
             <select
               className="select_format"
