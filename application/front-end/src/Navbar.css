@@ -219,6 +219,43 @@ li .first_header:hover {
     display: block;
 }
 
+
+
+
+
+
+
+.dropbtnStats .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropbtnStats .dropdown-content a {
+    color: black;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdownPlayerStats .dropbtnStats .dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdownPlayerStats:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
 .filter_section {
     padding-left: 15px;
     padding-bottom: 20px;
@@ -238,6 +275,8 @@ li .first_header:hover {
     background-color: #1DA099;
     transition: ease-in-out 0.26s;
 }
+
+
 
 .dateSelect {
     padding: 15px 25px;

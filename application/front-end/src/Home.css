@@ -60,10 +60,19 @@ body{
 .dropdown .dropdown-content{
   padding: 10px;
 }
+.dropdownPlayerStats .dropdown-content{
+  padding: 10px;
+}
 .dropdown .dropdown-content .select_format{
   color:#0d356c;
   border: none;
 }
+
+.dropdownPlayerStats .dropdown-content .select_format{
+  color:#0d356c;
+  border: none;
+}
+
 
 
 /* Date Selection Formatting */
