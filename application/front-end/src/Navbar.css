@@ -252,7 +252,9 @@ li .first_header:hover {
     display: block;
 }
 
-
+.dropdownPlayerStats .dropbtnStats:hover{
+    background-color: #1DA099;
+}
 
 
 
