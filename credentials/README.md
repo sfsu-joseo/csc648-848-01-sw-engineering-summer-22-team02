@@ -7,27 +7,29 @@
 
 # Below is a list of items required. Missing items will causes points to be deducted from multiple milestone submissions.
 
-1. Server URL or IP
-2. SSH username
-3. SSH password or key.
+1. Website URL
+2. Server URL or IP
+3. SSH username
+4. SSH password or key.
     <br> If a ssh key is used please upload the key to the credentials folder.
-4. Database URL or IP and port used.
+5. Database URL or IP and port used.
     <br><strong> NOTE THIS DOES NOT MEAN YOUR DATABASE NEEDS A PUBLIC FACING PORT.</strong> But knowing the IP and port number will help with SSH tunneling into the database. The default port is more than sufficient for this class.
-5. Database username
-6. Database password
-7. Database name (basically the name that contains all your tables)
-8. Instructions on how to use the above information.
+6. Database username
+7. Database password
+8. Database name (basically the name that contains all your tables)
+9. Instructions on how to use the above information.
 
 # Credentials
 
-1. Server IP: 34.136.124.189
-2. SSH Username: kshitizsareen709
-3. SSH Key: This file is included in the credentials folder.
-4. Database URL: 34.168.15.4
-5. Database Port: 3306
-6. Database Username: root
-7. Database Password: Ks@1234567890
-8. Instructions on how to use the above information:
+1. Website URL : http://34.136.124.189:3000
+2. Server IP: 34.136.124.189
+3. SSH Username: kshitizsareen709
+4. SSH Key: This file is included in the credentials folder.
+5. Database URL: 34.168.15.4
+6. Database Port: 3306
+7. Database Username: root
+8. Database Password: Ks@1234567890
+9. Instructions on how to use the above information:
     **To access the server via SSH**
     
     Please download the ssh_key file given in the credentials folder. Store that file in any path that you would wish to store. 

@@ -1,7 +1,11 @@
 .App {
   text-align: center;
+  overflow-x: hidden;
 }
 
+.column *{
+  color: white;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -38,4 +42,297 @@
 }
 h1{
   text-align: center;
+}
+.playerDisplay{
+   margin-left:15%;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+
+.indPlayer{
+  display: block;
+  text-align: center;
+      background:White;
+        margin-top: 20px;
+        margin-right:60%;
+        min-width: 60%;
+        border-radius: 200px;
+        border: none;
+        padding-left:15%;
+        padding-right:15%;
+        padding-bottom: 1%;
+        padding-top: 1%;
+        text-decoration: none;
+        color:black;
+        font-size: 100%;
+          
+}
+.indPlayer:hover {
+  background-color: #1DA099;
+  transition: ease-in-out 0.26s;
+  } 
+
+.gamesExample {
+  margin-left:10%;
+  margin-right: 10%;
+  background-color: rgb(44, 82, 138);
+  margin-bottom: 1%;
+   border-radius: 6px;
+   padding-bottom: 2%;
+}
+.gamesExample .gamesInfoExample{
+    text-align: center;
+      margin-top: .5%;
+      color: white;
+      height: 300px;
+      width: 100%;
+      text-decoration: none;
+      color: white;
+      padding-top: 1%;
+      
+}
+.gamesExample .teamsExample {
+ width: 47%;
+}
+.gamesExample .teamsExample1 {
+  width: 45%;
+}
+.gameTextExample {
+  font-size: 100%;
+  font-weight: 1000;
+  margin-bottom: 20%;
+}
+.gamesExample .columnExample{
+  float:left;
+  width:33%;
+  height:75%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.score2 {
+  text-align: center;
+  font-size: 25pt;
+  font-weight: 1000;
+  margin-top: 25%;
+}
+.versusText2 {
+  text-align: center;
+  font-size: larger;
+  font-weight: 1000;
+  padding-bottom: 10px;
+
+}
+.time2 {
+  text-align: center;
+  font-size: large;
+  padding-top: 10px;
+}
+
+.columnGames{
+  width: 50%;
+  float:left;
+}
+.columnGames .games{
+  text-align: center;
+  background-color:rgb(44, 82, 138);
+  margin-bottom: 50px;
+  margin-left:5%;
+  margin-right:10%;
+  color: white;
+  height: 300px;
+    width: 90%;
+    min-width: 50%;
+}
+
+.gamesInfo{
+  text-align: center;
+  margin-left:40%;
+  margin-right:50%;
+  background-color:rgb(44, 82, 138);
+  margin-bottom: 50px;
+  color: white;
+  height: 300px;
+    width: 100%;
+text-decoration: none;
+  color:white;
+}
+.gamesInfo .column{
+  float:left;
+  width:33.33%;
+}
+.teams{
+  height:  50%;
+  width: 50%;
+  margin-bottom: 4px;
+  margin-top: 50px;
+}
+.gameText{
+  font-size: 100%;
+  font-weight: 1000;
+  margin-bottom:5%;
+}
+
+.score{
+  text-align: center; 
+  margin-top: 20%;
+  font-size: 200%;
+  font-weight: 1000;    
+}
+.versusText{
+  text-align: center;
+  font-size: 90%;
+  margin-top: 5%;
+}
+.time{
+  text-align: center;
+  font-size: 100%;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px;
+  /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.games{
+  text-align: center;
+  background-color:rgb(44, 82, 138);
+  margin-bottom: 50px;
+  margin-left:5%;
+  margin-right:10%;
+  color: white;
+  height: 300px;
+    width: 90%;
+}
+* {
+  box-sizing: border-box;
+}
+.articleCount{
+text-align: center;
+font-size: 150%;
+font-weight: 500px;
+font-style: bold;
+}
+.dropdownPlayer {
+  padding-left: 10px;
+}
+
+.dropdownPlayer .dropbtn {
+  background: #0d356c;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: none;
+}
+.dropdownPlayer:hover .dropbtn {
+  background-color: #1DA099;
+  transition: ease-in-out 0.26s;
+}
+
+.dropdownPlayer .dropdown-content {
+  padding: 10px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  margin-left:7.5%;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdownPlayer .dropdown-content a {
+  color: black;
+  padding: 15px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdownPlayer .dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdownPlayer:hover .dropdown-content {
+  display: block;
+}
+
+.dropdownPlayer .dropdown-content .select_format {
+  color: #0d356c;
+  border: none;
+}
+
+.statement12 {
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 40px;
+  font-size: 200%;
+  color: rgb(79, 77, 77);
+}
+.column12 {
+  width: 50%;
+  float: left;
+}
+/* .row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+
+.curryStatline {
+  text-align: center;
+}
+
+.curryStatline .Stats_image {
+  margin-top: 3%;
+  height: 100%;
+  width: 60%;
+}
+
+.curryStatline .statLine {
+  font-size: 150%;
+  font-weight: 100%;
+  padding-top: .03%;
+}
+
+.comment_bar {
+  margin-top: 20px;
+    margin-right: 4%;
+}
+
+.comment_bar .search_feed {
+  padding-top: .5%;
+  margin-right: 1%;
+  padding-bottom: .5%;
+  padding-left: 2%;
+  margin-top: 30px;
+  margin-left: 2%;
+  border: none;
+  font-size: 20px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.comment_bar
+
+input,
+input::placeholder {
+  padding-right: 30%;
 }
