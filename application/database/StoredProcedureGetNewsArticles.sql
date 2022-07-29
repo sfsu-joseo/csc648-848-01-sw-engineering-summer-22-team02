@@ -8,7 +8,7 @@ IN inSearchText VARCHAR(255))
 
 BEGIN
 
-SELECT Name as `Author`,Image_url,Heading,SubHeading,PostDate,Introduction,Content,Conclusion,Sport,NumberOfViews,NumberOfLikes,NumberOfDislikes FROM 
+SELECT * FROM 
 (SELECT * FROM Article WHERE 
 (PostDate >= inPostdate OR inPostdate is NULL) 
 AND 
