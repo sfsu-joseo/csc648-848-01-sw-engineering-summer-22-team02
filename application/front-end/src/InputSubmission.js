@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import "./Navbar.css";
 import ArticleView from "./ArticleView";
@@ -12,6 +13,7 @@ function InputSubmission() {
   const [sport, setSport] = useState("");
   const [length, setLength] = useState("");
   const [searchApplied, setSearchApplied] = useState(false);
+  const backUrl = "http://localhost:8080/api/article/getSearch";
 
   function handlesearch() {
     if (InputText === "" && sport === "") {
@@ -117,6 +119,9 @@ function InputSubmission() {
                   <>
                     <div className="row">
                       <a className="click_to_view1" href="/ArticleView">
+                        {/* <Link
+                        to={`/${this.prop.Article_ID}? backUrl=${backUrl}`}
+                      /> */}
                         <div className="column1">
                           <h2 className="data_text">{data1.heading}</h2>
                           <h3 className="data_text">{data1.sport}</h3>
@@ -124,6 +129,7 @@ function InputSubmission() {
                           <h3 className="data_text">{data1.Author}</h3>
                         </div>
                       </a>
+
                       <a className="click_to_view2" href="/ArticleView">
                         <div className="column2">
                           <img
