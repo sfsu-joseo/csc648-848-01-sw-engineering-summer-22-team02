@@ -5,8 +5,37 @@ import Navbar from "./Navbar";
 import ForgotPassword from "./ForgotPassword";
 import Footer from "./Footer";
 import TermsOfService from "./TermsOfService";
+import axios from "axios";
 
 function Login() {
+  const [user, setUser] = useState("");
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [isLogged, setLogged] = useState(false);
+
+  function handleLogin() {
+    var config = {
+      method: "post",
+      url: "http://localhost:8080/api/account/login",
+      data: {
+        username: userName,
+        password: password,
+      },
+    };
+
+    axios(config)
+      .then(function (response) {
+        setUser(response.data);
+        localStorage.setItem("user", JSON.stringify(response.data));
+        setLogged(true);
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   function popup() {
     alert("Login Succesful");
   }
@@ -21,11 +50,17 @@ function Login() {
           className="form_input"
           type="text"
           placeholder="Username or Email"
+          onChange={(e) => setUserName(e.target.value)}
         />
 
-        <input className="form_input" type="password" placeholder="Password" />
+        <input
+          className="form_input"
+          type="password"
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-        <button type="submit" onClick={popup} className="Signup_button">
+        <button type="submit" onClick={handleLogin} className="Signup_button">
           Login
         </button>
       </div>
@@ -36,7 +71,7 @@ function Login() {
       </div>
       <div className="Forget_Signup">
         <a className="signup" href="/Signup">
-        Do not have an account? Signup Here!
+          Do not have an account? Signup Here!
         </a>
       </div>
       <ul className="footerLogin">

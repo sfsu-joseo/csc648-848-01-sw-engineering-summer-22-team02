@@ -19,6 +19,7 @@ import GamesExample from "./GamesExample";
 import Dashboard from "./Dashboard";
 import Footer from "./Footer";
 import LoginFooter from "./LoginFooter";
+import useToken from "./useToken";
 
 // Import other team member's file names
 import Ireland from "./PersonalAbout/Ireland";
@@ -54,7 +55,7 @@ function App() {
         <Route path="/Account_Settings" element={<Account_Settings />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/ForgotPassword" element={<ForgotPassword />} />
-
+        <Route path="/useToken" element={<useToken />} />
         {/* Route other team member's file names */}
         <Route path="/PersonalAbout/Ireland" element={<Ireland />} />
         <Route path="/PersonalAbout/Ip" element={<Ip />} />

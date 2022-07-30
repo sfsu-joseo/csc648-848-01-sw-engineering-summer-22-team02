@@ -13,18 +13,19 @@ function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [services, setServices] = useState(false);
-
+  const [creator, setCreator] = useState(false);
 
   function handlesignup() {
     var config = {
       method: "post",
-      url: "http://34.136.124.189:8080/api/account/signup",
+      url: "http://localhost:8080/api/account/signup",
       data: {
         name: name,
         username: userName,
         email: email,
         password: password,
         termsOfServiceAgreed: services,
+        isCreatorAccount: creator,
       },
     };
 
@@ -38,7 +39,6 @@ function SignUp() {
         console.log(error);
       });
   }
-
 
   return (
     <>
@@ -82,7 +82,10 @@ function SignUp() {
           <input
             classname="checkbox"
             type="checkbox"
-
+            checked={creator}
+            onChange={(e) => {
+              setCreator(e.target.checked);
+            }}
           />
         </p>
 

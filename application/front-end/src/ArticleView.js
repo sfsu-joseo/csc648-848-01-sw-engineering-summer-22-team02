@@ -147,6 +147,7 @@ const ArticleView = () => {
             <FontAwesomeIcon icon={faTrash} onClick={myFunction4} />
           </div>
         </div>
+        return
         <div className="commentText">
           Enjoy it while you can Warriors Fans, next year the Lakers will take
           it. Lebron and a healthy Anthony Davis {">"} Steph and Klay all day
