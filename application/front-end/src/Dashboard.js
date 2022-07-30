@@ -3,6 +3,7 @@ import React from "react";
 import "./Navbar.css";
 import Navbar from "./Navbar";
 import TermsOfService from "./TermsOfService";
+import Login from "./Login";
 
 function Dashboard() {
   function redirect() {
@@ -10,7 +11,11 @@ function Dashboard() {
   }
   return (
     <>
+    
+
       <Navbar />
+      {
+    data.isLogged ? 
       <div className="statement12">
         <p>Check the statistics of your articles here</p>
       </div>
@@ -152,7 +157,8 @@ function Dashboard() {
             <p>California</p>
           </div>
         </div>
-      </ul>
+      </ul>   } :
+      (null)
     </>
   );
 }

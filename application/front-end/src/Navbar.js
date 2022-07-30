@@ -72,6 +72,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
+            
             <a className="live_games" href="/Dashboard">
               Dashboard
             </a>
