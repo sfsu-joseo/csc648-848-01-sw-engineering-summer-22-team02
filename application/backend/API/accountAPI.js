@@ -12,10 +12,9 @@ accountRouter.post("/signup",(req,res)=>{
     let name = req.body.name == null || req.body.name.trim() == "" ? 'NULL' : '"'+req.body.name.trim().toLowerCase()+'"';
     let username = req.body.username == null || req.body.username.trim() == "" ? 'NULL' : '"'+req.body.username.trim().toLowerCase()+'"';
     let email = req.body.email == null || req.body.email.trim() == "" ? 'NULL' : '"'+req.body.email.trim().toLowerCase()+'"';
-    let password = req.body.password == null || req.body.password.trim() == "" ? 'NULL' : '"'+req.body.password+'"';
+    let password = req.body.password == null || req.body.password == "" ? 'NULL' : '"'+req.body.password+'"';
     let isCreatorAccount = req.body.isCreatorAccount == null || req.body.isCreatorAccount == false ? '0' : '1';
     let termsOfServiceAgreed = req.body.termsOfServiceAgreed == null || req.body.termsOfServiceAgreed == false ? 'NULL' : true;
-
 
     if (termsOfServiceAgreed==true)
     {
@@ -24,26 +23,43 @@ accountRouter.post("/signup",(req,res)=>{
       if(password.length>=8 && password.length<=20)
       {
 
-        let query = 'CALL CheckAccountByUsernameOrEmail('+username+','+email+')';
+        let queryOne= 'CALL CheckAccountByUsername('+username+');';
 
-        con.query(query,(error, results, fields)=>{
+        con.query(queryOne,(error, results, fields)=>{
           if (error) {
             res.json(error);
           }
-          count=results[0][0]['COUNT(*)'];
-          if(count==0)
+          let count=results[0][0]['COUNT(*)'];
+          if (count==0)
           {
-          let secondQuery = 'CALL InsertAccount('+name+','+username+','+email+','+password+','+isCreatorAccount+');';
-          con.query(secondQuery, (error, results, fields) => {
+            let queryTwo= 'CALL CheckAccountByEmail('+email+');';
+
+            con.query(queryTwo,(error, results, fields)=>{
               if (error) {
                 res.json(error);
               }
-              res.json("Account Created Succesfully");
-            });
+              count=results[0][0]['COUNT(*)'];
+
+              if (count==0)
+              {
+                let secondQuery = 'CALL InsertAccount('+name+','+username+','+email+','+password+','+isCreatorAccount+');';
+                con.query(secondQuery, (error, results, fields) => {
+                    if (error) {
+                      res.json(error);
+                    }
+                    res.json("Account Created Succesfully");
+                  });
+              }
+              else
+              {
+                res.json("Email Already exists");
+              }
+
+            })
           }
           else
           {
-            res.json("Username and email already exists");
+            res.json("Username already exists");
           }
         })
         }
@@ -70,7 +86,7 @@ accountRouter.post("/login",(req,res)=>{
   res.header('Access-Control-Allow-Headers', 'Content-Type');
 
   let username = req.body.username == null || req.body.username.trim() == "" ? 'NULL' : '"'+req.body.username.trim().toLowerCase()+'"';
-  let password = req.body.password == null || req.body.password.trim() == "" ? 'NULL' : '"'+req.body.password+'"';
+  let password = req.body.password == null || req.body.password == "" ? 'NULL' : '"'+req.body.password+'"';
 
   let query = 'CALL GetAccountByUsernameOrEmail('+username+','+username+','+password+');';
 
