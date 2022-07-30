@@ -4,6 +4,9 @@ const searchNewsRouter = require("./API/SearchNewsAPI");
 const bodyParser= require('body-parser');
 const cors = require('cors');
 const accountRouter = require("./API/accountAPI");
+const articleRouter = require("./API/ArticleAPI");
+const gamesRouter = require("./API/GamesAPI");
+const playersRouter = require("./API/PlayersAPI");
 
 const app = express();
 
@@ -24,6 +27,9 @@ app.use("/",router);
 
 app.use('/api/searchnews/',searchNewsRouter);
 app.use('/api/account/',accountRouter);
+app.use('/api/article',articleRouter);
+app.use('/api/games',gamesRouter);
+app.use('/api/players',playersRouter);
 
 
 
