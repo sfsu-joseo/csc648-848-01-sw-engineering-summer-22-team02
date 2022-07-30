@@ -21,7 +21,7 @@ function InputSubmission() {
     }
     var config = {
       method: "post",
-      url: "http://34.136.124.189:8080/api/searchnews/search",
+      url: "http://localhost:8080/api/article/search",
       data: {
         sport: sport,
         searchText: InputText,

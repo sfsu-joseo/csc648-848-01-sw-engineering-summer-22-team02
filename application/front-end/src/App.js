@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 //import logo from './logo.svg';
 import "./App.css";
 import Home from "./Home";
@@ -31,16 +31,37 @@ import Abiola from "./PersonalAbout/Abiola";
 import Sareen from "./PersonalAbout/Sareen";
 import ForgotPassword from "./ForgotPassword";
 import TermsOfService from "./TermsOfService";
+import UserContext from "./UserContext";
+
 
 function App() {
+
+  const [accountID, setAccountID] = useState("");
+  const [creator,setCreator] = useState(0);
+
+  useEffect(()=>{
+    let accountID = localStorage.getItem('accountID');
+    if(accountID!=null)
+    {
+      setAccountID(accountID);
+    }
+    let storedCreator = localStorage.getItem('creator');
+    setCreator(storedCreator);
+  })
+
   return (
     <div className="App">
+      <UserContext.Provider value={{accountID,
+      setAccountID,
+      creator,
+      setCreator
+      }}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/Login" element={<Login/>} />
         <Route path="/Games" element={<Games />} />
         <Route path="/Footer" element={<Footer />} />
         <Route path="/LoginFooter" element={<LoginFooter />} />
@@ -65,6 +86,7 @@ function App() {
         <Route path="/PersonalAbout/Abiola" element={<Abiola />} />
         <Route path="/PersonalAbout/Sareen" element={<Sareen />} />
       </Routes>
+      </UserContext.Provider>
     </div>
   );
 }

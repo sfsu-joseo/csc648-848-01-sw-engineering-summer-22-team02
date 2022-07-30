@@ -1,10 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./SignUp.css";
 import "./Navbar.css";
 import Navbar from "./Navbar";
 import  "./TermsOfService";
+import UserContext from "./UserContext";
 
 function Account_Settings() { 
+
+  const {accountID,
+    setAccountID,
+    creator,
+    setCreator
+    } = useContext(UserContext);
      function redirect() {
   alert("You are now leaving this Website");
 }
@@ -14,7 +21,10 @@ function Account_Settings() {
     }
 
     function logoutSuccess(){
-        alert("Logout Sucessful");
+      localStorage.clear();
+      setAccountID("");
+      setCreator(0);
+       alert("Logout Sucessful");
     }
 
     return (

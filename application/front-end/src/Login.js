@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./SignUp.css";
 import "./Navbar.css";
 import Navbar from "./Navbar";
@@ -6,13 +6,18 @@ import ForgotPassword from "./ForgotPassword";
 import Footer from "./Footer";
 import TermsOfService from "./TermsOfService";
 import axios from "axios";
+import UserContext from "./UserContext";
 
 function Login() {
-  const [user, setUser] = useState("");
+
+  const {accountID,
+    setAccountID,
+    creator,
+    setCreator
+    } = useContext(UserContext);
+
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-
-  const [isLogged, setLogged] = useState(false);
 
   function handleLogin() {
     var config = {
@@ -26,10 +31,12 @@ function Login() {
 
     axios(config)
       .then(function (response) {
-        setUser(response.data);
-        localStorage.setItem("user", JSON.stringify(response.data));
-        setLogged(true);
         console.log(response.data);
+        localStorage.setItem("accountID", response.data.account_id);
+        setAccountID(response.data.account_id);
+        setCreator(response.data.isCreator);
+        localStorage.setItem("creator", response.data.isCreator);
+        console.log(creator);
       })
       .catch(function (error) {
         console.log(error);
