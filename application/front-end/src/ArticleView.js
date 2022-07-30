@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import "./Home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,8 +9,44 @@ import {
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import Footer from "./Footer";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 const ArticleView = () => {
+
+  const [heading,setHeading] = useState("");
+  const [subHeading,setSubHeading] = useState("");
+  const [imageURL,setImageURL] = useState("");
+  const [introduction,setIntroduction] = useState("");
+  const [content,setContent] = useState("");
+  const [conclusion,setConclusion] = useState("");
+
+
+  const {articleID} = useParams();
+  var config = {
+    method: "post",
+    url: "http://localhost:8080/api/article/getArticle",
+    data: {
+      articleID: articleID,
+    }
+  };
+
+  useEffect(()=>{
+    axios(config)
+      .then(function (response) {
+        console.log(response.data);
+        setHeading(response.data.Heading);
+        setSubHeading(response.data.SubHeading);
+        setIntroduction(response.data.Introduction);
+        setContent(response.data.Content);
+        setConclusion(response.data.Conclusion);
+        setImageURL(response.data.Image_url);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  },[])
+
   function myFunction() {
     var x = document.getElementById("myDIV");
     if (x.style.display === "none") {
@@ -73,33 +109,38 @@ const ArticleView = () => {
           </a>
         </div>
         <h2 className="heading">
-          Kyrie Irving can still technically be traded, but all signs point to
-          him playing for Nets next season
+          {
+            heading
+          }
         </h2>
         <h4 className="sub-heading">
-          Irving's opt-in likely ends the possibility of him joining the Lakers.
+          {
+            subHeading
+          }
         </h4>
         <p className="image">
           <img
             className="article_image"
             alt="Article Img"
-            src={require("./HomePage_Images/Article_Img.png")}
+            src={
+              imageURL
+            }
           ></img>
         </p>
         <p className="content">
-          Irving has operated with all the subtlety of a Michael Bay film this
-          offseason. He only opted in after trying to find a sign-and-trade.
+          {
+            introduction
+          }
         </p>
         <p className="content">
-          Irving has operated with all the subtlety of a Michael Bay film this
-          offseason. He only opted in after trying to find a sign-and-trade —
-          Irving gave the Nets a list of teams where he wanted to go — and
-          finding there was no wide market for his services after the disruption
-          he caused in Boston and now Brooklyn.
+          {
+            content
+          }
         </p>
         <p className="conclusion">
-          For now, the Nets are being patient. It’s a negotiating position, but
-          one they don’t need to change. Brooklyn only gets one swing at this.
+          {
+            conclusion
+          }
         </p>
       </div>
       <div className="statement12">Comments</div>

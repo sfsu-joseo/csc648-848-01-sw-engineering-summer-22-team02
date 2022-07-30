@@ -118,7 +118,7 @@ function InputSubmission() {
                 return (
                   <>
                     <div className="row">
-                      <a className="click_to_view1" href="/ArticleView">
+                      <a className="click_to_view1" href={"/ArticleView/"+data1.Article_ID}>
                         {/* <Link
                         to={`/${this.prop.Article_ID}? backUrl=${backUrl}`}
                       /> */}

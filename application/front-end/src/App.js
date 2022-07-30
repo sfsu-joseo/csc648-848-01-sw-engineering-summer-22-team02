@@ -71,7 +71,7 @@ function App() {
         <Route path="/TermsOfService" element={<TermsOfService />} />
         <Route path="/BettsStatline" element={<BettsStatline />} />
         <Route path="/CurryPlayerStats" element={<CurryPlayerStats />} />
-        <Route path="/ArticleView" element={<ArticleView />} />
+        <Route path="/ArticleView/:articleID" element={<ArticleView />} />
         <Route path="/UploadArticle" element={<UploadArticle />} />
         <Route path="/Account_Settings" element={<Account_Settings />} />
         <Route path="/Dashboard" element={<Dashboard />} />
