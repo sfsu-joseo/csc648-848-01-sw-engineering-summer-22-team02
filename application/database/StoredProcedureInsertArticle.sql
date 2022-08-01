@@ -1,12 +1,12 @@
 Use YourSportsDB;
 
 DELIMITER $$
-CREATE PROCEDURE `InsertArticle` (IN inPostdate varchar(255), IN inImage_url varchar(255), 
-IN inHeading varchar(255),
-IN inSubHeading varchar(255),
-IN inIntroduction varchar(255),
-IN inContent varchar(4096),
-IN inConclusion varchar(255),
+CREATE PROCEDURE `InsertArticle` (IN inPostdate varchar(255), IN inImage_url LONGTEXT, 
+IN inHeading LONGTEXT,
+IN inSubHeading LONGTEXT,
+IN inIntroduction LONGTEXT,
+IN inContent LONGTEXT,
+IN inConclusion LONGTEXT,
 IN inSport varchar(255),
 IN inAuthor_ID INT)
 
