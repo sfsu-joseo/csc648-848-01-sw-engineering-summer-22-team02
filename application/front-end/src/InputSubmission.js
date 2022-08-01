@@ -114,20 +114,11 @@ function InputSubmission() {
               data.map((data1) => {
                 return (
                   <>
-                    <div className="row">
-                      <a className="click_to_view1" href={"/ArticleView/"+data1.Article_ID}>
-                        {/* <Link
-                        to={`/${this.prop.Article_ID}? backUrl=${backUrl}`}
-                      /> */}
-                        <div className="column1">
-                          <h2 className="data_text">{data1.Heading}</h2>
-                          <h3 className="data_text">{data1.Sport}</h3>
-                          <h3 className="data_text">{new Date(data1.PostDate).getFullYear()+'-'+(new Date(data1.PostDate).getMonth()+1)+'-'+new Date(data1.PostDate).getDate()}</h3>
-                          <h3 className="data_text">{data1.Name}</h3>
-                        </div>
-                      </a>
-
-                      <a className="click_to_view2" href={"/ArticleView/"+data1.Article_ID}>
+                    <div className="border">
+                      <a
+                        className="articleDisplay"
+                        href={"/ArticleView/" + data1.Article_ID}
+                      >
                         <div className="column2">
                           <img
                             className="image"
@@ -135,8 +126,57 @@ function InputSubmission() {
                             src={data1.Image_url}
                           ></img>
                         </div>
+                        <div className="column1">
+                          <h2 className="data_text1">{data1.Heading}</h2>
+                          <h3 className="data_text">{data1.Sport}</h3>
+                          <h3 className="data_text">
+                            {new Date(data1.PostDate).getFullYear() +
+                              "-" +
+                              (new Date(data1.PostDate).getMonth() + 1) +
+                              "-" +
+                              new Date(data1.PostDate).getDate()}
+                          </h3>
+                          <h3 className="data_text">{data1.Name}</h3>
+                        </div>
                       </a>
                     </div>
+                    {/* <a
+                      className="click_to_view1"
+                      href={"/ArticleView/" + data1.Article_ID}
+                    >
+                      {/* <Link
+                        to={`/${this.prop.Article_ID}? backUrl=${backUrl}`}
+                      /> */}
+                      {/* <div className="column1">
+                        <img
+                          className="image"
+                          alt="Article "
+                          src={data1.Image_url}
+                        ></img> */}
+                        {/* <h2 className="data_text">{data1.Heading}</h2>
+                          <h3 className="data_text">{data1.Sport}</h3>
+                          <h3 className="data_text">{new Date(data1.PostDate).getFullYear()+'-'+(new Date(data1.PostDate).getMonth()+1)+'-'+new Date(data1.PostDate).getDate()}</h3>
+                          <h3 className="data_text">{data1.Name}</h3> 
+                      </div>
+                    </a> */}
+
+                    {/* <a
+                      className="click_to_view2"
+                      href={"/ArticleView/" + data1.Article_ID}
+                    >
+                      <div className="column2">
+                        <h2 className="data_text">{data1.Heading}</h2>
+                        <h3 className="data_text">{data1.Sport}</h3>
+                        <h3 className="data_text">
+                          {new Date(data1.PostDate).getFullYear() +
+                            "-" +
+                            (new Date(data1.PostDate).getMonth() + 1) +
+                            "-" +
+                            new Date(data1.PostDate).getDate()}
+                        </h3>
+                        <h3 className="data_text">{data1.Name}</h3>
+                      </div>
+                    </a> */}
                   </>
                 );
               })
@@ -146,29 +186,32 @@ function InputSubmission() {
           data.map((data1) => {
             return (
               <>
-                    <div className="row">
-                      <a className="click_to_view1" href={"/ArticleView/"+data1.Article_ID}>
-                        {/* <Link
-                        to={`/${this.prop.Article_ID}? backUrl=${backUrl}`}
-                      /> */}
-                        <div className="column1">
-                          <h2 className="data_text">{data1.Heading}</h2>
-                          <h3 className="data_text">{data1.Sport}</h3>
-                          <h3 className="data_text">{new Date(data1.PostDate).getFullYear()+'-'+(new Date(data1.PostDate).getMonth()+1)+'-'+new Date(data1.PostDate).getDate()}</h3>
-                          <h3 className="data_text">{data1.Name}</h3>
-                        </div>
-                      </a>
-
-                      <a className="click_to_view2" href={"/ArticleView/"+data1.Article_ID}>
-                        <div className="column2">
-                          <img
-                            className="image"
-                            alt="Article "
-                            src={data1.Image_url}
-                          ></img>
-                        </div>
-                      </a>
+                <div className="border">
+                  <a
+                    className="articleDisplay"
+                    href={"/ArticleView/" + data1.Article_ID}
+                  >
+                    <div className="column2">
+                      <img
+                        className="image"
+                        alt="Article "
+                        src={data1.Image_url}
+                      ></img>
                     </div>
+                    <div className="column1">
+                      <h2 className="data_text">{data1.Heading}</h2>
+                      <h3 className="data_text">{data1.Sport}</h3>
+                      <h3 className="data_text">
+                        {new Date(data1.PostDate).getFullYear() +
+                          "-" +
+                          (new Date(data1.PostDate).getMonth() + 1) +
+                          "-" +
+                          new Date(data1.PostDate).getDate()}
+                      </h3>
+                      <h3 className="data_text">{data1.Name}</h3>
+                    </div>
+                  </a>
+                </div>
               </>
             );
           })
