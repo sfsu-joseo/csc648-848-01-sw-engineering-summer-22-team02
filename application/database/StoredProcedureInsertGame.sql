@@ -9,8 +9,8 @@ IN inTeamOneScore INT,
 IN inTeamTwoScore INT,
 IN inHasForumn INT,
 IN inSportType INT,
-IN inteamOneURL varchar(255),
-IN inteamTwoURL varchar(255)
+IN inteamOneURL LONGTEXT,
+IN inteamTwoURL LONGTEXT
 )
 
 BEGIN

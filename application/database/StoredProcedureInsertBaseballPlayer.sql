@@ -12,7 +12,7 @@ IN inRunsBatted DECIMAL,
 IN inBattingAverage DECIMAL,
 IN inOuts DECIMAL,
 IN inPlayerID INT,
-IN inplayerURL varchar(255)
+IN inplayerURL LONGTEXT
 )
 
 BEGIN

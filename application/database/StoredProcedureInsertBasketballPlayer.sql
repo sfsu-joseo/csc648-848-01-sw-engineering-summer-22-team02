@@ -9,7 +9,7 @@ IN inTwoPointersAttempted DECIMAL,
 IN inThreePointersMad DECIMAL,
 IN inThreePointersAttempted DECIMAL,
 IN inPlayerID INT,
-IN inplayerURL varchar(255)
+IN inplayerURL LONGTEXT
 )
  
 BEGIN

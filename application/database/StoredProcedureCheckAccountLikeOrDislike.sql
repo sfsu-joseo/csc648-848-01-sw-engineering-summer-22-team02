@@ -31,11 +31,5 @@ END IF;
 
 SELECT count;
 
-
-
-
-
-
-
 END$$
 DELIMITER ;

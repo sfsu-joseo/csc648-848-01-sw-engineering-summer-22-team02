@@ -2,7 +2,7 @@ Use YourSportsDB;
 
 DELIMITER $$
 CREATE PROCEDURE `InsertComment` (IN inPostdate varchar(255), 
-IN inCommentContent varchar(255), 
+IN inCommentContent LONGTEXT, 
 IN inAuthorID INT,
 IN inArticle_ID INT)
 
