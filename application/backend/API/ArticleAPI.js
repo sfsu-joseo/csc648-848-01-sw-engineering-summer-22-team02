@@ -27,6 +27,8 @@ articleRouter.post("/getArticle",(req,res)=>{
 })
 
 articleRouter.post("/insertArticle",(req,res)=>{
+    
+    
     res.header('Access-Control-Allow-Origin', "*");
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
@@ -41,17 +43,25 @@ articleRouter.post("/insertArticle",(req,res)=>{
     let sport = req.body.sport == null || req.body.sport.trim() == "" ? 'NULL' : '"'+req.body.sport.trim().toLowerCase()+'"';
     let authorID = req.body.authorID == null || req.body.authorID.trim() == "" ? 'NULL' : '"'+req.body.authorID.trim().toLowerCase()+'"';
 
-
-
-    if (postDate== 'NULL' || heading == 'NULL' || subHeading == 'NULL' || introduction == 'NULL' || content == 'NULL' || conclusion == 'NULL' || authorID=='NULL' || sport== 'NULL')
+    if(imageURL=='NULL')
+    {
+        res.json("Thumbnail is required");
+    }
+    else if(sport=='NULL')
+    {
+        res.json("Please select the sport that the article is talking about");
+    }
+    else if (postDate== 'NULL' || heading == 'NULL' || subHeading == 'NULL' || introduction == 'NULL' || content == 'NULL' || conclusion == 'NULL' || authorID=='NULL')
     {
         res.json("Heading, subHeading, Introduction, Content and Conclusion need to have atleast one character that is not a space");
     }
     else
     {
+        console.log("Test Article Upload");
         let query = 'CALL InsertArticle('+postDate+','+imageURL+','+heading+','+subHeading+','+introduction+','+content+','+conclusion+','+sport+','+authorID+');';
         con.query(query, (error, results, fields) => {
             if (error) {
+                console.log(error);
               res.json(error);
             }
             res.json("Article Uploaded Succesfully");
