@@ -193,7 +193,6 @@ body{
   text-align: center;
   margin-left: 45px;
   margin-right: 50px;
-  padding-top: 30px;
 }
 
 .article .sub-heading{
@@ -463,15 +462,16 @@ label{
 }
 
 .thumbs{
-  float: right;
-  margin-right: 25px;
+  /* float: right;
+  margin-right: 25px; */
+  margin-left: 50%;
 }
 
 .thumbsUp{
   color: rgb(23, 71, 134);
   padding-right: 20px;
   font-size: xx-large;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .thumbsDown{
   color: rgb(23, 71, 134);
