@@ -65,7 +65,7 @@ function App() {
         <Route path="/Games" element={<Games />} />
         <Route path="/Footer" element={<Footer />} />
         <Route path="/LoginFooter" element={<LoginFooter />} />
-        <Route path="/GamesExample" element={<GamesExample />} />
+        <Route path="/GamesExample/:gameID" element={<GamesExample />} />
         <Route path="PlayerStats" element={<PlayerStats />} />
         <Route path="/TempPage" element={<TempPage />} />
         <Route path="/TermsOfService" element={<TermsOfService />} />

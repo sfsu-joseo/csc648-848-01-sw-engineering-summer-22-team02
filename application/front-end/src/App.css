@@ -328,14 +328,9 @@ font-style: bold;
   font-size: 20px;
   border-radius: 20px;
   margin-bottom: 10px;
+  width: 100%;
 }
 
-.comment_bar
-
-input,
-input::placeholder {
-  padding-right: 30%;
-}
 
 .myArticles{
   color: black;

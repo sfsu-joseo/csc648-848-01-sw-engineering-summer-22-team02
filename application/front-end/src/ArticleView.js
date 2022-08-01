@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { Component, useEffect, useState, useContext } from "react";
 import Navbar from "./Navbar";
 import "./Home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,8 +11,12 @@ import {
 import Footer from "./Footer";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import UserContext from "./UserContext";
 
 const ArticleView = () => {
+
+  const {accountID
+    } = useContext(UserContext);
 
   const [heading,setHeading] = useState("");
   const [subHeading,setSubHeading] = useState("");
@@ -20,10 +24,15 @@ const ArticleView = () => {
   const [introduction,setIntroduction] = useState("");
   const [content,setContent] = useState("");
   const [conclusion,setConclusion] = useState("");
+  const [author, setAuthor] = useState("");
+  const [authorName,setAuthorName] = useState("");
+  const [postDate,setPostDate] = useState("");
+  const [comments,setComments] = useState([]);
+  const [commentContent,setCommentContent] = useState("");
 
 
   const {articleID} = useParams();
-  var config = {
+  var configOne = {
     method: "post",
     url: "http://localhost:8080/api/article/getArticle",
     data: {
@@ -31,8 +40,24 @@ const ArticleView = () => {
     }
   };
 
+  var configTwo = {
+    method: "post",
+    url: "http://localhost:8080/api/article/getComments",
+    data: {
+      articleID: articleID,
+    }
+  };
+
+  var configThree = {
+    method: "post",
+    url: "http://localhost:8080/api/article/updateArticleViews",
+    data: {
+      articleID: articleID,
+    }
+  }
+
   useEffect(()=>{
-    axios(config)
+    axios(configOne)
       .then(function (response) {
         console.log(response.data);
         setHeading(response.data.Heading);
@@ -41,10 +66,32 @@ const ArticleView = () => {
         setContent(response.data.Content);
         setConclusion(response.data.Conclusion);
         setImageURL(response.data.Image_url);
+        setAuthor(response.data.fk_Author_ID);
+        setAuthorName(response.data.Name);
+        let date = new Date(response.data.PostDate);
+        setPostDate(date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate());
       })
       .catch(function (error) {
         console.log(error);
       });
+
+      axios(configTwo)
+      .then(function (response) {
+        console.log(response.data);
+        setComments(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+      axios(configThree)
+      .then(function (response) {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
   },[])
 
   function myFunction() {
@@ -94,17 +141,94 @@ const ArticleView = () => {
     alert("Article disliked");
   }
 
+  function insertComment(comment)
+  {
+  let today= new Date();
+    var configThree={
+      method: "post",
+      url: "http://localhost:8080/api/article/insertComment",
+      data: {
+        postDate: today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate(),
+        content: commentContent,
+        authorID : accountID,
+        articleID: articleID,
+      }
+    };
+
+    axios(configThree)
+    .then(function (response) {
+      console.log(response.data);
+      setComments(response.data);
+      setCommentContent("");
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+
+  function deleteComment(commentID)
+  {    var configFour={
+    method: "post",
+    url: "http://localhost:8080/api/article/deleteComment",
+    data: {
+      commentID: commentID.toString(),
+      articleID: articleID,
+    }
+  };
+  axios(configFour)
+  .then(function (response) {
+    console.log(response.data);
+    setComments(response.data);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+  }
+
+  function likeArticle(like)
+  {
+    var likeConfig={
+      method: "post",
+      url: "http://localhost:8080/api/article/updateArticleProperties",
+      data: {
+        like: like,
+        accountID : accountID, 
+        articleID: articleID,
+      }
+    };
+    
+    axios(likeConfig)
+    .then(function (response) {
+      console.log(response.data);
+      if (like){
+        up();
+      }
+      else
+      {
+        down();
+      }
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+  }
+
   return (
     <>
       <Navbar />
       <div className="article">
-        <p className="author">Steward Smith</p>
-        <p className="date">07/10/2022</p>
+        <p className="author">{authorName}</p>
+        <p className="date">{postDate}</p>
         <div className="thumbs">
-          <a className="thumbsUp" href="" onClick={up}>
+          <a className="thumbsUp" href="" onClick={()=>{
+            likeArticle(true);
+          }}>
             <FontAwesomeIcon icon={faThumbsUp} />
           </a>
-          <a className="thumbsDown" href="" onClick={down}>
+          <a className="thumbsDown" href="" onClick={()=>{
+            likeArticle(false);
+          }}>
             <FontAwesomeIcon icon={faThumbsDown} />
           </a>
         </div>
@@ -144,67 +268,42 @@ const ArticleView = () => {
         </p>
       </div>
       <div className="statement12">Comments</div>
-      <div className="comment" id="myDIV1">
-        <div className="userName">
-          SportsLover:
-          <div className="commentIcon">
-            <FontAwesomeIcon icon={faTrash} onClick={myFunction1} />
+      {
+        comments.map(comment => 
+          <div className="comment">
+          <div className="userName">
+            {comment.Name}
+            <div className="commentIcon">
+              <FontAwesomeIcon icon={faTrash} onClick={()=>{
+                deleteComment(comment.Comment_ID);
+              }} />
+            </div>
+          </div>
+          <div className="commentText">
+            {
+              comment.Content
+            }
           </div>
         </div>
-        <div className="commentText">
-          I love the warriors. They'll repeat again for sure. A healthy Curry
-          and Klay duo is unstoppable. #Gold Blooded.{" "}
-        </div>
-      </div>
-      <div className="comment" id="myDIV2">
-        <div className="userName">
-          LuckyLep:
-          <div className="commentIcon">
-            <FontAwesomeIcon icon={faTrash} onClick={myFunction2} />
-          </div>
-        </div>
-        <div className="commentText">
-          Jayson Tatum gave up on the team. He looks like Westbrick out there. 5
-          turnovers is horrendous. We will be back next year.
-        </div>
-      </div>
-      <div className="comment" id="myDIV3">
-        <div className="userName">
-          MjoverLebron:
-          <div className="commentIcon">
-            <FontAwesomeIcon icon={faTrash} onClick={myFunction3} />
-          </div>
-        </div>
-        <div className="commentText">
-          This isn't real basketball. Michael Jordan would be dropping 80+
-          points a night in this era. Too soft.Curry good but he's no Jordan
-        </div>
-      </div>
-
-      <div className="comment" id="myDIV4">
-        <div className="userName">
-          LAforLife:
-          <div className="commentIcon">
-            <FontAwesomeIcon icon={faTrash} onClick={myFunction4} />
-          </div>
-        </div>
-        return
-        <div className="commentText">
-          Enjoy it while you can Warriors Fans, next year the Lakers will take
-          it. Lebron and a healthy Anthony Davis {">"} Steph and Klay all day
-        </div>
-      </div>
+        )
+      }
 
       <div className="comment_bar">
         <input
           placeholder="Write your post here"
           className="search_feed"
-          //   onChange={(e) => setData(e.target.value)}
+          value={commentContent}
+          onChange={(e)=>
+          {
+            setCommentContent(e.target.value);
+          }}
         />
         <button
           className="submit_button"
           type="submit"
-          //   onClick={handleComments}
+          onClick={()=>{
+            insertComment(commentContent)}
+          }
         >
           Submit
         </button>
