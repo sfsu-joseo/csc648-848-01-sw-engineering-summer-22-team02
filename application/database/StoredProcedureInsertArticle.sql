@@ -5,7 +5,7 @@ CREATE PROCEDURE `InsertArticle` (IN inPostdate varchar(255), IN inImage_url var
 IN inHeading varchar(255),
 IN inSubHeading varchar(255),
 IN inIntroduction varchar(255),
-IN inContent varchar(255),
+IN inContent varchar(4096),
 IN inConclusion varchar(255),
 IN inSport varchar(255),
 IN inAuthor_ID INT)
