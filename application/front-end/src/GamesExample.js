@@ -107,6 +107,7 @@ const GamesExample = () => {
             <div className="score2">103 - 90</div>
             <div className="time2">06-13-2022</div>
             <div className="versusText2">Chase Center,San Francisco</div>
+            <div className="versusText2">Basketball</div>
           </div>
           <div className="columnExample">
             <img
@@ -130,7 +131,7 @@ const GamesExample = () => {
           Oh yeah this game is so good, we are witnessing one of, if not the
           best, shooter of all time. KD needs Steph not the other way around{" "}
         </div>
-
+    
         {/* </div> */}
       </div>
       <div className="comment" id="myDIV1">
