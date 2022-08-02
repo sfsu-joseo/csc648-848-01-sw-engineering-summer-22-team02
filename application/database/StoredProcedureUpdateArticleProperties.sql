@@ -33,12 +33,21 @@ INSERT INTO Article_Likes(fk_Article_ID, fk_Account_ID)
 VALUES
 (inArticleID, inAccountID);
 END IF;
+
+IF newcount = 1
+THEN
+DELETE FROM Article_Likes
+WHERE fk_Account_ID = inAccountID and fk_Article_ID = inArticleID;
 END IF;
+END IF;
+
+
 
 IF inLike = 0
 THEN
 SET newcount = (SELECT COUNT(*) FROM Article_Dislikes 
 WHERE fk_Account_ID = inAccountID and fk_Article_ID = inArticleID);
+
 IF newcount = 0
 THEN
 SET count = (SELECT COUNT(*) FROM Article_Likes 
@@ -53,6 +62,12 @@ END IF;
 INSERT INTO Article_Dislikes(fk_Article_ID, fk_Account_ID)
 VALUES
 (inArticleID, inAccountID);
+END IF;
+
+IF newcount = 1
+THEN
+DELETE FROM Article_Dislikes
+WHERE fk_Account_ID = inAccountID and fk_Article_ID = inArticleID;
 END IF;
 END IF;
 
