@@ -60,10 +60,19 @@ body{
 .dropdown .dropdown-content{
   padding: 10px;
 }
+.dropdownPlayerStats .dropdown-content{
+  padding: 10px;
+}
 .dropdown .dropdown-content .select_format{
   color:#0d356c;
   border: none;
 }
+
+.dropdownPlayerStats .dropdown-content .select_format{
+  color:#0d356c;
+  border: none;
+}
+
 
 
 /* Date Selection Formatting */
@@ -184,7 +193,6 @@ body{
   text-align: center;
   margin-left: 45px;
   margin-right: 50px;
-  padding-top: 30px;
 }
 
 .article .sub-heading{
@@ -291,9 +299,9 @@ body{
   margin-left: auto;
   margin-right: auto;
   background-color: white;
-  margin-bottom: 35px;
-  padding-left: 20%;
-  padding-right: 20%;
+  margin-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 label{
@@ -376,7 +384,7 @@ label{
   margin-left: 0.75%;
   font-size: 100%;
   font-weight: bold;
-  padding:.5%;
+  margin-top: -1%;
 }
 .comment .commentText{
   text-align: left;
@@ -386,7 +394,7 @@ label{
 .comment .commentIcon{
     text-align: right;
     margin-left: 0.75%;
-    margin-top: -2%;
+    margin-top: -1%;
 }
 
 .text{
@@ -454,15 +462,16 @@ label{
 }
 
 .thumbs{
-  float: right;
-  margin-right: 25px;
+  /* float: right;
+  margin-right: 25px; */
+  margin-left: 50%;
 }
 
 .thumbsUp{
   color: rgb(23, 71, 134);
   padding-right: 20px;
   font-size: xx-large;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .thumbsDown{
   color: rgb(23, 71, 134);

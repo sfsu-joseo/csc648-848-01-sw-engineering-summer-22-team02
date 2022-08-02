@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 //import logo from './logo.svg';
 import "./App.css";
 import Home from "./Home";
@@ -19,6 +19,7 @@ import GamesExample from "./GamesExample";
 import Dashboard from "./Dashboard";
 import Footer from "./Footer";
 import LoginFooter from "./LoginFooter";
+import useToken from "./useToken";
 
 // Import other team member's file names
 import Ireland from "./PersonalAbout/Ireland";
@@ -30,31 +31,52 @@ import Abiola from "./PersonalAbout/Abiola";
 import Sareen from "./PersonalAbout/Sareen";
 import ForgotPassword from "./ForgotPassword";
 import TermsOfService from "./TermsOfService";
+import UserContext from "./UserContext";
+
 
 function App() {
+
+  const [accountID, setAccountID] = useState("");
+  const [creator,setCreator] = useState(0);
+
+  useEffect(()=>{
+    let accountID = localStorage.getItem('accountID');
+    if(accountID!=null)
+    {
+      setAccountID(accountID);
+    }
+    let storedCreator = localStorage.getItem('creator');
+    setCreator(storedCreator);
+  })
+
   return (
     <div className="App">
+      <UserContext.Provider value={{accountID,
+      setAccountID,
+      creator,
+      setCreator
+      }}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/Login" element={<Login/>} />
         <Route path="/Games" element={<Games />} />
         <Route path="/Footer" element={<Footer />} />
         <Route path="/LoginFooter" element={<LoginFooter />} />
-        <Route path="/GamesExample" element={<GamesExample />} />
+        <Route path="/GamesExample/:gameID" element={<GamesExample />} />
         <Route path="PlayerStats" element={<PlayerStats />} />
         <Route path="/TempPage" element={<TempPage />} />
         <Route path="/TermsOfService" element={<TermsOfService />} />
         <Route path="/BettsStatline" element={<BettsStatline />} />
         <Route path="/CurryPlayerStats" element={<CurryPlayerStats />} />
-        <Route path="/ArticleView" element={<ArticleView />} />
+        <Route path="/ArticleView/:articleID" element={<ArticleView />} />
         <Route path="/UploadArticle" element={<UploadArticle />} />
         <Route path="/Account_Settings" element={<Account_Settings />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/ForgotPassword" element={<ForgotPassword />} />
-
+        <Route path="/useToken" element={<useToken />} />
         {/* Route other team member's file names */}
         <Route path="/PersonalAbout/Ireland" element={<Ireland />} />
         <Route path="/PersonalAbout/Ip" element={<Ip />} />
@@ -64,6 +86,7 @@ function App() {
         <Route path="/PersonalAbout/Abiola" element={<Abiola />} />
         <Route path="/PersonalAbout/Sareen" element={<Sareen />} />
       </Routes>
+      </UserContext.Provider>
     </div>
   );
 }
