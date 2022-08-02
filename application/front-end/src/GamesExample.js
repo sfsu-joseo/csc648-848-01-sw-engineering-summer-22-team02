@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import UserContext from "./UserContext";
 
 const GamesExample = () => {
@@ -14,6 +14,8 @@ const GamesExample = () => {
 
   const {accountID
   } = useContext(UserContext);
+
+  const navigate = useNavigate();
 
   const [teamOne,setTeamOne] = useState('');
   const [teamOneURL, setTeamOneURL] = useState('');
@@ -146,8 +148,20 @@ const GamesExample = () => {
   axios(configThree)
   .then(function (response) {
     console.log(response.data);
+    if(response.data=="Login Required")
+    {
+      // eslint-disable-next-line no-restricted-globals
+      let value=confirm("You need to log in to post in the discussion forum. \n Would you like to log in instead?");
+      if(value==true)
+      {
+        navigate('/login');
+      }
+    }
+    else
+    {
     setPosts(response.data);
     setContent("");
+    }
   })
   .catch(function (error) {
     console.log(error);

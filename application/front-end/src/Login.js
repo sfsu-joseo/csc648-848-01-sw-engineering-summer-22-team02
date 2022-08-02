@@ -7,9 +7,11 @@ import Footer from "./Footer";
 import TermsOfService from "./TermsOfService";
 import axios from "axios";
 import UserContext from "./UserContext";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
 
+  const navigate = useNavigate();
   const {accountID,
     setAccountID,
     creator,
@@ -44,6 +46,7 @@ function Login() {
         localStorage.setItem("creator", response.data.isCreator);
         console.log(creator);
         alert("Login Succeful");
+        navigate('/home');
         }
       })
       .catch(function (error) {

@@ -9,7 +9,7 @@ import {
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import Footer from "./Footer";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import UserContext from "./UserContext";
 
@@ -30,6 +30,9 @@ const ArticleView = () => {
   const [comments,setComments] = useState([]);
   const [commentContent,setCommentContent] = useState("");
   const [articleLiked,setArticleLiked] = useState(0);
+
+  const navigate = useNavigate();
+
 
 
 
@@ -172,8 +175,20 @@ const ArticleView = () => {
     axios(configThree)
     .then(function (response) {
       console.log(response.data);
+      if(response.data=="Login Required")
+      {
+        // eslint-disable-next-line no-restricted-globals
+        let value=confirm("You need to log in to post a comment. \n Would you like to log in instead?");
+        if(value==true)
+        {
+          navigate('/login');
+        }
+      }
+      else
+      {
       setComments(response.data);
       setCommentContent("");
+      }
     })
     .catch(function (error) {
       console.log(error);
@@ -214,7 +229,19 @@ const ArticleView = () => {
     axios(likeConfig)
     .then(function (response) {
       console.log(response.data);
+      if(response.data=="Login Required")
+      {
+        // eslint-disable-next-line no-restricted-globals
+        let value=confirm("You need to log in to like an article. \n Would you like to log in instead?");
+        if(value==true)
+        {
+          navigate('/login');
+        }
+      }
+      else
+      {
       checkArticleLikedOrDisliked();
+      }
     })
     .catch(function (error) {
       console.log(error);

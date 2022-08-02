@@ -136,7 +136,8 @@ li .first_header:hover {
     border: none;
     border-radius: 20px;
     margin-bottom: 10px;
-    width: 65%;
+    width: 70%;
+    font-size: large;
 }
 
 

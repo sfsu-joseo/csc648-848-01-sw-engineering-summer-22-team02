@@ -16,8 +16,11 @@ import {
 import UserContext from "./UserContext";
 import axios from "axios";
 import {uid} from 'uid';
+import { useNavigate } from "react-router-dom";
 
 const UploadArticle = () => {
+    const navigate = useNavigate();
+
 
     const {accountID
     } = useContext(UserContext);
@@ -79,6 +82,7 @@ const UploadArticle = () => {
                   axios(configOne)
                   .then(function (response) {
                     alert(response.data);
+                    navigate('/dashboard');
                   })
                   .catch(function (error) {
                     console.log(error);

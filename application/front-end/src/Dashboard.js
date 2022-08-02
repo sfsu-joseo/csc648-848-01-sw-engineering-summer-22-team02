@@ -77,7 +77,8 @@ function Dashboard() {
     height : '450px',
     top : 0,
     left: 0,
-    position : 'absolute'
+    position : 'absolute',
+    fontSize: 22
   };
 
   return (
@@ -157,7 +158,7 @@ function Dashboard() {
   options={options}
 />
             </div> : 
-            <h2>Please select an article in the left to view its stats {" "}</h2>
+            <h2 className="articleStatistics">Please select an article in the left to view its stats {" "}</h2>
 }
           </div>
         </div>

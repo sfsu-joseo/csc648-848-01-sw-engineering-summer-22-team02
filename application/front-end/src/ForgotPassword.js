@@ -4,6 +4,8 @@ import "./Home.css";
 import { useState } from 'react'
 import Footer from "./Footer";
 
+
+
 const ForgotPassword = () => {
 
     const[show, setShow] = useState(true);
@@ -12,12 +14,17 @@ const ForgotPassword = () => {
         alert("Password is Reset");
     }
 
+    function sendEmail()
+    {
+    }
+
+
     return (
         <>
             <Navbar />
             <div className="reset_form">
                 <input className="associated_email" type="text" placeholder="Please enter email associated with your account" />
-                <button type="submit" onClick={() => setShow(!show)} className="otp_button">
+                <button type="submit" onClick={() => sendEmail()} className="otp_button">
                     Send OTP Email
                 </button>
                 {!show && <p className="OTP_message">Please check your inbox, you should receive an email 

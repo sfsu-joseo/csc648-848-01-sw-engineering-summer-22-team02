@@ -5,6 +5,7 @@ import "./Navbar.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import TermsOfService from "./TermsOfService";
+import { useNavigate } from "react-router-dom";
 
 function SignUp() {
   const [data, setData] = useState("");
@@ -14,6 +15,7 @@ function SignUp() {
   const [password, setPassword] = useState("");
   const [services, setServices] = useState(false);
   const [creator, setCreator] = useState(false);
+  const navigate = useNavigate();
 
   function handlesignup() {
     var config = {
@@ -33,7 +35,19 @@ function SignUp() {
       .then(function (response) {
         setData(response.data);
         console.log(response.data);
-        alert(response.data);
+        if (response.data=="Username already exists" || response.data=="Email Already exists")
+        {
+          // eslint-disable-next-line no-restricted-globals
+          let value=confirm(response.data+"! "+"Would you like to login instead ?");
+          if(value==true)
+          {
+            navigate('/login');
+          }
+        }
+        else
+        {
+          alert(response.data);
+        }
       })
       .catch(function (error) {
         console.log(error);
