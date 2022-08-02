@@ -1,6 +1,7 @@
 const express = require("express");
 const { query } = require("../conn");
 const con = require("../conn");
+var nodemailer = require('nodemailer');
 
 const accountRouter = express.Router();
 
@@ -144,6 +145,57 @@ else
 }
 
 });
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'kshitizsareen709@gmail.com',
+    pass: 'hyloetjuagxzznyi'
+  }
+});
+
+accountRouter.post("/sendOTP",(req,res)=>{
+  res.header('Access-Control-Allow-Origin', "*");
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+
+  let OTP= req.body.OTP == null || req.body.OTP.trim() == "" ? 'NULL' : '"'+req.body.OTP.trim().toLowerCase()+'"';
+  let email = req.body.email == null || req.body.email.trim() == "" ? 'NULL' : '"'+req.body.email.trim().toLowerCase()+'"';
+  if(email=='NULL')
+  {
+    res.json("Please enter your email");
+  }
+  else
+  {
+    
+    var mailOptions = {
+      from: 'kshitizsareen709@gmail.com',
+      to: email,
+      subject: 'Password Reset OTP',
+      text: 'Your OTP is '+OTP
+    };
+    
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        res.json('Email sent: ' + info.response);
+      }
+    });
+  }
+})
+
+accountRouter.post("/resetPassword",(req,res)=>{
+  res.header('Access-Control-Allow-Origin', "*");
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+
+  let confirmPassword =  req.body.OTP == null || req.body.OTP.trim() == "" ? 'NULL' : '"'+req.body.OTP.trim().toLowerCase()+'"';
+  let password = req.body.email == null || req.body.email.trim() == "" ? 'NULL' : '"'+req.body.email.trim().toLowerCase()+'"';
+
+  
+
+})
 
 
 
