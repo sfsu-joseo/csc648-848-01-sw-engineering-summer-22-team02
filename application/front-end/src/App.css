@@ -95,9 +95,13 @@ h1{
 }
 .gamesExample .teamsExample {
  width: 47%;
+ height: 100%;
+ margin-top: 50px;
 }
 .gamesExample .teamsExample1 {
   width: 45%;
+  height: 100%;
+  margin-top: 50px;
 }
 .gameTextExample {
   font-size: 100%;
@@ -119,14 +123,12 @@ h1{
   text-align: center;
   font-size: 25pt;
   font-weight: 1000;
-  margin-top: 25%;
+  margin-top: 20%;
 }
 .versusText2 {
   text-align: center;
-  font-size: larger;
-  font-weight: 1000;
-  padding-bottom: 10px;
-
+  font-size: 90%;
+  margin-top:5%;
 }
 .time2 {
   text-align: center;
@@ -328,11 +330,18 @@ font-style: bold;
   font-size: 20px;
   border-radius: 20px;
   margin-bottom: 10px;
+  width: 100%;
 }
 
-.comment_bar
 
-input,
-input::placeholder {
-  padding-right: 30%;
+.myArticles{
+  color: black;
+  text-align: left;
+  /* margin-left: 5%;
+  margin-right: 5%; */
+  margin-left: 90px;
+}
+
+.articleStatistics{
+  color: black;
 }
