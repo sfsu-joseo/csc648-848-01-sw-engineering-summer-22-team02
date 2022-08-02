@@ -31,7 +31,7 @@ function Dashboard() {
   {
     let config = {
       method: "post",
-      url: "http://localhost:8080/api/article/getArticlesByAuthorID",
+      url: "http://34.136.124.189:8080/api/article/getArticlesByAuthorID",
       data: {
         authorID : accountID
       },
@@ -51,7 +51,7 @@ function Dashboard() {
   {
     let config = {
       method: "post",
-      url: "http://localhost:8080/api/article/getArticleStatsByArticleID",
+      url: "http://34.136.124.189:8080/api/article/getArticleStatsByArticleID",
       data: {
         articleID : articleID.toString()
       },

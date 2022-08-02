@@ -65,7 +65,7 @@ const UploadArticle = () => {
                 console.log(downloadUrl);
                 var configOne = {
                     method: "post",
-                    url: "http://localhost:8080/api/article/insertArticle",
+                    url: "http://34.136.124.189:8080/api/article/insertArticle",
                     data: {
                         postDate: today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate(),
                         imageURL : downloadUrl,

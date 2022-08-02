@@ -29,7 +29,7 @@ const Games = () => {
     }
     var configOne = {
       method: "post",
-      url: "http://localhost:8080/api/games/searchGame",
+      url: "http://34.136.124.189:8080/api/games/searchGame",
       data: {
         postDate: postDate,
         sport: sport,

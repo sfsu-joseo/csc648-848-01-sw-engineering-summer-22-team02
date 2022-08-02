@@ -13,7 +13,7 @@ function InputSubmission() {
   const [sport, setSport] = useState("");
   const [length, setLength] = useState("");
   const [searchApplied, setSearchApplied] = useState(false);
-  const backUrl = "http://localhost:8080/api/article/getSearch";
+  const backUrl = "http://34.136.124.189:8080/api/article/getSearch";
 
   function handlesearch() {
     if (InputText === "" && sport === "") {
@@ -23,7 +23,7 @@ function InputSubmission() {
     }
     var config = {
       method: "post",
-      url: "http://localhost:8080/api/article/search",
+      url: "http://34.136.124.189:8080/api/article/search",
       data: {
         sport: sport,
         searchText: InputText,

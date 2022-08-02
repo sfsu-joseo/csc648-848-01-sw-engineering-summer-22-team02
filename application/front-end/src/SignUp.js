@@ -20,7 +20,7 @@ function SignUp() {
   function handlesignup() {
     var config = {
       method: "post",
-      url: "http://localhost:8080/api/account/signup",
+      url: "http://34.136.124.189:8080/api/account/signup",
       data: {
         name: name,
         username: userName,

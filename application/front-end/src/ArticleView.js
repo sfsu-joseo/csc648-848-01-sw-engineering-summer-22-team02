@@ -40,7 +40,7 @@ const ArticleView = () => {
   const {articleID} = useParams();
   var configOne = {
     method: "post",
-    url: "http://localhost:8080/api/article/getArticle",
+    url: "http://34.136.124.189:8080/api/article/getArticle",
     data: {
       articleID: articleID,
     }
@@ -48,7 +48,7 @@ const ArticleView = () => {
 
   var configTwo = {
     method: "post",
-    url: "http://localhost:8080/api/article/getComments",
+    url: "http://34.136.124.189:8080/api/article/getComments",
     data: {
       articleID: articleID,
     }
@@ -56,7 +56,7 @@ const ArticleView = () => {
 
   var configThree = {
     method: "post",
-    url: "http://localhost:8080/api/article/updateArticleViews",
+    url: "http://34.136.124.189:8080/api/article/updateArticleViews",
     data: {
       articleID: articleID,
     }
@@ -64,7 +64,7 @@ const ArticleView = () => {
 
   var configCheckProperty ={
     method: "post",
-    url: "http://localhost:8080/api/article/checkArticleLikeOrDislike",
+    url: "http://34.136.124.189:8080/api/article/checkArticleLikeOrDislike",
     data: {
       accountID : accountID, 
       articleID: articleID,
@@ -163,7 +163,7 @@ const ArticleView = () => {
   let today= new Date();
     var configThree={
       method: "post",
-      url: "http://localhost:8080/api/article/insertComment",
+      url: "http://34.136.124.189:8080/api/article/insertComment",
       data: {
         postDate: today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate(),
         content: commentContent,
@@ -198,7 +198,7 @@ const ArticleView = () => {
   function deleteComment(commentID)
   {    var configFour={
     method: "post",
-    url: "http://localhost:8080/api/article/deleteComment",
+    url: "http://34.136.124.189:8080/api/article/deleteComment",
     data: {
       commentID: commentID.toString(),
       articleID: articleID,
@@ -218,7 +218,7 @@ const ArticleView = () => {
   {
     var likeConfig={
       method: "post",
-      url: "http://localhost:8080/api/article/updateArticleProperties",
+      url: "http://34.136.124.189:8080/api/article/updateArticleProperties",
       data: {
         like: like,
         accountID : accountID, 

@@ -32,7 +32,7 @@ function PlayerStats() {
     
     var config={
       method: "post",
-      url: "http://localhost:8080/api/players/searchPlayer",
+      url: "http://34.136.124.189:8080/api/players/searchPlayer",
       data: {
         player: playerName,
         playerType: playerType
@@ -57,7 +57,7 @@ function PlayerStats() {
   {
     var config={
       method: "post",
-      url: "http://localhost:8080/api/players/getPlayer",
+      url: "http://34.136.124.189:8080/api/players/getPlayer",
       data: {
         playerID: playerID.toString(),
         sport : playerType.toString()

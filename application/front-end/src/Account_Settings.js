@@ -38,7 +38,7 @@ function Account_Settings() {
     {
       var config = {
         method: "post",
-        url: "http://localhost:8080/api/account/deleteAccount",
+        url: "http://34.136.124.189:8080/api/account/deleteAccount",
         data: {
           accountID: accountID
         },
