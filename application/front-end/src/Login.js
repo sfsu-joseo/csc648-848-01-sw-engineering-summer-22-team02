@@ -37,6 +37,7 @@ function Login() {
         setCreator(response.data.isCreator);
         localStorage.setItem("creator", response.data.isCreator);
         console.log(creator);
+        alert("Login Succesful");
       })
       .catch(function (error) {
         console.log(error);

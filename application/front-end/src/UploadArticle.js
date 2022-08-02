@@ -150,8 +150,8 @@ const UploadArticle = () => {
                     justifyContent: 'center'
                 }}
                 cropSize={{
-                    width: 200,
-                    height: 200
+                    width: 300,
+                    height: 150
                 }}
             />
                 </div>

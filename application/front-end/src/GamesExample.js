@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import UserContext from "./UserContext";
 
 const GamesExample = () => {
+
+  const {gameID} = useParams();
+
+  const {accountID
+  } = useContext(UserContext);
+
+  const [teamOne,setTeamOne] = useState('');
+  const [teamOneURL, setTeamOneURL] = useState('');
+  const [teamOneScore,setTeamOneScore] = useState('');
+  const [teamTwoScore,setTeamTwoScore] = useState('');
+  const [gameDate,setGameDate] = useState('');
+  const [gameLocation,setGameLocation] = useState('');
+  const [sportType,setSportType] = useState('');
+  const [teamTwoURL,setTeamTwoURL] = useState('');
+  const [teamTwo,setTeamTwo] = useState('');
+  const [posts,setPosts] = useState([]);
+  const [content,setContent] = useState('');
+
+
   function myFunction() {
     var x = document.getElementById("myDIV");
     if (x.style.display === "none") {
@@ -53,6 +75,104 @@ const GamesExample = () => {
     setData(temp);
     console.log(temp);
   }
+
+  useEffect(()=>{
+    var configOne = {
+      method: "post",
+      url: "http://localhost:8080/api/games/getGames",
+      data: {
+        gameID: gameID
+
+      }
+    };
+    
+    axios(configOne)
+    .then(function (response) {
+      console.log(response.data);
+      setGameDate(response.data.GameDate);
+      setGameLocation(response.data.GameLocation);
+      setSportType(response.data.SportType);
+      setTeamOne(response.data.TeamOne);
+      setTeamOneScore(response.data.TeamOneScore);
+      setTeamTwo(response.data.TeamTwo);
+      setTeamTwoScore(response.data.TeamTwoScore);
+      setTeamOneURL(response.data.teamOneURL);
+      setTeamTwoURL(response.data.teamTwoURL);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+    getPosts();
+  },[])
+
+  function getPosts()
+  {
+    var configTwo = {
+      method: "post",
+      url: "http://localhost:8080/api/games/getPosts",
+      data: {
+        gameID: gameID
+
+      }
+    };
+    
+    axios(configTwo)
+    .then(function (response) {
+      console.log(response.data);
+      setPosts(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+
+  function insertPost()
+  {    
+    let today= new Date();
+
+    var configThree = {
+    method: "post",
+    url: "http://localhost:8080/api/games/insertPost",
+    data: {
+      postDate: today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate(),
+      content: content,
+      authorID: accountID,
+      gameID: gameID
+
+    }
+  };
+  
+  axios(configThree)
+  .then(function (response) {
+    console.log(response.data);
+    setPosts(response.data);
+    setContent("");
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+  }
+
+  function deletePost(postID)
+  {
+    var configFour={
+      method: "post",
+      url: "http://localhost:8080/api/games/deletePost",
+      data: {
+        postID: postID.toString(),
+        gameID: gameID,
+      }
+    };
+    axios(configFour)
+    .then(function (response) {
+      console.log(response.data);
+      setPosts(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
   return (
     <>
       <Navbar />
@@ -96,104 +216,66 @@ const GamesExample = () => {
             <img
               className="teamsExample1"
               alt="Warriors logo"
-              src={require("./HomePage_Images/Golden_State_Warriors_logo.svg.png")}
+              src={teamOneURL}
               /*src\HomePage_Images\*/
             ></img>
 
-            <div className="gameTextExample">Warriors</div>
+            <div className="gameTextExample">{teamOne}</div>
           </div>
 
           <div className="columnExample">
-            <div className="score2">103 - 90</div>
-            <div className="time2">06-13-2022</div>
-            <div className="versusText2">Chase Center,San Francisco</div>
-            <div className="versusText2">Basketball</div>
+            <div className="score2">{teamOneScore+' - '+teamTwoScore}</div>
+            <div className="time2">{new Date(gameDate).getFullYear()+'-'+(new Date(gameDate).getMonth()+1)+'-'+new Date(gameDate).getDate()}</div>
+            <div className="versusText2">{gameLocation}</div>
+            <div className="versusText2">{sportType == 0 ? "Basketballl" : "Baseball"}</div>
           </div>
           <div className="columnExample">
             <img
               className="teamsExample"
               alt="Celtics logo"
-              src={require("./HomePage_Images/Boston_Celtics.svg.png")}
+              src={teamTwoURL}
             ></img>
-            <div className="gameTextExample">Celtics</div>
+            <div className="gameTextExample">{teamTwo}</div>
           </div>
         </div>
       </div>
 
-      <div className="comment" id="myDIV">
-        <div className="userName">
-          Test User
-          <div className="commentIcon">
-            <FontAwesomeIcon icon={faTrash} onClick={myFunction} />
+      {
+        posts.map(post=>
+          <div className="comment" id="myDIV">
+          <div className="userName">
+            {post.Name}
+            <div className="commentIcon">
+              {
+                post.Account_ID == accountID ?
+              <FontAwesomeIcon icon={faTrash} onClick={()=>
+                {deletePost(post.Post_ID)
+              }} /> : 
+              <br/>
+            }
+            </div>
           </div>
+          <div className="commentText">
+            {post.Content+" "}
+          </div>
+      
+          {/* </div> */}
         </div>
-        <div className="commentText">
-          Oh yeah this game is so good, we are witnessing one of, if not the
-          best, shooter of all time. KD needs Steph not the other way around{" "}
-        </div>
+          )
+      }
     
-        {/* </div> */}
-      </div>
-      <div className="comment" id="myDIV1">
-        <div className="userName">
-          SportsLover:
-          <div className="commentIcon">
-            <FontAwesomeIcon icon={faTrash} onClick={myFunction1} />
-          </div>
-        </div>
-        <div className="commentText">
-          I love the warriors. They'll repeat again for sure. A healthy Curry
-          and Klay duo is unstoppable. #Gold Blooded.{" "}
-        </div>
-      </div>
-      <div className="comment" id="myDIV2">
-        <div className="userName">
-          LuckyLep:
-          <div className="commentIcon">
-            <FontAwesomeIcon icon={faTrash} onClick={myFunction2} />
-          </div>
-        </div>
-        <div className="commentText">
-          Jayson Tatum gave up on the team. He looks like Westbrick out there. 5
-          turnovers is horrendous. We will be back next year.
-        </div>
-      </div>
-      <div className="comment" id="myDIV3">
-        <div className="userName">
-          MjoverLebron:
-          <div className="commentIcon">
-            <FontAwesomeIcon icon={faTrash} onClick={myFunction3} />
-          </div>
-        </div>
-        <div className="commentText">
-          This isn't real basketball. Michael Jordan would be dropping 80+
-          points a night in this era. Too soft.Curry good but he's no Jordan
-        </div>
-      </div>
-
-      <div className="comment" id="myDIV4">
-        <div className="userName">
-          LAforLife:
-          <div className="commentIcon">
-            <FontAwesomeIcon icon={faTrash} onClick={myFunction4} />
-          </div>
-        </div>
-        <div className="commentText">
-          Enjoy it while you can Warriors Fans, next year the Lakers will take
-          it. Lebron and a healthy Anthony Davis {">"} Steph and Klay all day
-        </div>
-      </div>
 
       <div className="comment_bar">
         <input
           placeholder="Write your post here"
           className="search_feed"
-          onChange={(e) => setData(e.target.value)}
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
         />
         <button
           className="submit_button"
           type="submit"
-          onClick={handleComments}
+          onClick={insertPost}
         >
           Submit
         </button>

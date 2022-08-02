@@ -29,6 +29,9 @@ const ArticleView = () => {
   const [postDate,setPostDate] = useState("");
   const [comments,setComments] = useState([]);
   const [commentContent,setCommentContent] = useState("");
+  const [articleLiked,setArticleLiked] = useState(0);
+
+
 
 
   const {articleID} = useParams();
@@ -52,6 +55,15 @@ const ArticleView = () => {
     method: "post",
     url: "http://localhost:8080/api/article/updateArticleViews",
     data: {
+      articleID: articleID,
+    }
+  }
+
+  var configCheckProperty ={
+    method: "post",
+    url: "http://localhost:8080/api/article/checkArticleLikeOrDislike",
+    data: {
+      accountID : accountID, 
       articleID: articleID,
     }
   }
@@ -92,7 +104,9 @@ const ArticleView = () => {
         console.log(error);
       });
 
-  },[])
+      checkArticleLikedOrDisliked();
+
+  },[articleID,accountID])
 
   function myFunction() {
     var x = document.getElementById("myDIV");
@@ -200,18 +214,27 @@ const ArticleView = () => {
     axios(likeConfig)
     .then(function (response) {
       console.log(response.data);
-      if (like){
-        up();
-      }
-      else
-      {
-        down();
-      }
+      checkArticleLikedOrDisliked();
     })
     .catch(function (error) {
       console.log(error);
     });
 
+  }
+
+  function checkArticleLikedOrDisliked()
+  {
+    console.log(accountID);
+    console.log(articleID);
+
+    axios(configCheckProperty).then(function (response) {
+      let count=response.data;
+      console.log(count);
+      setArticleLiked(count);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
   return (
@@ -221,15 +244,16 @@ const ArticleView = () => {
         <p className="author">{authorName}</p>
         <p className="date">{postDate}</p>
         <div className="thumbs">
-          <a className="thumbsUp" href="" onClick={()=>{
+
+          <a className="thumbsUp"  onClick={()=>{
             likeArticle(true);
           }}>
-            <FontAwesomeIcon icon={faThumbsUp} />
+            <FontAwesomeIcon icon={faThumbsUp} color={articleLiked == 1 ? "gold" : "blue"}/>
           </a>
-          <a className="thumbsDown" href="" onClick={()=>{
+          <a className="thumbsDown"  onClick={()=>{
             likeArticle(false);
           }}>
-            <FontAwesomeIcon icon={faThumbsDown} />
+            <FontAwesomeIcon icon={faThumbsDown} color={articleLiked == 2 ? "gold" : "blue"} />
           </a>
         </div>
         <h2 className="heading">
@@ -274,9 +298,13 @@ const ArticleView = () => {
           <div className="userName">
             {comment.Name}
             <div className="commentIcon">
+              {
+                comment.Account_ID == accountID ? 
               <FontAwesomeIcon icon={faTrash} onClick={()=>{
                 deleteComment(comment.Comment_ID);
-              }} />
+              }} /> :
+              <br/>
+            }
             </div>
           </div>
           <div className="commentText">
