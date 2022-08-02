@@ -86,6 +86,26 @@ gamesRouter.post('/insertPost',(req,res)=>{
 
 gamesRouter.post('/deletePost',(req,res)=>{
     let postID = req.body.postID == null || req.body.postID.trim() == "" ? 'NULL' : '"'+ req.body.postID.trim().toLowerCase()+'"';
+    let gameID = req.body.gameID == null || req.body.gameID.trim() == "" ? 'NULL' : '"'+ req.body.gameID.trim().toLowerCase()+'"';
+
+    let query = 'CALL DeletePostByPostID('+postID+');';
+    con.query(query,(error, results, fields) => {
+        if(error)
+        {
+            res.json(error);
+        }
+        else
+        {
+            let secondQuery = 'CALL GetPosts('+gameID+');';
+            con.query(secondQuery,(error, results, fields)=>{
+                if(error){
+                    res.json(error);
+                }
+                res.json(results[0]);
+            })
+        }
+    })
+
 })
 
 gamesRouter.post('/searchGame',(req,res)=>{

@@ -265,4 +265,26 @@ articleRouter.post("/search", (req, res) => {
       });
   });
 
+articleRouter.post('/checkArticleLikeOrDislike',(req,res)=>{
+    let articleID = req.body.articleID == null || req.body.articleID.trim() == "" ? 'NULL' : '"'+req.body.articleID.trim().toLowerCase()+'"';
+    let accountID = req.body.accountID == null || req.body.accountID.trim() == "" ? 'NULL' : '"'+ req.body.accountID.trim().toLowerCase()+'"';
+
+    let query = 'CALL CheckAccountLikeOrDislike('+articleID+','+accountID+');';
+
+    if(accountID=='NULL')
+    {
+        res.json("Login Required");
+    }
+    else
+    {
+    con.query(query, (error, results, fields) => {
+        if (error) {
+          res.json(error);
+        }
+        res.json(results[0][0]['count']);
+      });
+    }
+
+})
+
 module.exports=articleRouter;
