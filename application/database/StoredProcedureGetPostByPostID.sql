@@ -1,0 +1,13 @@
+Use YourSportsDB;
+
+DELIMITER $$
+CREATE PROCEDURE `GetPostByPostID` 
+(IN inPostID INT)
+
+BEGIN
+
+SELECT * FROM Post
+WHERE Post_ID = inPostID;
+
+END$$
+DELIMITER ;

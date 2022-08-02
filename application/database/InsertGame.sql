@@ -1,0 +1,18 @@
+SELECT * FROM YourSportsDB.Game;
+-- INSERT INTO `YourSportsDB`.`Game`
+-- (`TeamOne`,
+-- `TeamTwo`,
+-- `GameDate`,
+-- `GameLocation`,
+-- `SportType`)
+-- VALUES
+-- ('Australia', 'Japan', '2022-07-21','Sanfa', 0),
+--  ('Saskatchewan Rattlers', 'Guelph Nighthawks', '2022-07-24','Sanfa', 0),
+--  ('Soles', 'Indios', '2022-02-21','Sanfa', 0),
+--  ('Llaneros', 'Broncos', '2022-07-25','Sanfa', 0),
+--  ('Toros de Aragua', 'Cocodrilos', '2022-05-21','Sanfa', 0),
+--  ('Cangrejeros', 'Gladiadores', '2022-02-21','Sanfa', 0),
+--  ('Taurinos', 'Gladiadores', '2022-06-21','Sanfa',1),
+--  ('Tabasco', 'Saltillo', '2022-07-22','Sanfa',1),
+--  ('Laguna', 'Quintana Roo', '2022-01-21','Sanfa',1),
+-- ('Yucatan','Monclova', '2022-03-21','Sanfa',1);
