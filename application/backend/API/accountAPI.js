@@ -104,14 +104,12 @@ accountRouter.post("/login",(req,res)=>{
           "name": account.Name,
           "email": account.Email,
           "isCreator": account.isCreator
-
-
         }
       )
     }
     else
     {
-      res.json("Account does not exist, Please use a different username, email or password");
+      res.json("Accout does not exist! Please check your username, email and password");
     }
 
   });
