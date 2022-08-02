@@ -32,15 +32,22 @@ function Login() {
     axios(config)
       .then(function (response) {
         console.log(response.data);
+        if(response.data=="Accout does not exist! Please check your username, email and password")
+        {
+          alert("Accout does not exist! Please check your username, email and password");
+        }
+        else
+        {
         localStorage.setItem("accountID", response.data.account_id);
         setAccountID(response.data.account_id);
         setCreator(response.data.isCreator);
         localStorage.setItem("creator", response.data.isCreator);
         console.log(creator);
-        alert("Login Succesful");
+        alert("Login Succeful");
+        }
       })
       .catch(function (error) {
-        console.log(error);
+        alert(error);
       });
   }
 
