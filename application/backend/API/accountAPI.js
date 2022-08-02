@@ -42,7 +42,7 @@ accountRouter.post("/signup",(req,res)=>{
 
               if (count==0)
               {
-                let secondQuery = 'CALL InsertAccount('+name+','+username+','+email+','+password+','+isCreatorAccount+');';
+                let secondQuery = 'CALL InsertAccount('+name+','+username+','+email+',MD5('+password+'),'+isCreatorAccount+');';
                 con.query(secondQuery, (error, results, fields) => {
                     if (error) {
                       res.json(error);
@@ -88,7 +88,7 @@ accountRouter.post("/login",(req,res)=>{
   let username = req.body.username == null || req.body.username.trim() == "" ? 'NULL' : '"'+req.body.username.trim().toLowerCase()+'"';
   let password = req.body.password == null || req.body.password == "" ? 'NULL' : '"'+req.body.password+'"';
 
-  let query = 'CALL GetAccountByUsernameOrEmail('+username+','+username+','+password+');';
+  let query = 'CALL GetAccountByUsernameOrEmail('+username+','+username+',MD5('+password+'));';
 
   con.query(query, (error, results, fields) => {
     if (error) {
