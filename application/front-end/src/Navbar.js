@@ -81,7 +81,7 @@ const Navbar = () => {
           </li>
           <li>
             
-            <a className="live_games" href="/Dashboard">
+            <a className="live_games" href={"/Dashboard/"+accountID}>
               Dashboard
             </a>
           </li>

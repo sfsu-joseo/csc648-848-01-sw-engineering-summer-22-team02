@@ -7,11 +7,11 @@ import Login from "./Login";
 import UserContext from "./UserContext";
 import axios from "axios";
 import { Chart } from "react-google-charts";
+import { useParams } from "react-router-dom";
 
 function Dashboard() {
 
-  const {accountID
-  } = useContext(UserContext);
+  const {accountID} = useParams();
 
   const [articles,setArticles] = useState([]);
   const [articleID, setArticleID] = useState(null);

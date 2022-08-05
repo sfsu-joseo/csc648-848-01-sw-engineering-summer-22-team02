@@ -105,7 +105,7 @@ function PlayerStats() {
           <button className="search_button" type="submit" onClick={getPlayers}></button>
         </div>
         <div className="dropdownPlayerStats">
-          <button class="dropbtnStats">Filter Article By Sport</button>
+          <button class="dropbtnStats">Filter Player By Sport</button>
           <div className="dropdown-content">
             <select
               className="select_format"
