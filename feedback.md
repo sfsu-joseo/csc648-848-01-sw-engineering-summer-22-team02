@@ -1,6 +1,10 @@
-# Team 02: 1.7
-Please add URL to your Main README file.
-1.  Search function is not complete. User did not know what this website initial is user for. -1.3
-2. Please make sure let user know what is your website use for. I cannot get the point at initial while i enter your website.
-3. make sure check your menubar, decide which one to use.
+# Team 02:
+Did not change menu bar while login.
 
+Picture size need to work on.     
+
+Unable to delete or edit article after post.
+
+It is some minor mistakes. But i think you guys put a lot work in this project.
+
+GREAT WORK TEAM 2!
