@@ -78,18 +78,17 @@ function Account_Settings() {
             : null
 }
         </div> : 
-        <div style={{
+        <div className="account_buttons" style={{
           display: 'flex',
           alignSelf: 'center',
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          marginTop: '20%'
         }}>
-                      <a style={{
+                      <a type="submit" style={{
                         fontSize: 20
                       }} onClick={()=>{
-                        navigate('/');
+                        navigate('/login');
                       }} className="delete">
               Please Sign In to Access this page
             </a>

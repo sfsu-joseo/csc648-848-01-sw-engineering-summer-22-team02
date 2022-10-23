@@ -79,7 +79,7 @@ const Navbar = () => {
  </> : <>
       <ul className="secondNavbar">
         <li>
-          <a className="iconn" href="/Home">
+          <a className="iconn" href="/">
             <img
               alt="logo"
               class="Logo_Img"
