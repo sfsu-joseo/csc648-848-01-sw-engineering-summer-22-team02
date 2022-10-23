@@ -82,7 +82,7 @@ const UploadArticle = () => {
                   axios(configOne)
                   .then(function (response) {
                     alert(response.data);
-                    navigate('/dashboard');
+                    navigate('/home');
                   })
                   .catch(function (error) {
                     console.log(error);

@@ -4,6 +4,7 @@ import axios from "axios";
 import "./Navbar.css";
 import ArticleView from "./ArticleView";
 import "./Footer";
+import { Card, Icon, Image, Input } from 'semantic-ui-react';
 
 /*Function receives user input and calls api to return articles*/
 function InputSubmission() {
@@ -44,7 +45,12 @@ function InputSubmission() {
   }, []);
 
   return (
-    <div className="search_bar">
+    <div className="search_bar" style={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}>
       <div className="into">
         <p className="statement1">
           Welcome to YourSports, Enjoy a countless number of services ranging
@@ -55,38 +61,34 @@ function InputSubmission() {
           player statistics.
         </p>
       </div>
-      <input
-        placeholder="Type any keyword related to sports, to get the latest articles you would like to read. Ex “Harden”."
-        className="search_feed"
+      <div style={{
+        display: 'flex',
+        flexDirection: 'row'
+      }}>
+      <Input
+        placeholder="Search Articles by Keywords. Ex “Harden”."
         onChange={(e) => setInputText(e.target.value)}
+        style={{
+          width: '290px'
+        }}
+        onKeyDown={e=>{
+          if(e.keyCode===13)
+          {
+            handlesearch();
+          }
+        }}
       />
-
       <button
         className="search_button"
         onClick={handlesearch}
         type="submit"
       ></button>
-
-      <div className="filter_section">
-        <div className="dropdown">
-          <button class="dropbtn">Filter Article By Sport</button>
-          <div className="dropdown-content">
-            <select
-              className="select_format"
-              onChange={(e) => setSport(e.target.value)}
-            >
-              <option className="selec" value="">
-                Select One …
-              </option>
-              <option value="Basketball">Basketball</option>
-              <option value="Baseball">Baseball</option>
-            </select>
-          </div>
-        </div>
       </div>
       {/* If no search search results are returned,displays message to user */}
       {data.length === 0 ? (
-        <div className="noArticles">
+        <div className="noArticles" style={{
+          marginTop: '5%'
+        }}>
           <h2>{data.length} search results</h2>
           <h2>Your Search did not match any articles</h2>
           <h2>Suggestions:</h2>
@@ -97,14 +99,21 @@ function InputSubmission() {
         </div>
       ) : (
         <div>
-          <h2>{data.length} search results</h2>
+          <h2 style={{
+          marginTop: '5%'
+        }}>{data.length} search results</h2>
         </div>
       )}
 
       {/*When no filters applied all articles will be displayed  */}
       {data ? (
         searchApplied === false ? (
-          <div>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}>
             <h2>
               Since no filters or keywords were applied, all the articles are
               displayed{" "}
@@ -113,71 +122,32 @@ function InputSubmission() {
               /*Displays all articles */
               data.map((data1) => {
                 return (
-                  <>
-                    <div className="border">
-                      <a
-                        className="articleDisplay"
-                        href={"/ArticleView/" + data1.Article_ID}
-                      >
-                        <div className="column2">
-                          <img
-                            className="image"
-                            alt="Article "
-                            src={data1.Image_url}
-                          ></img>
-                        </div>
-                        <div className="column1">
-                          <h2 className="data_text1">{data1.Heading}</h2>
-                          <h3 className="data_text">{data1.Sport}</h3>
-                          <h3 className="data_text">
-                            {new Date(data1.PostDate).getFullYear() +
+                  <Card href={"/ArticleView/" + data1.Article_ID} style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    width: '90%',
+
+                  }}>
+                    <Image src={data1.Image_url} wrapped ui={false} />
+                    <Card.Content style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      flexDirection: 'column'
+                    }}>
+                      <Card.Header>{data1.Heading}</Card.Header>
+                      <Card.Meta>
+                        <p>                            {new Date(data1.PostDate).getFullYear() +
                               "-" +
                               (new Date(data1.PostDate).getMonth() + 1) +
                               "-" +
-                              new Date(data1.PostDate).getDate()}
-                          </h3>
-                          <h3 className="data_text">{data1.Name}</h3>
-                        </div>
-                      </a>
-                    </div>
-                    {/* <a
-                      className="click_to_view1"
-                      href={"/ArticleView/" + data1.Article_ID}
-                    >
-                      {/* <Link
-                        to={`/${this.prop.Article_ID}? backUrl=${backUrl}`}
-                      /> */}
-                      {/* <div className="column1">
-                        <img
-                          className="image"
-                          alt="Article "
-                          src={data1.Image_url}
-                        ></img> */}
-                        {/* <h2 className="data_text">{data1.Heading}</h2>
-                          <h3 className="data_text">{data1.Sport}</h3>
-                          <h3 className="data_text">{new Date(data1.PostDate).getFullYear()+'-'+(new Date(data1.PostDate).getMonth()+1)+'-'+new Date(data1.PostDate).getDate()}</h3>
-                          <h3 className="data_text">{data1.Name}</h3> 
-                      </div>
-                    </a> */}
-
-                    {/* <a
-                      className="click_to_view2"
-                      href={"/ArticleView/" + data1.Article_ID}
-                    >
-                      <div className="column2">
-                        <h2 className="data_text">{data1.Heading}</h2>
-                        <h3 className="data_text">{data1.Sport}</h3>
-                        <h3 className="data_text">
-                          {new Date(data1.PostDate).getFullYear() +
-                            "-" +
-                            (new Date(data1.PostDate).getMonth() + 1) +
-                            "-" +
-                            new Date(data1.PostDate).getDate()}
-                        </h3>
-                        <h3 className="data_text">{data1.Name}</h3>
-                      </div>
-                    </a> */}
-                  </>
+                              new Date(data1.PostDate).getDate()}</p>
+                      </Card.Meta>
+                      <Card.Description>
+                      {data1.Name}
+                      </Card.Description>
+                    </Card.Content>
+                      </Card>
                 );
               })
             }
@@ -185,34 +155,22 @@ function InputSubmission() {
         ) : (
           data.map((data1) => {
             return (
-              <>
-                <div className="border">
-                  <a
-                    className="articleDisplay"
-                    href={"/ArticleView/" + data1.Article_ID}
-                  >
-                    <div className="column2">
-                      <img
-                        className="image"
-                        alt="Article "
-                        src={data1.Image_url}
-                      ></img>
-                    </div>
-                    <div className="column1">
-                      <h2 className="data_text">{data1.Heading}</h2>
-                      <h3 className="data_text">{data1.Sport}</h3>
-                      <h3 className="data_text">
-                        {new Date(data1.PostDate).getFullYear() +
-                          "-" +
-                          (new Date(data1.PostDate).getMonth() + 1) +
-                          "-" +
-                          new Date(data1.PostDate).getDate()}
-                      </h3>
-                      <h3 className="data_text">{data1.Name}</h3>
-                    </div>
-                  </a>
-                </div>
-              </>
+              <Card href={"/ArticleView/" + data1.Article_ID}>
+              <Image src={data1.Image_url} wrapped ui={false}/>
+              <Card.Content>
+                <Card.Header>{data1.Heading}</Card.Header>
+                <Card.Meta>
+                  <p>                            {new Date(data1.PostDate).getFullYear() +
+                        "-" +
+                        (new Date(data1.PostDate).getMonth() + 1) +
+                        "-" +
+                        new Date(data1.PostDate).getDate()}</p>
+                </Card.Meta>
+                <Card.Description>
+                {data1.Name}
+                </Card.Description>
+              </Card.Content>
+                </Card>
             );
           })
         )

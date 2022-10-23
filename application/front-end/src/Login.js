@@ -46,7 +46,7 @@ function Login() {
         localStorage.setItem("creator", response.data.isCreator);
         console.log(creator);
         alert("Login Succeful");
-        navigate('/home');
+        navigate('/');
         }
       })
       .catch(function (error) {
@@ -81,11 +81,6 @@ function Login() {
         <button type="submit" onClick={handleLogin} className="Signup_button">
           Login
         </button>
-      </div>
-      <div className="Forget_Signup">
-        <a className="forget" href="/ForgotPassword">
-          Forgot Password?
-        </a>
       </div>
       <div className="Forget_Signup">
         <a className="signup" href="/Signup">

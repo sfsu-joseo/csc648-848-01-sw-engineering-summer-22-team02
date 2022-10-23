@@ -7,6 +7,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import UserContext from "./UserContext";
+import { Card, Icon, Image, Input, Container } from 'semantic-ui-react';
 
 const GamesExample = () => {
 
@@ -253,13 +254,24 @@ const GamesExample = () => {
           </div>
         </div>
       </div>
-
+      <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginTop: '5%'
+    }}>
       {
         posts.map(post=>
-          <div className="comment" id="myDIV">
-          <div className="userName">
+          <Card style={{
+            width: '90%'
+          }}>
+            <Card.Content>
+          <Card.Meta className="userName" style={{
+            display: 'flex',
+            justifyContent: 'space-between'
+          }}>
             {post.Name}
-            <div className="commentIcon">
               {
                 post.Account_ID == accountID ?
               <FontAwesomeIcon icon={faTrash} onClick={()=>
@@ -267,24 +279,31 @@ const GamesExample = () => {
               }} /> : 
               <br/>
             }
-            </div>
-          </div>
+          </Card.Meta>
+          <Card.Description>
           <div className="commentText">
             {post.Content+" "}
           </div>
-      
-          {/* </div> */}
-        </div>
+          </Card.Description>
+          </Card.Content>
+        </Card>
           )
       }
+      </div>
     
 
       <div className="comment_bar">
-        <input
+        <Input
           placeholder="Write your post here"
           className="search_feed"
           value={content}
           onChange={(e) => setContent(e.target.value)}
+          onKeyDown={e=>{
+            if(e.keyCode===13)
+            {
+              insertPost();
+            }
+          }}
         />
         <button
           className="submit_button"

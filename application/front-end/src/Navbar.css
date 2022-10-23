@@ -365,7 +365,7 @@ input {
 /*Search bar for the Players page*/
 .search_bar_player .search_feed {
     padding: 10px;
-    padding-right: 7%;
+    padding-right: 1%;
     padding-left: 1%;
     margin-top: 30px;
     /* margin-right: 16px; */
@@ -430,13 +430,13 @@ input {
     text-align: left;
 }
 .search_bar_Games .search_feed {
-    padding-right: 5%;
+    padding-right: 1%;
     padding-left: 1%;
     padding-top: .75%;
     padding-bottom: .75%;
     margin-right: 16px;
     border: none;
-    margin-right: 2%;
+    margin-right: 1%;
     font-size: 100%;
     border-radius: 20px;
     margin-bottom: 10px;
@@ -568,24 +568,17 @@ justify-content: center;
 }
 
 .border {
-    background-color: rgb(44, 82, 138);
     border-radius: 25px;
-    margin-left: 20%;
-    margin-right: 20%;
+    width: fit-content;
     margin-top:5%;
     text-decoration: none;
     text-align: center;
-    color: black;
-    padding-bottom: 20px;
-    box-shadow: 10px 10px 5px rgb(80, 84, 85);
-    padding: 1%;
+    border-color: black;
+    color: beige;
+    
 }
 .border .articleDisplay .image {
     border-radius: 25px;
-    margin-top:1%;
-    padding-top: 10px;
-    height: fit-content;
-    width: 90%;
     /* text-align: center; */
 }
 .border .articleDisplay {

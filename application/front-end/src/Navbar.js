@@ -32,7 +32,7 @@ const Navbar = () => {
     <>
       <ul className="secondNavbar">
         <li>
-          <a className="iconn" href="/Home">
+          <a className="iconn" href="/">
             <img
               alt="logo"
               class="Logo_Img"
@@ -43,8 +43,8 @@ const Navbar = () => {
         <li className="gear">
           <a className="settings" href="/Account_Settings">
             <FontAwesomeIcon icon={faUserGear} />
-          </a>
-        </li>
+          </a> 
+        </li> : null
         <li className="signup">
           <a className="login_signup_click" href="/SignUp">
             Signup
@@ -59,11 +59,6 @@ const Navbar = () => {
 
       <ul className="thirdNavbar">
         <div className="navbar_align">
-          <li className="third_align">
-            <a className="twitter_feed" href="/Home">
-              Home
-            </a>
-          </li>
           <li>
             <a className="player_stats" href="/Games">
               Games
@@ -72,17 +67,6 @@ const Navbar = () => {
           <li>
             <a className="player_stats" href="/PlayerStats">
               Player Statistics
-            </a>
-          </li>
-          <li>
-            <a className="player_stats" href="/UploadArticle">
-              Upload Articles
-            </a>
-          </li>
-          <li>
-            
-            <a className="live_games" href={"/Dashboard/"+accountID}>
-              Dashboard
             </a>
           </li>
           <li>
@@ -122,11 +106,6 @@ const Navbar = () => {
 
       <ul className="thirdNavbar">
         <div className="navbar_align">
-          <li className="third_align">
-            <a className="twitter_feed" href="/Home">
-              Home
-            </a>
-          </li>
           <li>
             <a className="player_stats" href="/Games">
               Games

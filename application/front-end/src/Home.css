@@ -141,9 +141,9 @@ body{
 
 .data .data_text{
   color: rgb(213,222,238);
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-bottom: '1%';
+  padding-left: '1%';
+  padding-right: '1%';
 }
 
 .temp_page {
@@ -370,7 +370,6 @@ label{
 
 
 .comment {
-  background-color:white;
   border-radius: 20px;
   margin-left: 10%;
   margin-right: 10%;

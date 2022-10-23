@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import TermsOfService from "./TermsOfService";
 import axios from "axios";
 import Chart from "react-google-charts";
+import { Card, Icon, Image, Input } from 'semantic-ui-react';
 
 function PlayerStats() {
   function redirect() {
@@ -96,16 +97,25 @@ function PlayerStats() {
 
       <div className="column12">
         <div className="search_bar_player">
-          <input
+          <Input
             placeholder="Search Player By Name. Ex. “Curry”."
             className="search_feed"
             value={playerName}
             onChange={(e) => setPlayerName(e.target.value)}
+            onKeyDown={e=>{
+              if(e.keyCode===13)
+              {
+                getPlayers();
+              }
+            }}
           />
           <button className="search_button" type="submit" onClick={getPlayers}></button>
         </div>
         <div className="dropdownPlayerStats">
-          <button class="dropbtnStats">Filter Player By Sport</button>
+          <button class="dropbtnStats" style={{
+            fontSize: '16px',
+            marginBottom: '10%'
+          }} >Filter Player By Sport</button>
           <div className="dropdown-content">
             <select
               className="select_format"
@@ -180,8 +190,10 @@ function PlayerStats() {
         {
           playerID == null ? 
           <div style={{
-            position: 'absolute',
-            top: '50%'
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column'
           }} onClick={()=>{
 
           }}>
@@ -189,15 +201,19 @@ function PlayerStats() {
           </div>
           : 
 
-        <div className="curryStatline">
+        <div className="curryStatline" style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column'
+        }}>
           {
             sport == 0 ?
-            <div>
-          <img
-            className="Stats_image"
+            <Card>
+          <Image
             alt="Article Img"
             src={playerDetails.playerURL}
-          ></img>
+          />
                         <div>
                 <Chart
   chartType="PieChart"
@@ -218,13 +234,12 @@ function PlayerStats() {
   options={options}
 />
             </div>
-          </div> :  sport == 1 ? <div>
-          <img
-            className="Stats_image"
+          </Card> :  sport == 1 ? <Card>
+          <Image
             alt="Article Img"
             src={playerDetails.playerURL}
-          ></img>
-                                  <div>
+          />
+                                  <Card.Content>
                 <Chart
   chartType="PieChart"
   data={[
@@ -246,8 +261,8 @@ function PlayerStats() {
   }}
   options={options}
 />
-            </div>
-          </div>  : null
+            </Card.Content>
+          </Card>  : null
 }
         </div>
 }

@@ -57,8 +57,7 @@ function App() {
       setCreator
       }}>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Games />} />
         <Route path="/About" element={<About />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Login" element={<Login/>} />
@@ -74,7 +73,6 @@ function App() {
         <Route path="/ArticleView/:articleID" element={<ArticleView />} />
         <Route path="/UploadArticle" element={<UploadArticle />} />
         <Route path="/Account_Settings" element={<Account_Settings />} />
-        <Route path="/Dashboard/:accountID" element={<Dashboard />} />
         <Route path="/ForgotPassword" element={<ForgotPassword />} />
         <Route path="/useToken" element={<useToken />} />
         {/* Route other team member's file names */}

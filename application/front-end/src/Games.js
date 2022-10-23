@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "./TermsOfService";
 import axios from "axios";
+import { Card, Icon, Image, Input, Container } from 'semantic-ui-react';
 
 const Games = () => {
 
@@ -60,11 +61,17 @@ const Games = () => {
         Search Games by the teams playing, and view there scores in an instant.
       </div>
       <div className="search_bar_Games">
-        <input
+        <Input
           placeholder="Search Game by Team. Ex. “Warriors”."
           className="search_feed"
           value={team}
           onChange={(e) => setTeam(e.target.value)}
+          onKeyDown={e=>{
+            if(e.keyCode===13)
+            {
+              search();
+            }
+          }}
         />
         <button className="search_button_Games" type="submit" onClick={search}></button>
       </div>

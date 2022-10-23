@@ -31,7 +31,7 @@ function Account_Settings() {
       setAccountID("");
       setCreator(0);
        alert("Logout Sucessful");
-       navigate('/home');
+       navigate('/');
     }
 
     function deleteAccount()
@@ -51,7 +51,7 @@ function Account_Settings() {
         setAccountID("");
         setCreator(0);
          alert("Account Deleted");
-         navigate('/home');
+         navigate('/');
       })
       .catch(function (error) {
         console.log(error);
@@ -61,12 +61,8 @@ function Account_Settings() {
     return (
       <>
         <Navbar />
-        <div className="account_buttons">
-          <a className="link" href="/ForgotPassword">
-            <button type="submit" className="reset">
-              Reset Password
-            </button>
-          </a>
+        {
+          accountID!= "" ?          <div className="account_buttons">
           {
             accountID != "" ? 
             <button type="submit" onClick={logoutSuccess} className="logout">
@@ -81,7 +77,24 @@ function Account_Settings() {
             </button>
             : null
 }
-        </div>
+        </div> : 
+        <div style={{
+          display: 'flex',
+          alignSelf: 'center',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+          marginTop: '20%'
+        }}>
+                      <a style={{
+                        fontSize: 20
+                      }} onClick={()=>{
+                        navigate('/');
+                      }} className="delete">
+              Please Sign In to Access this page
+            </a>
+            </div>
+        }
         <ul className="footerAccount">
           <div class="row">
             <div class="column">

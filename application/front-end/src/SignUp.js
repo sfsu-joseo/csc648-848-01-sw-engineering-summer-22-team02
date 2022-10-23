@@ -57,7 +57,11 @@ function SignUp() {
   return (
     <>
       <Navbar />
-      <div className="Signup_form">
+      <div className="Signup_form" style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-evenly'
+      }}>
         <input
           className="form_input"
           type="text"
@@ -91,19 +95,13 @@ function SignUp() {
         />
 
         <p className="requirement">Password must be between 8-20 characters</p>
-        <p className="check">
-          Are you signing up as a creator:{" "}
-          <input
-            classname="checkbox"
-            type="checkbox"
-            checked={creator}
-            onChange={(e) => {
-              setCreator(e.target.checked);
-            }}
-          />
-        </p>
 
-        <p className="check">
+        <p className="check" style={{
+          display: 'flex',
+          alignSelf: 'center',
+          justifyContent: 'space-evenly',
+          width: '20%'
+        }}>
           <a href="/termsOfService">Do you agree to the terms of service:</a>
           <input
             className="checkbox"
@@ -115,7 +113,10 @@ function SignUp() {
           />
         </p>
 
-        <button type="submit" onClick={handlesignup} className="Signup_button">
+        <button type="submit" onClick={handlesignup} className="Signup_button" style={{
+          width: '20%',
+          alignSelf: 'center'
+        }}>
           SignUp
         </button>
         <br></br>

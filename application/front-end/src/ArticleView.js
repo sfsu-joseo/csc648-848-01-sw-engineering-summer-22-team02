@@ -12,6 +12,7 @@ import Footer from "./Footer";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import UserContext from "./UserContext";
+import { Card, Icon, Image, Input, Container } from 'semantic-ui-react';
 
 const ArticleView = () => {
 
@@ -267,10 +268,26 @@ const ArticleView = () => {
   return (
     <>
       <Navbar />
-      <div className="article">
-        <p className="author">{authorName}</p>
-        <p className="date">{postDate}</p>
-        <div className="thumbs">
+      <div className="article" style={{
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center'
+      }}>
+
+        <div style={{
+          display: 'flex',
+          justifyContent: "space-evenly",
+          flexDirection: 'row',
+          width: '100%',
+          alignItems: 'center',
+          marginBottom: '5%'
+        }}>
+        <p>{authorName}</p>
+        <p>{postDate}</p>
+        <div style={{
+          display: 'flex'
+        }}>
 
           <a className="thumbsUp"  onClick={()=>{
             likeArticle(true);
@@ -283,6 +300,24 @@ const ArticleView = () => {
             <FontAwesomeIcon icon={faThumbsDown} color={articleLiked == 2 ? "gold" : "blue"} />
           </a>
         </div>
+        </div>
+        <div style={{
+          display: 'flex'
+        }}>
+          <p className="image">
+          <img
+            className="article_image"
+            style={{
+              width: '50%',
+              borderRadius: '10px'
+            }}
+            alt="Article Img"
+            src={
+              imageURL
+            }
+          ></img>
+        </p>
+          <div>
         <h2 className="heading">
           {
             heading
@@ -293,15 +328,8 @@ const ArticleView = () => {
             subHeading
           }
         </h4>
-        <p className="image">
-          <img
-            className="article_image"
-            alt="Article Img"
-            src={
-              imageURL
-            }
-          ></img>
-        </p>
+        </div>
+        </div>
         <p className="content">
           {
             introduction
@@ -319,9 +347,20 @@ const ArticleView = () => {
         </p>
       </div>
       <div className="statement12">Comments</div>
+      <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginTop: '5%'
+    }}>
       {
         comments.map(comment => 
-          <div className="comment">
+          <Card style={{
+            width: '90%'
+          }}>
+            <Card.Content>
+              <Card.Meta>
           <div className="userName">
             {comment.Name}
             <div className="commentIcon">
@@ -334,23 +373,31 @@ const ArticleView = () => {
             }
             </div>
           </div>
-          <div className="commentText">
+          </Card.Meta>
+         <Card.Description>
             {
               comment.Content
             }
-          </div>
-        </div>
+            </Card.Description>
+          </Card.Content>
+        </Card>
         )
       }
-
+      </div>
       <div className="comment_bar">
-        <input
+        <Input
           placeholder="Write your post here"
           className="search_feed"
           value={commentContent}
           onChange={(e)=>
           {
             setCommentContent(e.target.value);
+          }}
+          onKeyDown={e=>{
+            if(e.keyCode===13)
+            {
+              insertComment(commentContent);
+            }
           }}
         />
         <button
