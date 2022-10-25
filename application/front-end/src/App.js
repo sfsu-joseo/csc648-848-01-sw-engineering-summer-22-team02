@@ -57,7 +57,8 @@ function App() {
       setCreator
       }}>
       <Routes>
-        <Route path="/" element={<Games />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Login" element={<Login/>} />

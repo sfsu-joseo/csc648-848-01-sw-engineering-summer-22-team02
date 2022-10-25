@@ -81,8 +81,14 @@ const UploadArticle = () => {
     
                   axios(configOne)
                   .then(function (response) {
-                    alert(response.data);
-                    navigate('/home');
+                    if(response.data==="Article Uploaded Succesfully")
+                    {
+                    navigate('/');
+                    }
+                    else
+                    {
+                        alert(response.data);
+                    }
                   })
                   .catch(function (error) {
                     console.log(error);
@@ -154,8 +160,8 @@ const UploadArticle = () => {
                     justifyContent: 'center'
                 }}
                 cropSize={{
-                    width: 300,
-                    height: 150
+                    width: 250,
+                    height: 250
                 }}
             />
                 </div>

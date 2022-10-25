@@ -10,7 +10,7 @@ accountRouter.post("/signup",(req,res)=>{
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
 
-    let name = req.body.name == null || req.body.name.trim() == "" ? 'NULL' : '"'+req.body.name.trim().toLowerCase()+'"';
+    let name = req.body.name == null || req.body.name.trim() == "" ? 'NULL' : '"'+req.body.name.trim()+'"';
     let username = req.body.username == null || req.body.username.trim() == "" ? 'NULL' : '"'+req.body.username.trim().toLowerCase()+'"';
     let email = req.body.email == null || req.body.email.trim() == "" ? 'NULL' : '"'+req.body.email.trim().toLowerCase()+'"';
     let password = req.body.password == null || req.body.password == "" ? 'NULL' : '"'+req.body.password+'"';

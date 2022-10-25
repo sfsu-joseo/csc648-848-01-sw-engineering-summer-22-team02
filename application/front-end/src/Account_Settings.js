@@ -6,6 +6,7 @@ import  "./TermsOfService";
 import UserContext from "./UserContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
 function Account_Settings() { 
 
@@ -62,7 +63,14 @@ function Account_Settings() {
       <>
         <Navbar />
         {
-          accountID!= "" ?          <div className="account_buttons">
+          accountID!= "" ?          <div className="account_buttons" style={{
+            display: 'flex',
+            alignSelf: 'center',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column',
+            marginBottom: '20%'
+          }}>
           {
             accountID != "" ? 
             <button type="submit" onClick={logoutSuccess} className="logout">
@@ -84,6 +92,7 @@ function Account_Settings() {
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
+          marginBottom: '50%'
         }}>
                       <a type="submit" style={{
                         fontSize: 20
@@ -94,44 +103,7 @@ function Account_Settings() {
             </a>
             </div>
         }
-        <ul className="footerAccount">
-          <div class="row">
-            <div class="column">
-              <br></br>
-              <a href="./TermsOfService">Terms of Service</a>
-            </div>
-            <div class="column">
-              <p>Contact Us</p>
-              <a
-                href="https://www.facebook.com/sanfranciscostate"
-                onClick={redirect}
-              >
-                {" "}
-                <p>Facebook</p>
-              </a>
-              <a
-                href="https://twitter.com/SFSU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                onClick={redirect}
-              >
-                {" "}
-                <p>Twitter</p>
-              </a>
-              <a
-                href="https://www.instagram.com/sanfranciscostate/?hl=en"
-                onClick={redirect}
-              >
-                {" "}
-                <p>Instagram</p>
-              </a>
-            </div>
-            <div class="column">
-              <p>Address</p>
-              <p>San Francisco State University</p>
-              <p>San Francisco</p>
-              <p>California</p>
-            </div>
-          </div>
-        </ul>
+        <Footer/>
       </>
     );
 }

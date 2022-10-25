@@ -240,7 +240,9 @@ const GamesExample = () => {
 
           <div className="columnExample">
             <div className="score2">{teamOneScore+' - '+teamTwoScore}</div>
-            <div className="time2">{new Date(gameDate).getFullYear()+'-'+(new Date(gameDate).getMonth()+1)+'-'+new Date(gameDate).getDate()}</div>
+            <div className="time2" style={{
+                            marginTop: '5%'
+                          }}>{new Date(gameDate).getFullYear()+'-'+(new Date(gameDate).getMonth()+1)+'-'+new Date(gameDate).getDate()}</div>
             <div className="versusText2">{gameLocation}</div>
             <div className="versusText2">{sportType == 0 ? "Basketballl" : "Baseball"}</div>
           </div>

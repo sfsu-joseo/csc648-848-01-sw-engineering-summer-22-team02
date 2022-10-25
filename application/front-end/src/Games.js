@@ -122,7 +122,9 @@ const Games = () => {
 
             <div className="column">
               <div className="score">{game.TeamOneScore+' - '+game.TeamTwoScore}</div>
-              <div className="time">{new Date(game.GameDate).getFullYear()+'-'+(new Date(game.GameDate).getMonth()+1)+'-'+new Date(game.GameDate).getDate()}</div>
+              <div className="time" style={{
+                            marginTop: '5%'
+                          }}>{new Date(game.GameDate).getFullYear()+'-'+(new Date(game.GameDate).getMonth()+1)+'-'+(new Date(game.GameDate).getDate()+1)}</div>
               <div className="versusText">{game.GameLocation}</div>
               <div className="versusText">{game.SportType == 0 ? "Basketballl" : "Baseball"}</div>
             </div>
@@ -150,7 +152,7 @@ const Games = () => {
            Filter games by the Sport you are interested in. Ex. "Basketball"
          </h2>
          <h2>
-           Filter games by the date of the game. Ex "2022-06-07"
+           Filter games by the date of the game. Ex "2022-08-07"
          </h2>
        </div> : 
        <div>
@@ -172,7 +174,9 @@ const Games = () => {
             
                         <div className="column">
                           <div className="score">{game.TeamOneScore+' - '+game.TeamTwoScore}</div>
-                          <div className="time">{new Date(game.GameDate).getFullYear()+'-'+(new Date(game.GameDate).getMonth()+1)+'-'+new Date(game.GameDate).getDate()}</div>
+                          <div className="time" style={{
+                            marginTop: '5%'
+                          }}>{new Date(game.GameDate).getFullYear()+'-'+(new Date(game.GameDate).getMonth()+1)+'-'+(new Date(game.GameDate).getDate()+1)}</div>
                           <div className="versusText">{game.GameLocation}</div>
                           <div className="versusText">{game.SportType == 0 ? "Basketballl" : "Baseball"}</div>
                         </div>
@@ -195,45 +199,7 @@ const Games = () => {
 
 
 
-            
-      <ul className="footerGames">
-        <div class="row">
-          <div class="column">
-            <br></br>
-            <a href="/TermsOfService">Terms of Service</a>
-          </div>
-          <div class="column">
-            <p>Contact Us</p>
-            <a
-              href="https://www.facebook.com/sanfranciscostate"
-              onClick={redirect}
-            >
-              {" "}
-              <p>Facebook</p>
-            </a>
-            <a
-              href="https://twitter.com/SFSU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-              onClick={redirect}
-            >
-              {" "}
-              <p>Twitter</p>
-            </a>
-            <a
-              href="https://www.instagram.com/sanfranciscostate/?hl=en"
-              onClick={redirect}
-            >
-              {" "}
-              <p>Instagram</p>
-            </a>
-          </div>
-          <div class="column">
-            <p>Address</p>
-            <p>San Francisco State University</p>
-            <p>San Francisco</p>
-            <p>California</p>
-          </div>
-        </div>
-      </ul>
+<Footer/>
     </>
   );
 };

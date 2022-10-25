@@ -15,7 +15,6 @@ const Home = () => {
     <>
       <Navbar />
       <InputSubmission />
-      <Footer />
     </>
   );
 };

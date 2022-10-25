@@ -59,6 +59,11 @@ const Navbar = () => {
 
       <ul className="thirdNavbar">
         <div className="navbar_align">
+        <li>
+            <a className="player_stats" href="/Home">
+              Articles
+            </a>
+          </li>
           <li>
             <a className="player_stats" href="/Games">
               Games
@@ -67,6 +72,11 @@ const Navbar = () => {
           <li>
             <a className="player_stats" href="/PlayerStats">
               Player Statistics
+            </a>
+          </li>
+          <li>
+            <a className="player_stats" href="/UploadArticle">
+              Upload Article
             </a>
           </li>
           <li>
@@ -106,6 +116,11 @@ const Navbar = () => {
 
       <ul className="thirdNavbar">
         <div className="navbar_align">
+        <li>
+            <a className="player_stats" href="/Home">
+              Articles
+            </a>
+          </li>
           <li>
             <a className="player_stats" href="/Games">
               Games

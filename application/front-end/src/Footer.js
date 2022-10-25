@@ -14,8 +14,11 @@ const Footer = () => {
       <ul className="footer">
         <div class="row">
           <div class="column">
+          <a href="/TermsOfService">Terms of Service</a>
             <br></br>
-            <a href="/TermsOfService">Terms of Service</a>
+            <p></p>
+            <p></p>
+            <p></p>
           </div>
           <div class="column">
             <p>Contact Us</p>

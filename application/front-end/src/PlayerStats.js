@@ -80,12 +80,9 @@ function PlayerStats() {
   const options = {
     title: "Player Stats",
     backgroundColor: { fill : 'transparent'},
-    width : '100%',
-    height : '450px',
-    top : 0,
-    left: 0,
-    position : 'absolute',
-    fontSize: 22
+    width : '350px',
+    height : '500px',
+    fontSize: 15
   };
 
   return (
@@ -213,8 +210,16 @@ function PlayerStats() {
           <Image
             alt="Article Img"
             src={playerDetails.playerURL}
+            style={{
+              width: '300px',
+              height: '300px'
+            }}
           />
-                        <div>
+                        <div style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center'
+                        }}>
                 <Chart
   chartType="PieChart"
   data={[
@@ -238,8 +243,16 @@ function PlayerStats() {
           <Image
             alt="Article Img"
             src={playerDetails.playerURL}
+            style={{
+              width: '300px',
+              height: '300px'
+            }}
           />
-                                  <Card.Content>
+                        <div style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center'
+                        }}>
                 <Chart
   chartType="PieChart"
   data={[
@@ -261,51 +274,13 @@ function PlayerStats() {
   }}
   options={options}
 />
-            </Card.Content>
+</div>
           </Card>  : null
 }
         </div>
 }
       </div>
-
-      <ul className="footerPlayer">
-        <div class="row">
-          <div class="column">
-            <br></br>
-            <a href="./TermsOfService">Terms of Service</a>
-          </div>
-          <div class="column">
-            <p>Contact Us</p>
-            <a
-              href="https://www.facebook.com/sanfranciscostate"
-              onClick={redirect}
-            >
-              {" "}
-              <p>Facebook</p>
-            </a>
-            <a
-              href="https://twitter.com/SFSU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-              onClick={redirect}
-            >
-              {" "}
-              <p>Twitter</p>
-            </a>
-            <a
-              href="https://www.instagram.com/sanfranciscostate/?hl=en"
-              onClick={redirect}
-            >
-              {" "}
-              <p>Instagram</p>
-            </a>
-          </div>
-          <div class="column">
-            <p>Address</p>
-            <p>San Francisco State University</p>
-            <p>San Francisco</p>
-            <p>California</p>
-          </div>
-        </div>
-      </ul>
+      <Footer/>
     </>
   );
 }

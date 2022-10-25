@@ -5,6 +5,7 @@ import "./Navbar.css";
 import ArticleView from "./ArticleView";
 import "./Footer";
 import { Card, Icon, Image, Input } from 'semantic-ui-react';
+import Footer from "./Footer";
 
 /*Function receives user input and calls api to return articles*/
 function InputSubmission() {
@@ -45,11 +46,12 @@ function InputSubmission() {
   }, []);
 
   return (
+    <>
     <div className="search_bar" style={{
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
     }}>
       <div className="into">
         <p className="statement1">
@@ -84,7 +86,25 @@ function InputSubmission() {
         type="submit"
       ></button>
       </div>
-      {/* If no search search results are returned,displays message to user */}
+      <div className="filter_section" style={{
+        marginTop:'1%'
+      }}>
+        <div className="dropdown">
+          <button class="dropbtn">Filter Article By Sport</button>
+          <div className="dropdown-content">
+            <select
+              className="select_format"
+              onChange={(e) => setSport(e.target.value)}
+            >
+              <option className="selec" value="">
+                Select One …
+              </option>
+              <option value="Basketball">Basketball</option>
+              <option value="Baseball">Baseball</option>
+            </select>
+          </div>
+        </div>
+      </div>
       {data.length === 0 ? (
         <div className="noArticles" style={{
           marginTop: '5%'
@@ -100,19 +120,19 @@ function InputSubmission() {
       ) : (
         <div>
           <h2 style={{
-          marginTop: '5%'
+          marginTop: '5%',
+          marginBottom: '5%'
         }}>{data.length} search results</h2>
         </div>
       )}
-
-      {/*When no filters applied all articles will be displayed  */}
       {data ? (
         searchApplied === false ? (
           <div style={{
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
+            width: '80%'
           }}>
             <h2>
               Since no filters or keywords were applied, all the articles are
@@ -153,31 +173,52 @@ function InputSubmission() {
             }
           </div>
         ) : (
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '80%'
+          }}>
+            {
           data.map((data1) => {
             return (
-              <Card href={"/ArticleView/" + data1.Article_ID}>
-              <Image src={data1.Image_url} wrapped ui={false}/>
-              <Card.Content>
-                <Card.Header>{data1.Heading}</Card.Header>
-                <Card.Meta>
-                  <p>                            {new Date(data1.PostDate).getFullYear() +
-                        "-" +
-                        (new Date(data1.PostDate).getMonth() + 1) +
-                        "-" +
-                        new Date(data1.PostDate).getDate()}</p>
-                </Card.Meta>
-                <Card.Description>
-                {data1.Name}
-                </Card.Description>
-              </Card.Content>
-                </Card>
+              <Card href={"/ArticleView/" + data1.Article_ID} style={{
+                display: 'flex',
+                flexDirection: 'row',
+                width: '90%',
+
+              }}>
+                <Image src={data1.Image_url} wrapped ui={false} />
+                <Card.Content style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  flexDirection: 'column'
+                }}>
+                  <Card.Header>{data1.Heading}</Card.Header>
+                  <Card.Meta>
+                    <p>                            {new Date(data1.PostDate).getFullYear() +
+                          "-" +
+                          (new Date(data1.PostDate).getMonth() + 1) +
+                          "-" +
+                          new Date(data1.PostDate).getDate()}</p>
+                  </Card.Meta>
+                  <Card.Description>
+                  {data1.Name}
+                  </Card.Description>
+                </Card.Content>
+                  </Card>
             );
-          })
+          })}
+          </div>
         )
       ) : (
         <h3>No data yet</h3>
       )}
     </div>
+    <Footer/>
+    </>
   );
 }
 

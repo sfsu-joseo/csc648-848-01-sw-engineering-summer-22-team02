@@ -279,27 +279,11 @@ const ArticleView = () => {
           display: 'flex',
           justifyContent: "space-evenly",
           flexDirection: 'row',
-          width: '100%',
-          alignItems: 'center',
+          width: '60%',
           marginBottom: '5%'
         }}>
-        <p>{authorName}</p>
-        <p>{postDate}</p>
-        <div style={{
-          display: 'flex'
-        }}>
-
-          <a className="thumbsUp"  onClick={()=>{
-            likeArticle(true);
-          }}>
-            <FontAwesomeIcon icon={faThumbsUp} color={articleLiked == 1 ? "gold" : "blue"}/>
-          </a>
-          <a className="thumbsDown"  onClick={()=>{
-            likeArticle(false);
-          }}>
-            <FontAwesomeIcon icon={faThumbsDown} color={articleLiked == 2 ? "gold" : "blue"} />
-          </a>
-        </div>
+        <p>{"Author: "+authorName}</p>
+        <p>{"Date Uploaded: "+postDate}</p>
         </div>
         <div style={{
           display: 'flex'
@@ -308,7 +292,8 @@ const ArticleView = () => {
           <img
             className="article_image"
             style={{
-              width: '50%',
+              width: '250px',
+              height: '250px',
               borderRadius: '10px'
             }}
             alt="Article Img"
@@ -352,7 +337,7 @@ const ArticleView = () => {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: '5%'
+      marginTop: '2.5%'
     }}>
       {
         comments.map(comment => 
@@ -360,8 +345,10 @@ const ArticleView = () => {
             width: '90%'
           }}>
             <Card.Content>
-              <Card.Meta>
-          <div className="userName">
+              <Card.Meta className="userName"  style={{
+            display: 'flex',
+            justifyContent: 'space-between'
+          }}>
             {comment.Name}
             <div className="commentIcon">
               {
@@ -371,7 +358,6 @@ const ArticleView = () => {
               }} /> :
               <br/>
             }
-            </div>
           </div>
           </Card.Meta>
          <Card.Description>
