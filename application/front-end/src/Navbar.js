@@ -44,7 +44,7 @@ const Navbar = () => {
           <a className="settings" href="/Account_Settings">
             <FontAwesomeIcon icon={faUserGear} />
           </a> 
-        </li> : null
+        </li>
         <li className="signup">
           <a className="login_signup_click" href="/SignUp">
             Signup
