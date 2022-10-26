@@ -15,7 +15,7 @@ function InputSubmission() {
   const [sport, setSport] = useState("");
   const [length, setLength] = useState("");
   const [searchApplied, setSearchApplied] = useState(false);
-  const backUrl = "http://34.136.124.189:8080/api/article/getSearch";
+  const backUrl = "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/article/getSearch";
 
   function handlesearch() {
     if (InputText === "" && sport === "") {
@@ -25,7 +25,7 @@ function InputSubmission() {
     }
     var config = {
       method: "post",
-      url: "http://34.136.124.189:8080/api/article/search",
+      url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/article/search",
       data: {
         sport: sport,
         searchText: InputText,

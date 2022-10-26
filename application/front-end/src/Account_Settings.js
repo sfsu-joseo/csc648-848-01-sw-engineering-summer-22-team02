@@ -39,7 +39,7 @@ function Account_Settings() {
     {
       var config = {
         method: "post",
-        url: "http://34.136.124.189:8080/api/account/deleteAccount",
+        url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/account/deleteAccount",
         data: {
           accountID: accountID
         },

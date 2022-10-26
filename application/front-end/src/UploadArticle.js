@@ -65,7 +65,7 @@ const UploadArticle = () => {
                 console.log(downloadUrl);
                 var configOne = {
                     method: "post",
-                    url: "http://34.136.124.189:8080/api/article/insertArticle",
+                    url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/article/insertArticle",
                     data: {
                         postDate: today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate(),
                         imageURL : downloadUrl,

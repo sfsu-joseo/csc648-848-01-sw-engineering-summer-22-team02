@@ -82,7 +82,7 @@ const GamesExample = () => {
   useEffect(()=>{
     var configOne = {
       method: "post",
-      url: "http://34.136.124.189:8080/api/games/getGames",
+      url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/games/getGames",
       data: {
         gameID: gameID
 
@@ -113,7 +113,7 @@ const GamesExample = () => {
   {
     var configTwo = {
       method: "post",
-      url: "http://34.136.124.189:8080/api/games/getPosts",
+      url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/games/getPosts",
       data: {
         gameID: gameID
 
@@ -136,7 +136,7 @@ const GamesExample = () => {
 
     var configThree = {
     method: "post",
-    url: "http://34.136.124.189:8080/api/games/insertPost",
+    url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/games/insertPost",
     data: {
       postDate: today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate(),
       content: content,
@@ -173,7 +173,7 @@ const GamesExample = () => {
   {
     var configFour={
       method: "post",
-      url: "http://34.136.124.189:8080/api/games/deletePost",
+      url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/games/deletePost",
       data: {
         postID: postID.toString(),
         gameID: gameID,

@@ -30,7 +30,7 @@ const Games = () => {
     }
     var configOne = {
       method: "post",
-      url: "http://34.136.124.189:8080/api/games/searchGame",
+      url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/games/searchGame",
       data: {
         postDate: postDate,
         sport: sport,

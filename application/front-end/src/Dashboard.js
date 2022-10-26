@@ -31,7 +31,7 @@ function Dashboard() {
   {
     let config = {
       method: "post",
-      url: "http://34.136.124.189:8080/api/article/getArticlesByAuthorID",
+      url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/article/getArticlesByAuthorID",
       data: {
         authorID : accountID
       },

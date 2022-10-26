@@ -27,7 +27,7 @@ function SignUp() {
   function handlesignup() {
     var config = {
       method: "post",
-      url: "http://34.136.124.189:8080/api/account/signup",
+      url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/account/signup",
       data: {
         name: name,
         username: userName,
@@ -55,7 +55,7 @@ function SignUp() {
           {
             var config = {
               method: "post",
-              url: "http://34.136.124.189:8080/api/account/login",
+              url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/account/login",
               data: {
                 username: userName,
                 password: password,

@@ -41,7 +41,7 @@ const ArticleView = () => {
   const {articleID} = useParams();
   var configOne = {
     method: "post",
-    url: "http://34.136.124.189:8080/api/article/getArticle",
+    url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/article/getArticle",
     data: {
       articleID: articleID,
     }
@@ -49,7 +49,7 @@ const ArticleView = () => {
 
   var configTwo = {
     method: "post",
-    url: "http://34.136.124.189:8080/api/article/getComments",
+    url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/article/getComments",
     data: {
       articleID: articleID,
     }
@@ -57,7 +57,7 @@ const ArticleView = () => {
 
   var configThree = {
     method: "post",
-    url: "http://34.136.124.189:8080/api/article/updateArticleViews",
+    url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/article/updateArticleViews",
     data: {
       articleID: articleID,
     }
@@ -65,7 +65,7 @@ const ArticleView = () => {
 
   var configCheckProperty ={
     method: "post",
-    url: "http://34.136.124.189:8080/api/article/checkArticleLikeOrDislike",
+    url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/article/checkArticleLikeOrDislike",
     data: {
       accountID : accountID, 
       articleID: articleID,
@@ -164,7 +164,7 @@ const ArticleView = () => {
   let today= new Date();
     var configThree={
       method: "post",
-      url: "http://34.136.124.189:8080/api/article/insertComment",
+      url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/article/insertComment",
       data: {
         postDate: today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate(),
         content: commentContent,
@@ -199,7 +199,7 @@ const ArticleView = () => {
   function deleteComment(commentID)
   {    var configFour={
     method: "post",
-    url: "http://34.136.124.189:8080/api/article/deleteComment",
+    url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/article/deleteComment",
     data: {
       commentID: commentID.toString(),
       articleID: articleID,
@@ -219,7 +219,7 @@ const ArticleView = () => {
   {
     var likeConfig={
       method: "post",
-      url: "http://34.136.124.189:8080/api/article/updateArticleProperties",
+      url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/article/updateArticleProperties",
       data: {
         like: like,
         accountID : accountID, 

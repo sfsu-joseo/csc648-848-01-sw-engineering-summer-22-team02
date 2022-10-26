@@ -33,7 +33,7 @@ function PlayerStats() {
     
     var config={
       method: "post",
-      url: "http://34.136.124.189:8080/api/players/searchPlayer",
+      url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/players/searchPlayer",
       data: {
         player: playerName,
         playerType: playerType
@@ -58,7 +58,7 @@ function PlayerStats() {
   {
     var config={
       method: "post",
-      url: "http://34.136.124.189:8080/api/players/getPlayer",
+      url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/players/getPlayer",
       data: {
         playerID: playerID.toString(),
         sport : playerType.toString()

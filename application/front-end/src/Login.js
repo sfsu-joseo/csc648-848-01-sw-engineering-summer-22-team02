@@ -24,7 +24,7 @@ function Login() {
   function handleLogin() {
     var config = {
       method: "post",
-      url: "http://34.136.124.189:8080/api/account/login",
+      url: "https://backend-service-dot-yoursports-352701.uw.r.appspot.com/api/account/login",
       data: {
         username: userName,
         password: password,
