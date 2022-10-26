@@ -306,6 +306,10 @@ const GamesExample = () => {
               insertPost();
             }
           }}
+          style={{
+            alignSelf: 'center',
+            width: '90%'
+          }}
         />
         <button
           className="submit_button"

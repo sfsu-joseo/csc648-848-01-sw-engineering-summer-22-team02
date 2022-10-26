@@ -331,7 +331,12 @@ const ArticleView = () => {
           }
         </p>
       </div>
-      <div className="statement12">Comments</div>
+      <div className="statement12" style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}>Comments</div>
       <div style={{
       display: 'flex',
       flexDirection: 'column',
@@ -342,12 +347,12 @@ const ArticleView = () => {
       {
         comments.map(comment => 
           <Card style={{
-            width: '90%'
+            width: '90%',
           }}>
             <Card.Content>
               <Card.Meta className="userName"  style={{
             display: 'flex',
-            justifyContent: 'space-between'
+            justifyContent: 'space-between',
           }}>
             {comment.Name}
             <div className="commentIcon">
@@ -370,7 +375,12 @@ const ArticleView = () => {
         )
       }
       </div>
-      <div className="comment_bar">
+      <div className="comment_bar" style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}>
         <Input
           placeholder="Write your post here"
           className="search_feed"
@@ -384,6 +394,10 @@ const ArticleView = () => {
             {
               insertComment(commentContent);
             }
+          }}
+          style={{
+            alignSelf: 'center',
+            width: '90%'
           }}
         />
         <button
