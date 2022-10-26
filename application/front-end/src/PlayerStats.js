@@ -80,7 +80,7 @@ function PlayerStats() {
   const options = {
     title: "Player Stats",
     backgroundColor: { fill : 'transparent'},
-    width : '350px',
+    width : '700px',
     height : '500px',
     fontSize: 15
   };
@@ -108,26 +108,10 @@ function PlayerStats() {
           />
           <button className="search_button" type="submit" onClick={getPlayers}></button>
         </div>
-        <div className="dropdownPlayerStats">
-          <button class="dropbtnStats" style={{
-            fontSize: '16px',
-            marginBottom: '10%'
-          }} >Filter Player By Sport</button>
-          <div className="dropdown-content">
-            <select
-              className="select_format"
-              onChange={(e) => setPlayerType(e.target.value)}
-            >
-              <option className="selec" value="">
-                Select One …
-              </option>
-              <option value="basketball">Basketball</option>
-              <option value="baseball">Baseball</option>
-            </select>
-          </div>
-        </div>
         <div className="playerDisplay">
-          <div className="scroll">
+          <div className="scroll" style={{
+            marginBottom: '20px'
+          }}>
             {
               searchApplied == false ? 
               <div>
@@ -206,13 +190,14 @@ function PlayerStats() {
         }}>
           {
             sport == 0 ?
-            <Card>
+            <Card style={{
+              width: '500px'
+            }}>
           <Image
             alt="Article Img"
             src={playerDetails.playerURL}
             style={{
-              width: '300px',
-              height: '300px'
+              height: '400px'
             }}
           />
                         <div style={{

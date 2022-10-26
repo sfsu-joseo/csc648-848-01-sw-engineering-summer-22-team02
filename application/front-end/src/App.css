@@ -172,7 +172,7 @@ text-decoration: none;
 .teams{
   height: 100%;
   margin-bottom: 4px;
-  margin-top: 50px;
+  margin-top: 25%;
 }
 .gameText{
   font-size: 100%;
@@ -220,7 +220,7 @@ text-decoration: none;
   margin-left:5%;
   margin-right:10%;
   color: white;
-  height: 300px;
+  height: 250px;
     width: 90%;
 }
 * {

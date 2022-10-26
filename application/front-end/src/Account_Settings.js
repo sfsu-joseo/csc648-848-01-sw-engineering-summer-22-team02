@@ -99,7 +99,7 @@ function Account_Settings() {
                       }} onClick={()=>{
                         navigate('/login');
                       }} className="delete">
-              Please Sign In to Access this page
+              Please Login to Access this page
             </a>
             </div>
         }
